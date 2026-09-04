@@ -1,0 +1,14 @@
+# NVIDIA upstream repositories are cloned and versioned independently.
+/CCCL_CUB/
+/CUTLASS_CuTe/
+
+# Local build and cache artifacts.
+**/build/
+**/__pycache__/
+*.py[cod]
+
+# Editor and operating-system noise.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
