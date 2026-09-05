@@ -1,0 +1,19 @@
+commit 1fb7869e6c414905d14a3ce81a7850fe5e616518
+Author: Minh Vu <vuhoangminh97@gmail.com>
+Date:   Wed Sep 2 02:32:05 2026 +0200
+
+    [CUB] Align reduce vector buffer (#10928)
+
+diff --git a/cub/cub/agent/agent_reduce.cuh b/cub/cub/agent/agent_reduce.cuh
+index d3efafc33a..7db92dcd65 100644
+--- a/cub/cub/agent/agent_reduce.cuh
++++ b/cub/cub/agent/agent_reduce.cuh
+@@ -310,7 +310,7 @@ struct AgentReduceImpl
+         reinterpret_cast<VectorT*>(d_in_unqualified));
+ 
+       // Load items as vector items
+-      InputT input_items[ITEMS_PER_THREAD];
++      alignas(VectorT) InputT input_items[ITEMS_PER_THREAD];
+       VectorT* vec_items = reinterpret_cast<VectorT*>(input_items);
+ 
+       // Alias items as an array of VectorT and load it in striped fashion

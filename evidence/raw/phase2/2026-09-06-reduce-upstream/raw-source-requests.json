@@ -1,0 +1,19 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/NVIDIA/cccl/486de1c44daf7d1a343cbbf0f5477e9bea8ad600/cub/cub/agent/agent_reduce.cuh",
+    "error": "The SSL connection could not be established, see inner exception.",
+    "captured_at_utc": "2026-09-05T16:30:07.1110870Z"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/NVIDIA/cccl/486de1c44daf7d1a343cbbf0f5477e9bea8ad600/cub/cub/warp/specializations/warp_reduce_shfl.cuh",
+    "commit": "486de1c44daf7d1a343cbbf0f5477e9bea8ad600",
+    "captured_at_utc": "2026-09-05T16:30:08.6800315Z",
+    "sha256": "1D7F52C36C522910D9D0AE4E480FE4062548DB9D497E2CE39B209116AB7F6750"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/NVIDIA/cccl/486de1c44daf7d1a343cbbf0f5477e9bea8ad600/cub/cub/block/specializations/block_reduce_warp_reductions.cuh",
+    "commit": "486de1c44daf7d1a343cbbf0f5477e9bea8ad600",
+    "captured_at_utc": "2026-09-05T16:30:10.2202935Z",
+    "sha256": "D7C02B80A80985205CA3FB9FEBF6C2F67E71C6FCD0D2FF4971284C9C406A7E8E"
+  }
+]

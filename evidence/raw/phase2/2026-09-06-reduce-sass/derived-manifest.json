@@ -1,0 +1,11 @@
+{
+  "ptx_source_start_line": 107976,
+  "ptx_source_end_line": 109046,
+  "ptx_entry_count": 1,
+  "static_sass_instruction_count": 1096,
+  "dynamic_instruction_counts_measured": false,
+  "derived_sha256": {
+    "target-reduce.ptx": "ed803e78b8bc7204e8be081dd0403618a583ce517297f1115e3652dcedb37a97",
+    "target-sass-instructions.txt": "e16ba1ef1d9dbca84383826e4c132b38b52e6f77e948e4d025ac618aa0ccf3d0"
+  }
+}

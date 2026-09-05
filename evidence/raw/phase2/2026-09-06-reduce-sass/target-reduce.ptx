@@ -1,0 +1,1071 @@
+.visible .entry _ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_(
+.param .u64 _ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_0,
+.param .u64 _ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_1,
+.param .u32 _ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_2,
+.param .align 4 .b8 _ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_3[40],
+.param .align 1 .b8 _ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_4[1],
+.param .u32 _ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_5,
+.param .align 1 .b8 _ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_6[1]
+)
+.maxntid 256, 1, 1
+{
+.reg .pred %p<67>;
+.reg .b32 %r<640>;
+.reg .b64 %rd<213>;
+
+.shared .align 4 .b8 _ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage[44];
+
+ld.param.u64 %rd1, [_ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_0];
+ld.param.u64 %rd2, [_ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_1];
+ld.param.u32 %r1, [_ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_3+20];
+ld.param.u32 %r158, [_ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8__param_3+24];
+shl.b32 %r2, %r158, 12;
+mov.u32 %r159, %ctaid.x;
+shl.b32 %r613, %r159, 12;
+and.b64 %rd3, %rd1, 15;
+setp.eq.s64 %p1, %rd3, 0;
+sub.s32 %r3, %r1, %r613;
+@%p1 bra $L__BB2_36;
+
+setp.lt.u32 %p2, %r3, 4096;
+@%p2 bra $L__BB2_18;
+bra.uni $L__BB2_2;
+
+$L__BB2_18:
+mov.u32 %r602, %tid.x;
+setp.ge.s32 %p14, %r602, %r3;
+mov.u32 %r608, 0;
+@%p14 bra $L__BB2_20;
+
+mov.u32 %r304, %tid.x;
+shl.b32 %r306, %r159, 12;
+add.s32 %r307, %r306, %r304;
+mul.wide.u32 %rd145, %r307, 4;
+add.s64 %rd144, %rd1, %rd145;
+
+ld.global.nc.u32 %r608, [%rd144];
+
+add.s32 %r602, %r304, 256;
+
+$L__BB2_20:
+setp.ge.s32 %p15, %r602, %r3;
+@%p15 bra $L__BB2_27;
+
+not.b32 %r309, %r602;
+add.s32 %r310, %r1, %r309;
+shl.b32 %r311, %r159, 12;
+sub.s32 %r48, %r310, %r311;
+shr.u32 %r312, %r48, 8;
+add.s32 %r313, %r312, 1;
+and.b32 %r601, %r313, 3;
+setp.eq.s32 %p16, %r601, 0;
+@%p16 bra $L__BB2_24;
+
+add.s32 %r598, %r602, %r311;
+
+$L__BB2_23:
+.pragma "nounroll";
+mul.wide.u32 %rd147, %r598, 4;
+add.s64 %rd146, %rd1, %rd147;
+
+ld.global.nc.u32 %r319, [%rd146];
+
+add.s32 %r608, %r319, %r608;
+add.s32 %r602, %r602, 256;
+add.s32 %r598, %r598, 256;
+add.s32 %r601, %r601, -1;
+setp.ne.s32 %p17, %r601, 0;
+@%p17 bra $L__BB2_23;
+
+$L__BB2_24:
+setp.lt.u32 %p18, %r48, 768;
+@%p18 bra $L__BB2_27;
+
+add.s32 %r322, %r602, %r311;
+add.s32 %r605, %r322, 768;
+
+$L__BB2_26:
+add.s32 %r327, %r311, %r602;
+mul.wide.u32 %rd152, %r327, 4;
+add.s64 %rd148, %rd1, %rd152;
+
+ld.global.nc.u32 %r323, [%rd148];
+
+add.s32 %r328, %r323, %r608;
+add.s32 %r329, %r605, -512;
+mul.wide.u32 %rd153, %r329, 4;
+add.s64 %rd149, %rd1, %rd153;
+
+ld.global.nc.u32 %r324, [%rd149];
+
+add.s32 %r330, %r324, %r328;
+add.s32 %r331, %r605, -256;
+mul.wide.u32 %rd154, %r331, 4;
+add.s64 %rd150, %rd1, %rd154;
+
+ld.global.nc.u32 %r325, [%rd150];
+
+add.s32 %r332, %r325, %r330;
+mul.wide.u32 %rd155, %r605, 4;
+add.s64 %rd151, %rd1, %rd155;
+
+ld.global.nc.u32 %r326, [%rd151];
+
+add.s32 %r608, %r326, %r332;
+add.s32 %r605, %r605, 1024;
+add.s32 %r602, %r602, 1024;
+setp.lt.s32 %p19, %r602, %r3;
+@%p19 bra $L__BB2_26;
+
+$L__BB2_27:
+mov.u32 %r334, %tid.x;
+shr.s32 %r335, %r334, 31;
+shr.u32 %r336, %r335, 27;
+add.s32 %r337, %r334, %r336;
+shr.s32 %r71, %r337, 5;
+
+mov.u32 %r333, %laneid;
+
+shl.b32 %r338, %r71, 2;
+mov.u32 %r339, _ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage;
+add.s32 %r340, %r339, %r338;
+setp.gt.s32 %p20, %r3, 255;
+@%p20 bra $L__BB2_32;
+bra.uni $L__BB2_28;
+
+$L__BB2_32:
+mov.u32 %r369, -1;
+redux.sync.add.s32 %r639, %r608, %r369;
+setp.ne.s32 %p32, %r333, 0;
+@%p32 bra $L__BB2_34;
+
+add.s32 %r578, %r340, 8;
+st.shared.u32 [%r578], %r639;
+
+$L__BB2_34:
+bar.sync 0;
+setp.ne.s32 %p33, %r334, 0;
+@%p33 bra $L__BB2_71;
+
+ld.shared.u32 %r371, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+12];
+add.s32 %r372, %r371, %r639;
+ld.shared.u32 %r373, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+16];
+add.s32 %r374, %r373, %r372;
+ld.shared.u32 %r375, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+20];
+add.s32 %r376, %r375, %r374;
+ld.shared.u32 %r377, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+24];
+add.s32 %r378, %r377, %r376;
+ld.shared.u32 %r379, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+28];
+add.s32 %r380, %r379, %r378;
+ld.shared.u32 %r381, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+32];
+add.s32 %r382, %r381, %r380;
+ld.shared.u32 %r383, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+36];
+add.s32 %r639, %r383, %r382;
+bra.uni $L__BB2_71;
+
+$L__BB2_36:
+setp.lt.u32 %p34, %r3, 4096;
+@%p34 bra $L__BB2_53;
+bra.uni $L__BB2_37;
+
+$L__BB2_53:
+mov.u32 %r632, %tid.x;
+setp.ge.s32 %p46, %r632, %r3;
+mov.u32 %r638, 0;
+@%p46 bra $L__BB2_55;
+
+mov.u32 %r498, %tid.x;
+add.s32 %r501, %r613, %r498;
+mul.wide.u32 %rd199, %r501, 4;
+add.s64 %rd198, %rd1, %rd199;
+
+ld.global.nc.u32 %r638, [%rd198];
+
+add.s32 %r632, %r498, 256;
+
+$L__BB2_55:
+setp.ge.s32 %p47, %r632, %r3;
+@%p47 bra $L__BB2_62;
+
+not.b32 %r503, %r632;
+add.s32 %r504, %r1, %r503;
+sub.s32 %r128, %r504, %r613;
+shr.u32 %r506, %r128, 8;
+add.s32 %r507, %r506, 1;
+and.b32 %r631, %r507, 3;
+setp.eq.s32 %p48, %r631, 0;
+@%p48 bra $L__BB2_59;
+
+add.s32 %r628, %r632, %r613;
+
+$L__BB2_58:
+.pragma "nounroll";
+mul.wide.u32 %rd201, %r628, 4;
+add.s64 %rd200, %rd1, %rd201;
+
+ld.global.nc.u32 %r510, [%rd200];
+
+add.s32 %r638, %r510, %r638;
+add.s32 %r632, %r632, 256;
+add.s32 %r628, %r628, 256;
+add.s32 %r631, %r631, -1;
+setp.ne.s32 %p49, %r631, 0;
+@%p49 bra $L__BB2_58;
+
+$L__BB2_59:
+setp.lt.u32 %p50, %r128, 768;
+@%p50 bra $L__BB2_62;
+
+add.s32 %r513, %r632, %r613;
+add.s32 %r635, %r513, 768;
+
+$L__BB2_61:
+add.s32 %r518, %r613, %r632;
+mul.wide.u32 %rd206, %r518, 4;
+add.s64 %rd202, %rd1, %rd206;
+
+ld.global.nc.u32 %r514, [%rd202];
+
+add.s32 %r519, %r514, %r638;
+add.s32 %r520, %r635, -512;
+mul.wide.u32 %rd207, %r520, 4;
+add.s64 %rd203, %rd1, %rd207;
+
+ld.global.nc.u32 %r515, [%rd203];
+
+add.s32 %r521, %r515, %r519;
+add.s32 %r522, %r635, -256;
+mul.wide.u32 %rd208, %r522, 4;
+add.s64 %rd204, %rd1, %rd208;
+
+ld.global.nc.u32 %r516, [%rd204];
+
+add.s32 %r523, %r516, %r521;
+mul.wide.u32 %rd209, %r635, 4;
+add.s64 %rd205, %rd1, %rd209;
+
+ld.global.nc.u32 %r517, [%rd205];
+
+add.s32 %r638, %r517, %r523;
+add.s32 %r635, %r635, 1024;
+add.s32 %r632, %r632, 1024;
+setp.lt.s32 %p51, %r632, %r3;
+@%p51 bra $L__BB2_61;
+
+$L__BB2_62:
+mov.u32 %r525, %tid.x;
+shr.s32 %r526, %r525, 31;
+shr.u32 %r527, %r526, 27;
+add.s32 %r528, %r525, %r527;
+shr.s32 %r150, %r528, 5;
+
+mov.u32 %r524, %laneid;
+
+shl.b32 %r529, %r150, 2;
+mov.u32 %r530, _ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage;
+add.s32 %r531, %r530, %r529;
+setp.gt.s32 %p52, %r3, 255;
+@%p52 bra $L__BB2_67;
+bra.uni $L__BB2_63;
+
+$L__BB2_67:
+mov.u32 %r560, -1;
+redux.sync.add.s32 %r639, %r638, %r560;
+setp.ne.s32 %p64, %r524, 0;
+@%p64 bra $L__BB2_69;
+
+add.s32 %r580, %r531, 8;
+st.shared.u32 [%r580], %r639;
+
+$L__BB2_69:
+bar.sync 0;
+setp.ne.s32 %p65, %r525, 0;
+@%p65 bra $L__BB2_71;
+
+ld.shared.u32 %r562, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+12];
+add.s32 %r563, %r562, %r639;
+ld.shared.u32 %r564, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+16];
+add.s32 %r565, %r564, %r563;
+ld.shared.u32 %r566, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+20];
+add.s32 %r567, %r566, %r565;
+ld.shared.u32 %r568, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+24];
+add.s32 %r569, %r568, %r567;
+ld.shared.u32 %r570, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+28];
+add.s32 %r571, %r570, %r569;
+ld.shared.u32 %r572, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+32];
+add.s32 %r573, %r572, %r571;
+ld.shared.u32 %r574, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+36];
+add.s32 %r639, %r574, %r573;
+bra.uni $L__BB2_71;
+
+$L__BB2_2:
+shl.b32 %r178, %r159, 12;
+cvt.u64.u32 %rd20, %r178;
+mov.u32 %r179, %tid.x;
+cvt.s64.s32 %rd21, %r179;
+add.s64 %rd22, %rd21, %rd20;
+shl.b64 %rd23, %rd22, 2;
+add.s64 %rd4, %rd1, %rd23;
+
+ld.global.nc.u32 %r161, [%rd4];
+
+add.s32 %r180, %r179, 256;
+cvt.s64.s32 %rd24, %r180;
+add.s64 %rd25, %rd24, %rd20;
+shl.b64 %rd26, %rd25, 2;
+add.s64 %rd5, %rd1, %rd26;
+
+ld.global.nc.u32 %r162, [%rd5];
+
+add.s32 %r181, %r179, 512;
+cvt.s64.s32 %rd27, %r181;
+add.s64 %rd28, %rd27, %rd20;
+shl.b64 %rd29, %rd28, 2;
+add.s64 %rd6, %rd1, %rd29;
+
+ld.global.nc.u32 %r163, [%rd6];
+
+add.s32 %r182, %r179, 768;
+cvt.s64.s32 %rd30, %r182;
+add.s64 %rd31, %rd30, %rd20;
+shl.b64 %rd32, %rd31, 2;
+add.s64 %rd7, %rd1, %rd32;
+
+ld.global.nc.u32 %r164, [%rd7];
+
+add.s32 %r183, %r179, 1024;
+cvt.s64.s32 %rd33, %r183;
+add.s64 %rd34, %rd33, %rd20;
+shl.b64 %rd35, %rd34, 2;
+add.s64 %rd8, %rd1, %rd35;
+
+ld.global.nc.u32 %r165, [%rd8];
+
+add.s32 %r184, %r179, 1280;
+cvt.s64.s32 %rd36, %r184;
+add.s64 %rd37, %rd36, %rd20;
+shl.b64 %rd38, %rd37, 2;
+add.s64 %rd9, %rd1, %rd38;
+
+ld.global.nc.u32 %r166, [%rd9];
+
+add.s32 %r185, %r179, 1536;
+cvt.s64.s32 %rd39, %r185;
+add.s64 %rd40, %rd39, %rd20;
+shl.b64 %rd41, %rd40, 2;
+add.s64 %rd10, %rd1, %rd41;
+
+ld.global.nc.u32 %r167, [%rd10];
+
+add.s32 %r186, %r179, 1792;
+cvt.s64.s32 %rd42, %r186;
+add.s64 %rd43, %rd42, %rd20;
+shl.b64 %rd44, %rd43, 2;
+add.s64 %rd11, %rd1, %rd44;
+
+ld.global.nc.u32 %r168, [%rd11];
+
+add.s32 %r187, %r179, 2048;
+cvt.s64.s32 %rd45, %r187;
+add.s64 %rd46, %rd45, %rd20;
+shl.b64 %rd47, %rd46, 2;
+add.s64 %rd12, %rd1, %rd47;
+
+ld.global.nc.u32 %r169, [%rd12];
+
+add.s32 %r188, %r179, 2304;
+cvt.s64.s32 %rd48, %r188;
+add.s64 %rd49, %rd48, %rd20;
+shl.b64 %rd50, %rd49, 2;
+add.s64 %rd13, %rd1, %rd50;
+
+ld.global.nc.u32 %r170, [%rd13];
+
+add.s32 %r189, %r179, 2560;
+cvt.s64.s32 %rd51, %r189;
+add.s64 %rd52, %rd51, %rd20;
+shl.b64 %rd53, %rd52, 2;
+add.s64 %rd14, %rd1, %rd53;
+
+ld.global.nc.u32 %r171, [%rd14];
+
+add.s32 %r190, %r179, 2816;
+cvt.s64.s32 %rd54, %r190;
+add.s64 %rd55, %rd54, %rd20;
+shl.b64 %rd56, %rd55, 2;
+add.s64 %rd15, %rd1, %rd56;
+
+ld.global.nc.u32 %r172, [%rd15];
+
+add.s32 %r191, %r179, 3072;
+cvt.s64.s32 %rd57, %r191;
+add.s64 %rd58, %rd57, %rd20;
+shl.b64 %rd59, %rd58, 2;
+add.s64 %rd16, %rd1, %rd59;
+
+ld.global.nc.u32 %r173, [%rd16];
+
+add.s32 %r192, %r179, 3328;
+cvt.s64.s32 %rd60, %r192;
+add.s64 %rd61, %rd60, %rd20;
+shl.b64 %rd62, %rd61, 2;
+add.s64 %rd17, %rd1, %rd62;
+
+ld.global.nc.u32 %r174, [%rd17];
+
+add.s32 %r193, %r179, 3584;
+cvt.s64.s32 %rd63, %r193;
+add.s64 %rd64, %rd63, %rd20;
+shl.b64 %rd65, %rd64, 2;
+add.s64 %rd18, %rd1, %rd65;
+
+ld.global.nc.u32 %r175, [%rd18];
+
+add.s32 %r194, %r179, 3840;
+cvt.s64.s32 %rd66, %r194;
+add.s64 %rd67, %rd66, %rd20;
+shl.b64 %rd68, %rd67, 2;
+add.s64 %rd19, %rd1, %rd68;
+
+ld.global.nc.u32 %r176, [%rd19];
+
+add.s32 %r195, %r162, %r161;
+add.s32 %r196, %r163, %r195;
+add.s32 %r197, %r164, %r196;
+add.s32 %r198, %r165, %r197;
+add.s32 %r199, %r166, %r198;
+add.s32 %r200, %r167, %r199;
+add.s32 %r201, %r168, %r200;
+add.s32 %r202, %r169, %r201;
+add.s32 %r203, %r170, %r202;
+add.s32 %r204, %r171, %r203;
+add.s32 %r205, %r172, %r204;
+add.s32 %r206, %r173, %r205;
+add.s32 %r207, %r174, %r206;
+add.s32 %r208, %r175, %r207;
+add.s32 %r595, %r176, %r208;
+setp.lt.u32 %p3, %r3, %r2;
+@%p3 bra $L__BB2_14;
+
+add.s32 %r582, %r2, %r178;
+add.s32 %r212, %r179, %r2;
+add.s32 %r581, %r212, %r178;
+
+$L__BB2_4:
+add.s32 %r213, %r1, -4096;
+setp.gt.u32 %p4, %r582, %r213;
+@%p4 bra $L__BB2_6;
+
+cvt.u64.u32 %rd85, %r582;
+mov.u32 %r230, %tid.x;
+cvt.s64.s32 %rd86, %r230;
+add.s64 %rd87, %rd86, %rd85;
+shl.b64 %rd88, %rd87, 2;
+add.s64 %rd69, %rd1, %rd88;
+
+ld.global.nc.u32 %r214, [%rd69];
+
+add.s32 %r231, %r230, 256;
+cvt.s64.s32 %rd89, %r231;
+add.s64 %rd90, %rd89, %rd85;
+shl.b64 %rd91, %rd90, 2;
+add.s64 %rd70, %rd1, %rd91;
+
+ld.global.nc.u32 %r215, [%rd70];
+
+add.s32 %r232, %r230, 512;
+cvt.s64.s32 %rd92, %r232;
+add.s64 %rd93, %rd92, %rd85;
+shl.b64 %rd94, %rd93, 2;
+add.s64 %rd71, %rd1, %rd94;
+
+ld.global.nc.u32 %r216, [%rd71];
+
+add.s32 %r233, %r230, 768;
+cvt.s64.s32 %rd95, %r233;
+add.s64 %rd96, %rd95, %rd85;
+shl.b64 %rd97, %rd96, 2;
+add.s64 %rd72, %rd1, %rd97;
+
+ld.global.nc.u32 %r217, [%rd72];
+
+add.s32 %r234, %r230, 1024;
+cvt.s64.s32 %rd98, %r234;
+add.s64 %rd99, %rd98, %rd85;
+shl.b64 %rd100, %rd99, 2;
+add.s64 %rd73, %rd1, %rd100;
+
+ld.global.nc.u32 %r218, [%rd73];
+
+add.s32 %r235, %r230, 1280;
+cvt.s64.s32 %rd101, %r235;
+add.s64 %rd102, %rd101, %rd85;
+shl.b64 %rd103, %rd102, 2;
+add.s64 %rd74, %rd1, %rd103;
+
+ld.global.nc.u32 %r219, [%rd74];
+
+add.s32 %r236, %r230, 1536;
+cvt.s64.s32 %rd104, %r236;
+add.s64 %rd105, %rd104, %rd85;
+shl.b64 %rd106, %rd105, 2;
+add.s64 %rd75, %rd1, %rd106;
+
+ld.global.nc.u32 %r220, [%rd75];
+
+add.s32 %r237, %r230, 1792;
+cvt.s64.s32 %rd107, %r237;
+add.s64 %rd108, %rd107, %rd85;
+shl.b64 %rd109, %rd108, 2;
+add.s64 %rd76, %rd1, %rd109;
+
+ld.global.nc.u32 %r221, [%rd76];
+
+add.s32 %r238, %r230, 2048;
+cvt.s64.s32 %rd110, %r238;
+add.s64 %rd111, %rd110, %rd85;
+shl.b64 %rd112, %rd111, 2;
+add.s64 %rd77, %rd1, %rd112;
+
+ld.global.nc.u32 %r222, [%rd77];
+
+add.s32 %r239, %r230, 2304;
+cvt.s64.s32 %rd113, %r239;
+add.s64 %rd114, %rd113, %rd85;
+shl.b64 %rd115, %rd114, 2;
+add.s64 %rd78, %rd1, %rd115;
+
+ld.global.nc.u32 %r223, [%rd78];
+
+add.s32 %r240, %r230, 2560;
+cvt.s64.s32 %rd116, %r240;
+add.s64 %rd117, %rd116, %rd85;
+shl.b64 %rd118, %rd117, 2;
+add.s64 %rd79, %rd1, %rd118;
+
+ld.global.nc.u32 %r224, [%rd79];
+
+add.s32 %r241, %r230, 2816;
+cvt.s64.s32 %rd119, %r241;
+add.s64 %rd120, %rd119, %rd85;
+shl.b64 %rd121, %rd120, 2;
+add.s64 %rd80, %rd1, %rd121;
+
+ld.global.nc.u32 %r225, [%rd80];
+
+add.s32 %r242, %r230, 3072;
+cvt.s64.s32 %rd122, %r242;
+add.s64 %rd123, %rd122, %rd85;
+shl.b64 %rd124, %rd123, 2;
+add.s64 %rd81, %rd1, %rd124;
+
+ld.global.nc.u32 %r226, [%rd81];
+
+add.s32 %r243, %r230, 3328;
+cvt.s64.s32 %rd125, %r243;
+add.s64 %rd126, %rd125, %rd85;
+shl.b64 %rd127, %rd126, 2;
+add.s64 %rd82, %rd1, %rd127;
+
+ld.global.nc.u32 %r227, [%rd82];
+
+add.s32 %r244, %r230, 3584;
+cvt.s64.s32 %rd128, %r244;
+add.s64 %rd129, %rd128, %rd85;
+shl.b64 %rd130, %rd129, 2;
+add.s64 %rd83, %rd1, %rd130;
+
+ld.global.nc.u32 %r228, [%rd83];
+
+add.s32 %r245, %r230, 3840;
+cvt.s64.s32 %rd131, %r245;
+add.s64 %rd132, %rd131, %rd85;
+shl.b64 %rd133, %rd132, 2;
+add.s64 %rd84, %rd1, %rd133;
+
+ld.global.nc.u32 %r229, [%rd84];
+
+add.s32 %r246, %r214, %r595;
+add.s32 %r247, %r215, %r246;
+add.s32 %r248, %r216, %r247;
+add.s32 %r249, %r217, %r248;
+add.s32 %r250, %r218, %r249;
+add.s32 %r251, %r219, %r250;
+add.s32 %r252, %r220, %r251;
+add.s32 %r253, %r221, %r252;
+add.s32 %r254, %r222, %r253;
+add.s32 %r255, %r223, %r254;
+add.s32 %r256, %r224, %r255;
+add.s32 %r257, %r225, %r256;
+add.s32 %r258, %r226, %r257;
+add.s32 %r259, %r227, %r258;
+add.s32 %r260, %r228, %r259;
+add.s32 %r595, %r229, %r260;
+sub.s32 %r261, %r1, %r582;
+setp.lt.u32 %p5, %r261, %r2;
+add.s32 %r582, %r582, %r2;
+add.s32 %r581, %r581, %r2;
+@%p5 bra $L__BB2_14;
+bra.uni $L__BB2_4;
+
+$L__BB2_37:
+cvt.u64.u32 %rd168, %r613;
+mov.u32 %r386, %tid.x;
+shl.b32 %r387, %r386, 2;
+cvt.u64.u32 %rd169, %r387;
+add.s64 %rd170, %rd168, %rd169;
+shl.b64 %rd171, %rd170, 2;
+add.s64 %rd158, %rd1, %rd171;
+
+ld.global.nc.v2.u64 {%rd156, %rd157}, [%rd158];
+
+mov.b64 {%r388, %r389}, %rd156;
+mov.b64 {%r390, %r391}, %rd157;
+add.s64 %rd161, %rd158, 4096;
+
+ld.global.nc.v2.u64 {%rd159, %rd160}, [%rd161];
+
+mov.b64 {%r392, %r393}, %rd159;
+mov.b64 {%r394, %r395}, %rd160;
+add.s64 %rd164, %rd158, 8192;
+
+ld.global.nc.v2.u64 {%rd162, %rd163}, [%rd164];
+
+mov.b64 {%r396, %r397}, %rd162;
+mov.b64 {%r398, %r399}, %rd163;
+add.s64 %rd167, %rd158, 12288;
+
+ld.global.nc.v2.u64 {%rd165, %rd166}, [%rd167];
+
+mov.b64 {%r400, %r401}, %rd165;
+mov.b64 {%r402, %r403}, %rd166;
+add.s32 %r404, %r389, %r388;
+add.s32 %r405, %r390, %r404;
+add.s32 %r406, %r391, %r405;
+add.s32 %r407, %r392, %r406;
+add.s32 %r408, %r393, %r407;
+add.s32 %r409, %r394, %r408;
+add.s32 %r410, %r395, %r409;
+add.s32 %r411, %r396, %r410;
+add.s32 %r412, %r397, %r411;
+add.s32 %r413, %r398, %r412;
+add.s32 %r414, %r399, %r413;
+add.s32 %r415, %r400, %r414;
+add.s32 %r416, %r401, %r415;
+add.s32 %r417, %r402, %r416;
+add.s32 %r625, %r403, %r417;
+setp.lt.u32 %p35, %r3, %r2;
+@%p35 bra $L__BB2_49;
+
+add.s32 %r610, %r2, %r613;
+add.s32 %r611, %r610, 768;
+add.s32 %r420, %r386, %r2;
+add.s32 %r609, %r420, %r613;
+
+$L__BB2_39:
+add.s32 %r421, %r1, -4096;
+add.s32 %r613, %r613, %r2;
+setp.gt.u32 %p36, %r613, %r421;
+@%p36 bra $L__BB2_41;
+
+cvt.u64.u32 %rd184, %r613;
+mov.u32 %r422, %tid.x;
+shl.b32 %r423, %r422, 2;
+cvt.u64.u32 %rd185, %r423;
+add.s64 %rd186, %rd184, %rd185;
+shl.b64 %rd187, %rd186, 2;
+add.s64 %rd174, %rd1, %rd187;
+
+ld.global.nc.v2.u64 {%rd172, %rd173}, [%rd174];
+
+mov.b64 {%r424, %r425}, %rd172;
+mov.b64 {%r426, %r427}, %rd173;
+add.s64 %rd177, %rd174, 4096;
+
+ld.global.nc.v2.u64 {%rd175, %rd176}, [%rd177];
+
+mov.b64 {%r428, %r429}, %rd175;
+mov.b64 {%r430, %r431}, %rd176;
+add.s64 %rd180, %rd174, 8192;
+
+ld.global.nc.v2.u64 {%rd178, %rd179}, [%rd180];
+
+mov.b64 {%r432, %r433}, %rd178;
+mov.b64 {%r434, %r435}, %rd179;
+add.s64 %rd183, %rd174, 12288;
+
+ld.global.nc.v2.u64 {%rd181, %rd182}, [%rd183];
+
+mov.b64 {%r436, %r437}, %rd181;
+mov.b64 {%r438, %r439}, %rd182;
+add.s32 %r440, %r424, %r625;
+add.s32 %r441, %r425, %r440;
+add.s32 %r442, %r426, %r441;
+add.s32 %r443, %r427, %r442;
+add.s32 %r444, %r428, %r443;
+add.s32 %r445, %r429, %r444;
+add.s32 %r446, %r430, %r445;
+add.s32 %r447, %r431, %r446;
+add.s32 %r448, %r432, %r447;
+add.s32 %r449, %r433, %r448;
+add.s32 %r450, %r434, %r449;
+add.s32 %r451, %r435, %r450;
+add.s32 %r452, %r436, %r451;
+add.s32 %r453, %r437, %r452;
+add.s32 %r454, %r438, %r453;
+add.s32 %r625, %r439, %r454;
+sub.s32 %r455, %r1, %r613;
+setp.lt.u32 %p37, %r455, %r2;
+add.s32 %r611, %r611, %r2;
+add.s32 %r610, %r610, %r2;
+add.s32 %r609, %r609, %r2;
+@%p37 bra $L__BB2_49;
+bra.uni $L__BB2_39;
+
+$L__BB2_28:
+shl.b32 %r342, %r71, 5;
+add.s32 %r343, %r342, 32;
+setp.gt.s32 %p21, %r343, %r3;
+sub.s32 %r344, %r3, %r342;
+selp.b32 %r345, %r344, 32, %p21;
+
+mov.u32 %r341, %laneid;
+
+setp.lt.s32 %p22, %r341, %r345;
+selp.b32 %r346, %r608, 0, %p22;
+mov.u32 %r347, -1;
+redux.sync.add.s32 %r639, %r346, %r347;
+setp.ne.s32 %p23, %r333, 0;
+@%p23 bra $L__BB2_30;
+
+add.s32 %r577, %r340, 8;
+st.shared.u32 [%r577], %r639;
+
+$L__BB2_30:
+bar.sync 0;
+setp.ne.s32 %p24, %r334, 0;
+@%p24 bra $L__BB2_71;
+
+setp.gt.s32 %p25, %r3, 32;
+ld.shared.u32 %r349, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+12];
+selp.b32 %r350, %r349, 0, %p25;
+add.s32 %r351, %r639, %r350;
+ld.shared.u32 %r352, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+16];
+setp.gt.s32 %p26, %r3, 64;
+selp.b32 %r353, %r352, 0, %p26;
+add.s32 %r354, %r351, %r353;
+ld.shared.u32 %r355, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+20];
+setp.gt.s32 %p27, %r3, 96;
+selp.b32 %r356, %r355, 0, %p27;
+add.s32 %r357, %r354, %r356;
+ld.shared.u32 %r358, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+24];
+setp.gt.s32 %p28, %r3, 128;
+selp.b32 %r359, %r358, 0, %p28;
+add.s32 %r360, %r357, %r359;
+ld.shared.u32 %r361, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+28];
+setp.gt.s32 %p29, %r3, 160;
+selp.b32 %r362, %r361, 0, %p29;
+add.s32 %r363, %r360, %r362;
+ld.shared.u32 %r364, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+32];
+setp.gt.s32 %p30, %r3, 192;
+selp.b32 %r365, %r364, 0, %p30;
+add.s32 %r366, %r363, %r365;
+ld.shared.u32 %r367, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+36];
+setp.gt.s32 %p31, %r3, 224;
+selp.b32 %r368, %r367, 0, %p31;
+add.s32 %r639, %r366, %r368;
+bra.uni $L__BB2_71;
+
+$L__BB2_63:
+shl.b32 %r533, %r150, 5;
+add.s32 %r534, %r533, 32;
+setp.gt.s32 %p53, %r534, %r3;
+sub.s32 %r535, %r3, %r533;
+selp.b32 %r536, %r535, 32, %p53;
+
+mov.u32 %r532, %laneid;
+
+setp.lt.s32 %p54, %r532, %r536;
+selp.b32 %r537, %r638, 0, %p54;
+mov.u32 %r538, -1;
+redux.sync.add.s32 %r639, %r537, %r538;
+setp.ne.s32 %p55, %r524, 0;
+@%p55 bra $L__BB2_65;
+
+add.s32 %r579, %r531, 8;
+st.shared.u32 [%r579], %r639;
+
+$L__BB2_65:
+bar.sync 0;
+setp.ne.s32 %p56, %r525, 0;
+@%p56 bra $L__BB2_71;
+
+setp.gt.s32 %p57, %r3, 32;
+ld.shared.u32 %r540, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+12];
+selp.b32 %r541, %r540, 0, %p57;
+add.s32 %r542, %r639, %r541;
+ld.shared.u32 %r543, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+16];
+setp.gt.s32 %p58, %r3, 64;
+selp.b32 %r544, %r543, 0, %p58;
+add.s32 %r545, %r542, %r544;
+ld.shared.u32 %r546, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+20];
+setp.gt.s32 %p59, %r3, 96;
+selp.b32 %r547, %r546, 0, %p59;
+add.s32 %r548, %r545, %r547;
+ld.shared.u32 %r549, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+24];
+setp.gt.s32 %p60, %r3, 128;
+selp.b32 %r550, %r549, 0, %p60;
+add.s32 %r551, %r548, %r550;
+ld.shared.u32 %r552, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+28];
+setp.gt.s32 %p61, %r3, 160;
+selp.b32 %r553, %r552, 0, %p61;
+add.s32 %r554, %r551, %r553;
+ld.shared.u32 %r555, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+32];
+setp.gt.s32 %p62, %r3, 192;
+selp.b32 %r556, %r555, 0, %p62;
+add.s32 %r557, %r554, %r556;
+ld.shared.u32 %r558, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+36];
+setp.gt.s32 %p63, %r3, 224;
+selp.b32 %r559, %r558, 0, %p63;
+add.s32 %r639, %r557, %r559;
+bra.uni $L__BB2_71;
+
+$L__BB2_6:
+setp.le.u32 %p6, %r1, %r582;
+@%p6 bra $L__BB2_14;
+
+sub.s32 %r13, %r1, %r582;
+setp.ge.s32 %p7, %r179, %r13;
+@%p7 bra $L__BB2_14;
+
+not.b32 %r264, %r179;
+add.s32 %r265, %r1, %r264;
+sub.s32 %r15, %r265, %r582;
+shr.u32 %r266, %r15, 8;
+add.s32 %r267, %r266, 1;
+and.b32 %r587, %r267, 3;
+setp.eq.s32 %p8, %r587, 0;
+mov.u32 %r588, %r179;
+@%p8 bra $L__BB2_11;
+
+mov.u32 %r588, %tid.x;
+
+$L__BB2_10:
+.pragma "nounroll";
+mul.wide.u32 %rd135, %r581, 4;
+add.s64 %rd134, %rd1, %rd135;
+
+ld.global.nc.u32 %r268, [%rd134];
+
+add.s32 %r595, %r268, %r595;
+add.s32 %r588, %r588, 256;
+add.s32 %r581, %r581, 256;
+add.s32 %r587, %r587, -1;
+setp.ne.s32 %p9, %r587, 0;
+@%p9 bra $L__BB2_10;
+
+$L__BB2_11:
+setp.lt.u32 %p10, %r15, 768;
+@%p10 bra $L__BB2_14;
+
+add.s32 %r591, %r588, %r582;
+add.s32 %r592, %r591, 768;
+
+$L__BB2_13:
+mul.wide.u32 %rd140, %r591, 4;
+add.s64 %rd136, %rd1, %rd140;
+
+ld.global.nc.u32 %r269, [%rd136];
+
+add.s32 %r273, %r269, %r595;
+add.s32 %r274, %r592, -512;
+mul.wide.u32 %rd141, %r274, 4;
+add.s64 %rd137, %rd1, %rd141;
+
+ld.global.nc.u32 %r270, [%rd137];
+
+add.s32 %r275, %r270, %r273;
+add.s32 %r276, %r592, -256;
+mul.wide.u32 %rd142, %r276, 4;
+add.s64 %rd138, %rd1, %rd142;
+
+ld.global.nc.u32 %r271, [%rd138];
+
+add.s32 %r277, %r271, %r275;
+mul.wide.u32 %rd143, %r592, 4;
+add.s64 %rd139, %rd1, %rd143;
+
+ld.global.nc.u32 %r272, [%rd139];
+
+add.s32 %r595, %r272, %r277;
+add.s32 %r592, %r592, 1024;
+add.s32 %r591, %r591, 1024;
+add.s32 %r588, %r588, 1024;
+setp.lt.s32 %p11, %r588, %r13;
+@%p11 bra $L__BB2_13;
+
+$L__BB2_14:
+
+mov.u32 %r278, %laneid;
+
+mov.u32 %r279, -1;
+redux.sync.add.s32 %r639, %r595, %r279;
+setp.ne.s32 %p12, %r278, 0;
+@%p12 bra $L__BB2_16;
+
+shr.s32 %r281, %r179, 31;
+shr.u32 %r282, %r281, 27;
+add.s32 %r283, %r179, %r282;
+shr.s32 %r284, %r283, 5;
+shl.b32 %r285, %r284, 2;
+mov.u32 %r286, _ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage;
+add.s32 %r287, %r286, %r285;
+st.shared.u32 [%r287+8], %r639;
+
+$L__BB2_16:
+bar.sync 0;
+setp.ne.s32 %p13, %r179, 0;
+@%p13 bra $L__BB2_71;
+
+ld.shared.u32 %r289, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+12];
+add.s32 %r290, %r289, %r639;
+ld.shared.u32 %r291, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+16];
+add.s32 %r292, %r291, %r290;
+ld.shared.u32 %r293, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+20];
+add.s32 %r294, %r293, %r292;
+ld.shared.u32 %r295, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+24];
+add.s32 %r296, %r295, %r294;
+ld.shared.u32 %r297, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+28];
+add.s32 %r298, %r297, %r296;
+ld.shared.u32 %r299, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+32];
+add.s32 %r300, %r299, %r298;
+ld.shared.u32 %r301, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+36];
+add.s32 %r639, %r301, %r300;
+bra.uni $L__BB2_71;
+
+$L__BB2_41:
+setp.le.u32 %p38, %r1, %r613;
+@%p38 bra $L__BB2_49;
+
+sub.s32 %r93, %r1, %r613;
+setp.ge.s32 %p39, %r386, %r93;
+@%p39 bra $L__BB2_49;
+
+not.b32 %r458, %r386;
+add.s32 %r459, %r1, %r458;
+sub.s32 %r95, %r459, %r613;
+shr.u32 %r460, %r95, 8;
+add.s32 %r461, %r460, 1;
+and.b32 %r617, %r461, 3;
+setp.eq.s32 %p40, %r617, 0;
+mov.u32 %r618, %r386;
+@%p40 bra $L__BB2_46;
+
+mov.u32 %r618, %tid.x;
+
+$L__BB2_45:
+.pragma "nounroll";
+mul.wide.u32 %rd189, %r609, 4;
+add.s64 %rd188, %rd1, %rd189;
+
+ld.global.nc.u32 %r462, [%rd188];
+
+add.s32 %r625, %r462, %r625;
+add.s32 %r618, %r618, 256;
+add.s32 %r609, %r609, 256;
+add.s32 %r617, %r617, -1;
+setp.ne.s32 %p41, %r617, 0;
+@%p41 bra $L__BB2_45;
+
+$L__BB2_46:
+setp.lt.u32 %p42, %r95, 768;
+@%p42 bra $L__BB2_49;
+
+add.s32 %r622, %r618, %r611;
+add.s32 %r621, %r618, %r610;
+
+$L__BB2_48:
+mul.wide.u32 %rd194, %r621, 4;
+add.s64 %rd190, %rd1, %rd194;
+
+ld.global.nc.u32 %r463, [%rd190];
+
+add.s32 %r467, %r463, %r625;
+add.s32 %r468, %r622, -512;
+mul.wide.u32 %rd195, %r468, 4;
+add.s64 %rd191, %rd1, %rd195;
+
+ld.global.nc.u32 %r464, [%rd191];
+
+add.s32 %r469, %r464, %r467;
+add.s32 %r470, %r622, -256;
+mul.wide.u32 %rd196, %r470, 4;
+add.s64 %rd192, %rd1, %rd196;
+
+ld.global.nc.u32 %r465, [%rd192];
+
+add.s32 %r471, %r465, %r469;
+mul.wide.u32 %rd197, %r622, 4;
+add.s64 %rd193, %rd1, %rd197;
+
+ld.global.nc.u32 %r466, [%rd193];
+
+add.s32 %r625, %r466, %r471;
+add.s32 %r622, %r622, 1024;
+add.s32 %r621, %r621, 1024;
+add.s32 %r618, %r618, 1024;
+setp.lt.s32 %p43, %r618, %r93;
+@%p43 bra $L__BB2_48;
+
+$L__BB2_49:
+
+mov.u32 %r472, %laneid;
+
+mov.u32 %r473, -1;
+redux.sync.add.s32 %r639, %r625, %r473;
+setp.ne.s32 %p44, %r472, 0;
+@%p44 bra $L__BB2_51;
+
+shr.s32 %r475, %r386, 31;
+shr.u32 %r476, %r475, 27;
+add.s32 %r477, %r386, %r476;
+shr.s32 %r478, %r477, 5;
+shl.b32 %r479, %r478, 2;
+mov.u32 %r480, _ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage;
+add.s32 %r481, %r480, %r479;
+st.shared.u32 [%r481+8], %r639;
+
+$L__BB2_51:
+bar.sync 0;
+setp.ne.s32 %p45, %r386, 0;
+@%p45 bra $L__BB2_71;
+
+ld.shared.u32 %r483, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+12];
+add.s32 %r484, %r483, %r639;
+ld.shared.u32 %r485, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+16];
+add.s32 %r486, %r485, %r484;
+ld.shared.u32 %r487, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+20];
+add.s32 %r488, %r487, %r486;
+ld.shared.u32 %r489, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+24];
+add.s32 %r490, %r489, %r488;
+ld.shared.u32 %r491, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+28];
+add.s32 %r492, %r491, %r490;
+ld.shared.u32 %r493, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+32];
+add.s32 %r494, %r493, %r492;
+ld.shared.u32 %r495, [_ZZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_E12temp_storage+36];
+add.s32 %r639, %r495, %r494;
+
+$L__BB2_71:
+mov.u32 %r575, %tid.x;
+setp.ne.s32 %p66, %r575, 0;
+@%p66 bra $L__BB2_73;
+
+cvta.to.global.u64 %rd210, %rd2;
+mul.wide.u32 %rd211, %r159, 4;
+add.s64 %rd212, %rd210, %rd211;
+st.global.u32 [%rd212], %r639;
+
+$L__BB2_73:
+ret;
+
+}

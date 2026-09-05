@@ -1,0 +1,13 @@
+{
+  "object_and_measured_binary_target_sass_equal": true,
+  "dump_hashes_verified": true,
+  "pinned_wsl_checkout_clean": true,
+  "live_main_ref_observed": "486de1c44daf7d1a343cbbf0f5477e9bea8ad600",
+  "latest_upstream_source_equal_to_pinned": {
+    "cub/cub/agent/agent_reduce.cuh": true,
+    "cub/cub/warp/specializations/warp_reduce_shfl.cuh": true,
+    "cub/cub/block/specializations/block_reduce_warp_reductions.cuh": true
+  },
+  "warp_reduce_local_history": "1749f8f6de05dfbb01e693908904fd38827614bc 2026-09-03 [CUB] A more efficient `WarpReduce` dispatch (#11164)\nff3421b5204652b3e78ff0d2f52396ad097c41af 2026-06-17 [CUB] Fully support warp `redux` (#9441)\n0b5730ce4f40be3ace67bef952563c3ba8357757 2025-12-18 Extract reduce_op_sync into a free function (#7004)\na04ffc4ef546053e53e61a8bd5ef099fcf367d14 2025-12-11 Use integer promotion for `warp_reduce` (#6819)\nbbe5cb7e406426ea6b5a0daf4e979851c2436fb5 2025-12-01 Improve our `WarpReduce` implementation (#6814)",
+  "gpu_work_launched": false
+}

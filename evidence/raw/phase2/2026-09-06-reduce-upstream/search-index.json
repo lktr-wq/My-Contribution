@@ -1,0 +1,702 @@
+[
+  {
+    "number": 307,
+    "title": "[FEA]: Vectorize memory operations in CUB algorithms",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/307",
+    "updated_at": "2024-11-20T18:27:40Z"
+  },
+  {
+    "number": 512,
+    "title": "[FEA]: Experiment with decoupled look-back optimization for primitive types",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/512",
+    "updated_at": "2026-01-15T16:59:11Z"
+  },
+  {
+    "number": 695,
+    "title": "variadic template implementation of thrust::tuple",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/695",
+    "updated_at": "2023-12-06T16:15:45Z"
+  },
+  {
+    "number": 821,
+    "title": "TBB implementation of `reduce_by_key` incompatible with `transform_output_iterator`",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/821",
+    "updated_at": "2023-11-08T19:23:04Z"
+  },
+  {
+    "number": 897,
+    "title": "Implementing reduction for non-commutative operations",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/897",
+    "updated_at": "2023-11-08T19:35:55Z"
+  },
+  {
+    "number": 913,
+    "title": "Optimise decoupled look-back for small non-primitive types",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/913",
+    "updated_at": "2025-07-07T16:53:15Z"
+  },
+  {
+    "number": 1534,
+    "title": "[FEA]: Using `thrust::device` execution policy in device code should fail to compile ",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/1534",
+    "updated_at": "2026-01-15T17:00:19Z"
+  },
+  {
+    "number": 1790,
+    "title": "[Possible BUG]: compute-sanitizer initchecker reports uninitialized global memory reads from thrust::reduce_by_key",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/1790",
+    "updated_at": "2025-03-07T06:40:03Z"
+  },
+  {
+    "number": 2086,
+    "title": "Add `cub::DeviceTransform`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/2086",
+    "updated_at": "2024-09-08T21:40:58Z"
+  },
+  {
+    "number": 2405,
+    "title": "Implement `cub::DeviceFind::FindIf`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/2405",
+    "updated_at": "2026-01-09T09:20:47Z"
+  },
+  {
+    "number": 3462,
+    "title": "Add Scan implementation for c.parallel",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/3462",
+    "updated_at": "2025-02-11T03:26:00Z"
+  },
+  {
+    "number": 3871,
+    "title": "[EPIC] Use work stealing in all relevant CUB algorithms",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/3871",
+    "updated_at": "2025-10-21T19:50:40Z"
+  },
+  {
+    "number": 4041,
+    "title": "[BUG]: compute-sanitizer issues Uninitialized __global__ memory read for cub::DeviceReduce::ReduceByKey",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/4041",
+    "updated_at": "2025-03-07T08:53:57Z"
+  },
+  {
+    "number": 4815,
+    "title": "Add vectorized `cub::DeviceTransform` algorithm",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/4815",
+    "updated_at": "2025-06-26T12:14:49Z"
+  },
+  {
+    "number": 4898,
+    "title": "Initial migration of cuco hasher to cudax",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/4898",
+    "updated_at": "2026-06-11T22:17:56Z"
+  },
+  {
+    "number": 5019,
+    "title": "Investigate the root causes in `DeviceScan` that lead to invalid values being passed to the custom reduction operator",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/5019",
+    "updated_at": "2025-08-28T01:40:09Z"
+  },
+  {
+    "number": 5315,
+    "title": "[STF] Add python bindings",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/5315",
+    "updated_at": "2026-08-13T18:50:16Z"
+  },
+  {
+    "number": 5327,
+    "title": "[BUG]: Potentially uninitialized/oob reads of `vsmem` in `DeviceMergeSort`, `DeviceReduceByKey`, and `DeviceScanByKey`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/5327",
+    "updated_at": "2026-08-20T16:24:07Z"
+  },
+  {
+    "number": 5505,
+    "title": "[BUG]: cub::DeviceReduce::Sum is not deterministic when reducing a sub range (AA[BB]) compared to the extracted range alone ([BB])",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/5505",
+    "updated_at": "2026-01-15T16:47:28Z"
+  },
+  {
+    "number": 5963,
+    "title": "Drop `thrust::counting_iterator` in favor of `cuda::counting_iterator` (#5839)",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/5963",
+    "updated_at": "2026-04-09T16:25:13Z"
+  },
+  {
+    "number": 6696,
+    "title": "[FEA]: Determine the best approach of tuning the Segmented Algorithms with regard to their segment size",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/6696",
+    "updated_at": "2026-01-15T16:58:37Z"
+  },
+  {
+    "number": 6712,
+    "title": "Segmented scan agent with multiple segments per block",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/6712",
+    "updated_at": "2026-08-18T23:17:19Z"
+  },
+  {
+    "number": 6792,
+    "title": "[FEA]: Investigate Fine Grained Bucket Sizes for Segmented Sort",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/6792",
+    "updated_at": "2026-03-11T17:00:20Z"
+  },
+  {
+    "number": 6811,
+    "title": "Integrate decoupled lookahead warpspeed scan",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/6811",
+    "updated_at": "2026-02-10T21:53:04Z"
+  },
+  {
+    "number": 7097,
+    "title": "[BUG]: Serious performance regression in branch 3.2.0 in cudf on Hopper",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/7097",
+    "updated_at": "2026-01-21T17:24:09Z"
+  },
+  {
+    "number": 7214,
+    "title": "[WIP] Implement single-phase cuda.coop functionality (v2).",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/7214",
+    "updated_at": "2026-04-20T16:13:46Z"
+  },
+  {
+    "number": 7386,
+    "title": "Expose boolean types in `cuda.compute` correctly",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/7386",
+    "updated_at": "2026-01-28T10:27:18Z"
+  },
+  {
+    "number": 7571,
+    "title": "Vectorize reduction also for trivially relocatable types",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/7571",
+    "updated_at": "2026-02-22T22:23:13Z"
+  },
+  {
+    "number": 7705,
+    "title": "Add fixed_capacity_map to cudax",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/7705",
+    "updated_at": "2026-07-04T06:37:45Z"
+  },
+  {
+    "number": 8020,
+    "title": "Add env ReduceByKey and TransformReduce",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8020",
+    "updated_at": "2026-03-25T09:01:13Z"
+  },
+  {
+    "number": 8134,
+    "title": "Fix OOB in warpspeed scan kernel on last partial tiles",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8134",
+    "updated_at": "2026-05-10T11:19:02Z"
+  },
+  {
+    "number": 8172,
+    "title": "[CUB] Add detail::uninitialized_array",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8172",
+    "updated_at": "2026-05-07T07:03:15Z"
+  },
+  {
+    "number": 8391,
+    "title": "Add WarpBitonicSort",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8391",
+    "updated_at": "2026-08-04T18:25:11Z"
+  },
+  {
+    "number": 8484,
+    "title": "[cccl.c] Split build step into compile + load",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8484",
+    "updated_at": "2026-06-22T17:12:03Z"
+  },
+  {
+    "number": 8747,
+    "title": "Fix bug in reduce bench base.cuh only shown during tuning",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8747",
+    "updated_at": "2026-04-30T07:37:31Z"
+  },
+  {
+    "number": 8863,
+    "title": "Allow public tuning of non-ByKey `cub::DeviceReduce`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8863",
+    "updated_at": "2026-07-03T13:28:47Z"
+  },
+  {
+    "number": 8892,
+    "title": "Variable segment size TopK benchmark",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8892",
+    "updated_at": "2026-05-13T02:42:58Z"
+  },
+  {
+    "number": 8985,
+    "title": "CCCL C v2",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8985",
+    "updated_at": "2026-07-20T20:11:04Z"
+  },
+  {
+    "number": 8994,
+    "title": "`cuda::simd` Add `abs_diff`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/8994",
+    "updated_at": "2026-09-03T17:14:51Z"
+  },
+  {
+    "number": 9000,
+    "title": "[cub] Use `REQUIRE_CUDART` in catch2 tests",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9000",
+    "updated_at": "2026-05-19T00:39:36Z"
+  },
+  {
+    "number": 9030,
+    "title": "[FEA]: Identify gaps in tensor algorithms coverage",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/9030",
+    "updated_at": "2026-06-02T16:40:29Z"
+  },
+  {
+    "number": 9098,
+    "title": "run_to_run deterministic device scan",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9098",
+    "updated_at": "2026-06-03T23:16:14Z"
+  },
+  {
+    "number": 9101,
+    "title": "optimize blockReduceWarp",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9101",
+    "updated_at": "2026-09-02T21:06:52Z"
+  },
+  {
+    "number": 9137,
+    "title": "`cudax::copy(mdspan)` Optimize shared memory cases",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9137",
+    "updated_at": "2026-06-04T18:50:15Z"
+  },
+  {
+    "number": 9168,
+    "title": "Refactor warpspeed scan 1/2",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9168",
+    "updated_at": "2026-05-29T10:36:37Z"
+  },
+  {
+    "number": 9169,
+    "title": "Refactor warpspeed scan 2/2 ",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9169",
+    "updated_at": "2026-06-01T12:46:51Z"
+  },
+  {
+    "number": 9206,
+    "title": "Prevent type-mismatch errors in cuda.compute.reduce_into",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9206",
+    "updated_at": "2026-06-04T14:29:59Z"
+  },
+  {
+    "number": 9222,
+    "title": "Add warp-aggregated CUB block histogram algorithms",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9222",
+    "updated_at": "2026-06-11T05:59:36Z"
+  },
+  {
+    "number": 9224,
+    "title": "Implement Segmented TopK using Thread-Block-Clusters",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9224",
+    "updated_at": "2026-08-13T15:13:09Z"
+  },
+  {
+    "number": 9247,
+    "title": "Add PDL to `cub::DeviceRadixSort`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9247",
+    "updated_at": "2026-09-04T07:51:14Z"
+  },
+  {
+    "number": 9300,
+    "title": "[cudax] Implement `cuda::coop::reduce` for threads within a warp ",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9300",
+    "updated_at": "2026-06-09T20:11:27Z"
+  },
+  {
+    "number": 9322,
+    "title": "Add CUB BlockReduceBroadcast",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9322",
+    "updated_at": "2026-06-10T02:20:36Z"
+  },
+  {
+    "number": 9329,
+    "title": "Allow public tuning of the `cub::DeviceReduce::ReduceByKey` and `cub::DeviceRunLengthEncode::Encode`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9329",
+    "updated_at": "2026-06-10T06:52:29Z"
+  },
+  {
+    "number": 9331,
+    "title": "Exposes `DeviceBatchedTopK::{Min,Max}{Keys,Pairs}` for non-deterministic, unordered, and small segments-only",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9331",
+    "updated_at": "2026-07-01T03:49:13Z"
+  },
+  {
+    "number": 9447,
+    "title": "[FEA]: Capture potential segmented reduce transform API and performance",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/9447",
+    "updated_at": "2026-06-24T20:08:38Z"
+  },
+  {
+    "number": 9481,
+    "title": "Vectorize output store in ublkcp DeviceTransform kernel",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9481",
+    "updated_at": "2026-07-08T00:45:47Z"
+  },
+  {
+    "number": 9496,
+    "title": "Add CUB `Prefetch` as an option to all `cub::BlockLoad` algorithms",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9496",
+    "updated_at": "2026-07-08T21:45:56Z"
+  },
+  {
+    "number": 9506,
+    "title": "bugprone-misplaced-widening-cast",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9506",
+    "updated_at": "2026-07-07T09:40:23Z"
+  },
+  {
+    "number": 9565,
+    "title": "warpspeed run_to_run deterministic scan for SM90 using atomic global counter",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9565",
+    "updated_at": "2026-07-09T20:54:18Z"
+  },
+  {
+    "number": 9568,
+    "title": "[cccl.c]: Add `serialize()` and `deserialize()` functions to enable ahead-of-time compilation workflows",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9568",
+    "updated_at": "2026-06-30T10:00:32Z"
+  },
+  {
+    "number": 9645,
+    "title": "Add MGMN Reduce",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9645",
+    "updated_at": "2026-07-10T21:53:00Z"
+  },
+  {
+    "number": 9659,
+    "title": "Small refactorings for batched memcpy",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9659",
+    "updated_at": "2026-07-06T09:02:54Z"
+  },
+  {
+    "number": 9674,
+    "title": "Adds `thrust::erase` and `thrust::erase_if`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9674",
+    "updated_at": "2026-08-03T17:27:37Z"
+  },
+  {
+    "number": 9699,
+    "title": "Warpspeed Implementation of `cub::DeviceRunLengthEncode::Encode`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9699",
+    "updated_at": "2026-08-18T02:49:09Z"
+  },
+  {
+    "number": 9740,
+    "title": "[CUB] GPU-to-GPU `DeviceReduce` with device resident problem size",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9740",
+    "updated_at": "2026-07-15T10:07:46Z"
+  },
+  {
+    "number": 9762,
+    "title": "Do not vectorize large type reductions",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9762",
+    "updated_at": "2026-07-09T21:01:49Z"
+  },
+  {
+    "number": 9771,
+    "title": "[BUG]: cub::DeviceReduce gpu_to_gpu determinism writes out of bounds when num_items is an exact multiple of INT32_MAX",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/9771",
+    "updated_at": "2026-07-09T18:24:17Z"
+  },
+  {
+    "number": 9840,
+    "title": "[DRAFT] Adds latency-optimized, redux-based reduce-then-scan algorithm",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9840",
+    "updated_at": "2026-09-04T15:53:49Z"
+  },
+  {
+    "number": 9885,
+    "title": "[cuda.compute]: Add smoke tests for benchmarks",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/9885",
+    "updated_at": "2026-07-22T16:34:48Z"
+  },
+  {
+    "number": 9995,
+    "title": "[BUG]: `DeviceReduce::ReduceByKey` is not run-to-run deterministic for fp64 sums over multi-tile runs",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/9995",
+    "updated_at": "2026-08-27T15:53:03Z"
+  },
+  {
+    "number": 10052,
+    "title": "Test sanitizer on blackwell",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10052",
+    "updated_at": "2026-08-19T06:11:13Z"
+  },
+  {
+    "number": 10556,
+    "title": "[cub] Add static and runtime-sized shared-memory histogram privatization",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10556",
+    "updated_at": "2026-08-31T00:20:33Z"
+  },
+  {
+    "number": 10568,
+    "title": "[cub] Add cooperative cached high-bin histograms",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10568",
+    "updated_at": "2026-09-05T01:14:56Z"
+  },
+  {
+    "number": 10581,
+    "title": "cudax: add configurable on_throw exception handling",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10581",
+    "updated_at": "2026-08-13T18:53:58Z"
+  },
+  {
+    "number": 10621,
+    "title": "[libcu++] Promote cuco hashers to cuda::hash",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10621",
+    "updated_at": "2026-08-10T23:58:34Z"
+  },
+  {
+    "number": 10622,
+    "title": "Split cuda-cccl into headers, compute, and metapackage wheels",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10622",
+    "updated_at": "2026-08-05T01:53:59Z"
+  },
+  {
+    "number": 10625,
+    "title": "[STF] data_place::replicated — one copy per grid member, read-only",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10625",
+    "updated_at": "2026-08-05T12:16:18Z"
+  },
+  {
+    "number": 10650,
+    "title": "Split cuda-compute into its own wheel with private CCCL headers",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10650",
+    "updated_at": "2026-08-05T18:58:32Z"
+  },
+  {
+    "number": 10658,
+    "title": "[STF] locality domain places",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10658",
+    "updated_at": "2026-08-07T18:05:24Z"
+  },
+  {
+    "number": 10661,
+    "title": "[RFE] `DeviceSegmentedSort`: user requests, workloads & feature prioritization",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/10661",
+    "updated_at": "2026-08-05T16:03:23Z"
+  },
+  {
+    "number": 10686,
+    "title": "Pretty printers maintenance",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10686",
+    "updated_at": "2026-08-10T12:48:26Z"
+  },
+  {
+    "number": 10687,
+    "title": "[libcu++] Backport `cuda::std::constant_wrapper` to C++17",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10687",
+    "updated_at": "2026-08-07T09:40:14Z"
+  },
+  {
+    "number": 10696,
+    "title": "Add stdpar smoke test for transform_reduce",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10696",
+    "updated_at": "2026-09-04T09:54:28Z"
+  },
+  {
+    "number": 10733,
+    "title": "Fixes various issues in partial tile merge sort",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10733",
+    "updated_at": "2026-08-20T16:24:06Z"
+  },
+  {
+    "number": 10752,
+    "title": "Add sm107 tunings for DeviceReduce::Sum",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10752",
+    "updated_at": "2026-09-04T21:03:29Z"
+  },
+  {
+    "number": 10770,
+    "title": "[STF] Placement evaluation: score a mapping before committing memory (stack 2/4)",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10770",
+    "updated_at": "2026-09-02T09:14:55Z"
+  },
+  {
+    "number": 10788,
+    "title": "[c.parallel.v2] hostjit: unregister the fatbin when a produced library is unloaded",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10788",
+    "updated_at": "2026-08-25T21:35:25Z"
+  },
+  {
+    "number": 10866,
+    "title": "[STF] Replication for structured partitions across C++, C API, Python, and torch (stack 4/4)",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10866",
+    "updated_at": "2026-08-27T07:06:22Z"
+  },
+  {
+    "number": 10898,
+    "title": "C2H/CUB: Add checked buffer utilities, stream-aware test support, and migrate segmented-scan tests",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10898",
+    "updated_at": "2026-09-04T12:07:53Z"
+  },
+  {
+    "number": 10912,
+    "title": "[Tile] Fix window CI scripts",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/10912",
+    "updated_at": "2026-09-03T23:00:16Z"
+  },
+  {
+    "number": 11000,
+    "title": "Add `O(sample_size)` sampling algorithm under `cuda/`",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/11000",
+    "updated_at": "2026-08-28T11:14:01Z"
+  },
+  {
+    "number": 11030,
+    "title": "[FEA]: Add runtime-width group merge-sort primitive for segmented sort",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/11030",
+    "updated_at": "2026-08-28T14:23:48Z"
+  },
+  {
+    "number": 11032,
+    "title": "[CUB] Make ReduceByKey run-to-run deterministic",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/11032",
+    "updated_at": "2026-09-02T08:46:58Z"
+  },
+  {
+    "number": 11060,
+    "title": "Reduces the latency of air-based block-level top-k",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/11060",
+    "updated_at": "2026-09-04T11:15:01Z"
+  },
+  {
+    "number": 11088,
+    "title": "Add `cuda::bit_fns` to `<cuda/bit>`",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/11088",
+    "updated_at": "2026-09-05T07:17:27Z"
+  },
+  {
+    "number": 11118,
+    "title": "[STF] cudax sharded: concepts for sharded structures + concept-generic algorithms (pilot)",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/11118",
+    "updated_at": "2026-09-05T16:09:40Z"
+  },
+  {
+    "number": 11164,
+    "title": "[CUB] A more efficient `WarpReduce` dispatch",
+    "state": "closed",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/11164",
+    "updated_at": "2026-09-03T18:34:47Z"
+  },
+  {
+    "number": 11167,
+    "title": "[BUG]: scan_by_key silently corrupts second tile on sm_120 with CUDA 12.9 and tabulate output",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/issues/11167",
+    "updated_at": "2026-09-03T14:31:14Z"
+  },
+  {
+    "number": 11182,
+    "title": "Add Numba-CUDA-MLIR Block Load and Store to cuda.coop",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/11182",
+    "updated_at": "2026-09-04T19:02:30Z"
+  },
+  {
+    "number": 11200,
+    "title": "cuda.coop: execute all Block Load and Store algorithms",
+    "state": "open",
+    "html_url": "https://github.com/NVIDIA/cccl/pull/11200",
+    "updated_at": "2026-09-04T19:02:44Z"
+  }
+]

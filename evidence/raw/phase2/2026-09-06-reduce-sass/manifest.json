@@ -1,0 +1,65 @@
+{
+  "binary": "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce",
+  "binary_sha256": "0f997ed19d59bd20343f557f7766b53ab8f9ca74248e8df2c61533b98eaa6f95",
+  "commands": [
+    {
+      "label": "object-sass",
+      "args": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-sass",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "kernel-demangled",
+      "args": [
+        "c++filt",
+        "_ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "binary-reduce-sass",
+      "args": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-sass",
+        "--function",
+        "_ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "binary-reduce-ptx",
+      "args": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-ptx",
+        "--function",
+        "_ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "binary-reduce-resources",
+      "args": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-resource-usage",
+        "--function",
+        "_ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce"
+      ],
+      "returncode": 0
+    }
+  ],
+  "symbol": "_ZN3cub16_V_300600_SM_8906detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_",
+  "demangled": "void cub::_V_300600_SM_890::detail::reduce::DeviceReduceKernel<cub::_V_300600_SM_890::detail::reduce::policy_selector_from_types<int, unsigned int, cuda::std::__4::plus<void>, (cuda::execution::__4::determinism::__determinism_t)1>, true, int*, int*, unsigned int, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(int*, int*, unsigned int, cub::_V_300600_SM_890::GridEvenShare<unsigned int>, cuda::std::__4::plus<void>, int, cuda::std::__4::identity)",
+  "artifact_sha256": {
+    "binary-reduce-ptx.txt": "86ae435bf32e0c0424aa908921d0e112b18f1e614fb091e4dc8cd750ee36d101",
+    "binary-reduce-resources.txt": "ecbd94fba8f52582a3b528ba448ddee248f4a3ad1a1476a1f99f5f09d0b39aec",
+    "binary-reduce-sass.txt": "23f23d15ca5c11f650e2637c3ed0d5ecfb2d29ec3af2f0ad81aa0f120cb286bf",
+    "kernel-demangled.txt": "4113bce26b29c80c50e3232e0d49cfd675d2db9854b10ae73c1205d405a94ff8",
+    "object-sass.txt": "a035b1e7671e8413540eec90230420d05e8b10cb7d4ef20822e015465e4c6cfa"
+  }
+}
