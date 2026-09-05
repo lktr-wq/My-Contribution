@@ -1,0 +1,934 @@
+{
+  "utc_start": "2026-09-05T06:16:11.909357+00:00",
+  "scope": "official I32/I32, 9 sizes, 3 orders, no correctness assertion",
+  "cccl_head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "cccl_status": "",
+  "binary_sha256": "950d9d1185acd25762a29a4210fb4d4b2ec35f83b0feffefdb5e3081e671c13f",
+  "nvbench_head": "410dcdd21c9b48191ecb3d3d77060b1bf4ac6244",
+  "env_overrides": {
+    "LD_LIBRARY_PATH": "/home/lktr/src/cccl/build/cub-benchmark/lib:/usr/lib/wsl/lib:/usr/local/cuda/lib64",
+    "CCCL_EXPERIMENTAL_LOGGING": "0"
+  },
+  "gpu_before": "Sat Sep  5 14:16:12 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.01              KMD Version: 610.88        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    On  |   00000000:01:00.0  On |                  N/A |\n| N/A   42C    P8              4W /  128W |    1127MiB /   8188MiB |      7%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+  "runs": [
+    {
+      "label": "dispatch-trace",
+      "sizes_requested": [
+        4095,
+        4096,
+        4097,
+        16777216,
+        16777217
+      ],
+      "trace_only": true,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "utc_start": "2026-09-05T06:16:12.207773+00:00",
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}=[4095,4096,4097,16777216,16777217]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-boundaries/dispatch-trace.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-boundaries/dispatch-trace.md",
+        "--profile"
+      ],
+      "logging": "1",
+      "returncode": 0,
+      "elapsed_s": 0.5706446390000002,
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "warning_lines": []
+    },
+    {
+      "label": "round1",
+      "sizes_requested": [
+        4095,
+        4096,
+        4097,
+        16773120,
+        16777215,
+        16777216,
+        16777217,
+        16781311,
+        16781312
+      ],
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "utc_start": "2026-09-05T06:16:12.883636+00:00",
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}=[4095,4096,4097,16773120,16777215,16777216,16777217,16781311,16781312]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-boundaries/round1.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-boundaries/round1.md",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15"
+      ],
+      "logging": "0",
+      "returncode": 0,
+      "elapsed_s": 4.682323965,
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "warning_lines": [],
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.27511953,
+          "mean_s": 1.5457536048721648e-05,
+          "median_s": 1.3311999849975109e-05,
+          "noise": 0.7703050084234664,
+          "iqr": 0.2163461245835651,
+          "min_s": 5.119999870657921e-06,
+          "max_s": 0.00026419198513031006,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=4095",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "4095"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.25804602000000004,
+          "mean_s": 1.5322207983583294e-05,
+          "median_s": 1.4336000196635724e-05,
+          "noise": 0.544234909062234,
+          "iqr": 0.1428571242960267,
+          "min_s": 3.0720001086592673e-06,
+          "max_s": 0.000159743994474411,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=4096",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "4096"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.27191696000000004,
+          "mean_s": 2.2080543981399458e-05,
+          "median_s": 1.8432000651955604e-05,
+          "noise": 0.7659920678711013,
+          "iqr": 0.4444444781294323,
+          "min_s": 5.119999870657921e-06,
+          "max_s": 0.0003409920036792755,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=4097",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "4097"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.5464334190000001,
+          "mean_s": 0.00037265116798877864,
+          "median_s": 0.0003717119991779327,
+          "noise": 0.03401822528946259,
+          "iqr": 0.019283733083398515,
+          "min_s": 0.0003389439880847931,
+          "max_s": 0.0005713919997215271,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16773120",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16773120"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.547714441,
+          "mean_s": 0.0003730953292250642,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.031354784136298185,
+          "iqr": 0.01923075539230404,
+          "min_s": 0.00027340799570083616,
+          "max_s": 0.0005355520248413086,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16777215",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777215"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.5457222270000001,
+          "mean_s": 0.0003722726725637919,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.031917015727122515,
+          "iqr": 0.021634619805236108,
+          "min_s": 0.000272383987903595,
+          "max_s": 0.0006420480012893677,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16777216",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777216"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.544093344,
+          "mean_s": 0.00037285024100542263,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.02960921677134732,
+          "iqr": 0.017256172470575357,
+          "min_s": 0.00027340799570083616,
+          "max_s": 0.0005406720042228698,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16777217",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777217"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.5432135770000001,
+          "mean_s": 0.00037275904160738086,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.024176009934044645,
+          "iqr": 0.01914488310294811,
+          "min_s": 0.0003317759931087494,
+          "max_s": 0.0005580800175666809,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16781311",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16781311"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.539025579,
+          "mean_s": 0.00037259916949272274,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.01965965435730054,
+          "iqr": 0.01923075539230404,
+          "min_s": 0.00029561600089073183,
+          "max_s": 0.00042495998740196226,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16781312",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16781312"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ],
+      "sizes_actual": [
+        4095,
+        4096,
+        4097,
+        16773120,
+        16777215,
+        16777216,
+        16777217,
+        16781311,
+        16781312
+      ]
+    },
+    {
+      "label": "round2",
+      "sizes_requested": [
+        16781312,
+        16781311,
+        16777217,
+        16777216,
+        16777215,
+        16773120,
+        4097,
+        4096,
+        4095
+      ],
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "utc_start": "2026-09-05T06:16:17.675818+00:00",
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}=[16781312,16781311,16777217,16777216,16777215,16773120,4097,4096,4095]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-boundaries/round2.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-boundaries/round2.md",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15"
+      ],
+      "logging": "0",
+      "returncode": 0,
+      "elapsed_s": 4.7337425400000015,
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "warning_lines": [],
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.543969869,
+          "mean_s": 0.0003731562892496595,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.03362314123454197,
+          "iqr": 0.01923075539230404,
+          "min_s": 0.000272383987903595,
+          "max_s": 0.0005437440276145935,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16781312",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16781312"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.552794719,
+          "mean_s": 0.0003733780487477792,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.03985787084089667,
+          "iqr": 0.02197802900708357,
+          "min_s": 0.0002826240062713623,
+          "max_s": 0.0006369280219078064,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16781311",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16781311"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.548365389,
+          "mean_s": 0.00037328080117702645,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.03071420138650448,
+          "iqr": 0.01923075539230404,
+          "min_s": 0.000272383987903595,
+          "max_s": 0.0005437440276145935,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16777217",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777217"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.554049109,
+          "mean_s": 0.0003735101442039026,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.03215763394267409,
+          "iqr": 0.021892156717727637,
+          "min_s": 0.00027852800488471985,
+          "max_s": 0.00054476797580719,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16777216",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777216"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.552729863,
+          "mean_s": 0.00037368713697791245,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.02806488128775864,
+          "iqr": 0.01923075539230404,
+          "min_s": 0.0002795520126819611,
+          "max_s": 0.0004382399916648865,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16777215",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777215"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.5448940560000001,
+          "mean_s": 0.00037309312072396437,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.034797253107987224,
+          "iqr": 0.016483481777524362,
+          "min_s": 0.0002775039970874786,
+          "max_s": 0.0006707199811935425,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16773120",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16773120"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.276944544,
+          "mean_s": 2.156864001788206e-05,
+          "median_s": 1.740800030529499e-05,
+          "noise": 0.7251887219691349,
+          "iqr": 0.4779411158900598,
+          "min_s": 6.0479999519884585e-06,
+          "max_s": 0.00019353599846363067,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=4097",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "4097"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.278417609,
+          "mean_s": 1.479856000840668e-05,
+          "median_s": 1.3311999849975109e-05,
+          "noise": 0.9382162752317745,
+          "iqr": 0.23798076502637427,
+          "min_s": 3.0720001086592673e-06,
+          "max_s": 0.00020172800123691558,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=4096",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "4096"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.269903141,
+          "mean_s": 1.7085375990718692e-05,
+          "median_s": 1.4336000196635724e-05,
+          "noise": 0.9902669471651528,
+          "iqr": 0.28794640841521646,
+          "min_s": 5.119999870657921e-06,
+          "max_s": 0.0003338240087032318,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=4095",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "4095"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ],
+      "sizes_actual": [
+        16781312,
+        16781311,
+        16777217,
+        16777216,
+        16777215,
+        16773120,
+        4097,
+        4096,
+        4095
+      ]
+    },
+    {
+      "label": "round3",
+      "sizes_requested": [
+        16777215,
+        16777216,
+        16777217,
+        16781311,
+        16781312,
+        4095,
+        4096,
+        4097,
+        16773120
+      ],
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "utc_start": "2026-09-05T06:16:22.516647+00:00",
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}=[16777215,16777216,16777217,16781311,16781312,4095,4096,4097,16773120]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-boundaries/round3.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-boundaries/round3.md",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15"
+      ],
+      "logging": "0",
+      "returncode": 0,
+      "elapsed_s": 4.833313628999999,
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "warning_lines": [
+        "Warn: GPU throttled below threshold (1461.83 MHz / 2250.00 MHz) (65% < 75%) on sample 506. Discarding previous trial and pausing for 0.050s."
+      ],
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.560736641,
+          "mean_s": 0.0003733758082985883,
+          "median_s": 0.0003717119991779327,
+          "noise": 0.05037296026904662,
+          "iqr": 0.019283733083398515,
+          "min_s": 0.00033792001008987427,
+          "max_s": 0.00066457599401474,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16777215",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777215"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.54307109,
+          "mean_s": 0.00037240796926617763,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.03871265559892092,
+          "iqr": 0.01854393698860912,
+          "min_s": 0.0002744320034980774,
+          "max_s": 0.000634880006313324,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16777216",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777216"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.560276703,
+          "mean_s": 0.0003728071683943284,
+          "median_s": 0.0003717119991779327,
+          "noise": 0.044473555337470445,
+          "iqr": 0.019541979469372195,
+          "min_s": 0.0003102720081806183,
+          "max_s": 0.00066457599401474,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16777217",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777217"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.544615398,
+          "mean_s": 0.00037273900929093534,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.021927277818943245,
+          "iqr": 0.01923075539230404,
+          "min_s": 0.0003031040132045746,
+          "max_s": 0.00041763201355934145,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16781311",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16781311"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.544540753,
+          "mean_s": 0.00037373123294115197,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.036293248348972566,
+          "iqr": 0.01923075539230404,
+          "min_s": 0.00030924800038337706,
+          "max_s": 0.0006604800224304199,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16781312",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16781312"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.30919776200000004,
+          "mean_s": 1.6255839976016513e-05,
+          "median_s": 1.44640002399683e-05,
+          "noise": 0.6785679094878072,
+          "iqr": 0.21238938451967293,
+          "min_s": 4.0959999896585945e-06,
+          "max_s": 0.00021606400609016418,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=4095",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "4095"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.25504396500000004,
+          "mean_s": 1.6300287960097282e-05,
+          "median_s": 1.4336000196635724e-05,
+          "noise": 0.5270385652183714,
+          "iqr": 0.1428571242960267,
+          "min_s": 3.0720001086592673e-06,
+          "max_s": 0.00010035199671983719,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=4096",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "4096"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.273095749,
+          "mean_s": 2.1403200004249915e-05,
+          "median_s": 1.644800044596195e-05,
+          "noise": 0.6061205653005408,
+          "iqr": 0.4474708149174228,
+          "min_s": 6.144000217318535e-06,
+          "max_s": 0.00012800000607967376,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=4097",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "4097"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.543334788,
+          "mean_s": 0.0003724834249615681,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.021229413188441456,
+          "iqr": 0.02197802900708357,
+          "min_s": 0.000289792001247406,
+          "max_s": 0.0004167680144309998,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=16773120",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16773120"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ],
+      "sizes_actual": [
+        16777215,
+        16777216,
+        16777217,
+        16781311,
+        16781312,
+        4095,
+        4096,
+        4097,
+        16773120
+      ]
+    }
+  ],
+  "source_sha256": {
+    "cub/benchmarks/bench/reduce/base.cuh": "7fe86731402fe7f05c754c625774ff0d597e1988cb85e06665cbbf476cbe8280",
+    "cub/benchmarks/bench/reduce/sum.cu": "c41a007b41c79a076952271bf88c8b9b491b5940aaf2c5e5f0b3e68883e4ae76",
+    "cub/cub/device/device_reduce.cuh": "16ebc9f81a33e34ed6641e8734b5a98bf6fe2bb2bc027f1fde487bbf512b94cf",
+    "cub/cub/device/dispatch/tuning/tuning_reduce.cuh": "27acc1fe6c227ba5923f59969be8e1b25f6ca2e7d7f48a2ad8bd63fcbc8dd395",
+    "cub/cub/device/dispatch/dispatch_reduce.cuh": "cbe70c12a09709c8613aca3814bd05b1324b2ce159bf9fc474834be0bf2e2750",
+    "cub/cub/grid/grid_even_share.cuh": "18a599e5173752f10203bb1fd1e242bffe1b5bdc32c09209c0793682702e559c",
+    "cub/cub/agent/agent_reduce.cuh": "1c72e6c4a628f7c3c7ea2e2a9b3e14d61be9cc0e9d11b6d6dbf931ac9501f497",
+    "cub/cub/util_arch.cuh": "d4b360cbae1b390d3e8a820a9162f4639eadc0a844c8148698947260322f6052",
+    "cub/cub/detail/logging.cuh": "542fb5a1d0552634d1bd19ba41ea744d703c56ef07867336d401652844cc786c"
+  },
+  "groups": [
+    {
+      "elements": 4095,
+      "medians_us": [
+        13.311999849975109,
+        14.336000196635723,
+        14.4640002399683
+      ],
+      "median_of_medians_us": 14.336000196635723,
+      "span_pct": 8.035716895871237,
+      "noise_pct": [
+        77.03050084234664,
+        99.02669471651528,
+        67.85679094878073
+      ],
+      "means_us": [
+        15.457536048721648,
+        17.085375990718692,
+        16.255839976016514
+      ]
+    },
+    {
+      "elements": 4096,
+      "medians_us": [
+        14.336000196635723,
+        13.311999849975109,
+        14.336000196635723
+      ],
+      "median_of_medians_us": 14.336000196635723,
+      "span_pct": 7.142859462996657,
+      "noise_pct": [
+        54.42349090622341,
+        93.82162752317745,
+        52.703856521837146
+      ],
+      "means_us": [
+        15.322207983583294,
+        14.79856000840668,
+        16.300287960097283
+      ]
+    },
+    {
+      "elements": 4097,
+      "medians_us": [
+        18.432000651955605,
+        17.40800030529499,
+        16.448000445961952
+      ],
+      "median_of_medians_us": 17.40800030529499,
+      "span_pct": 11.397059806979549,
+      "noise_pct": [
+        76.59920678711013,
+        72.51887219691349,
+        60.61205653005408
+      ],
+      "means_us": [
+        22.080543981399458,
+        21.56864001788206,
+        21.403200004249914
+      ]
+    },
+    {
+      "elements": 16773120,
+      "medians_us": [
+        371.71199917793274,
+        372.73600697517395,
+        372.73600697517395
+      ],
+      "median_of_medians_us": 372.73600697517395,
+      "span_pct": 0.27472736147796284,
+      "noise_pct": [
+        3.4018225289462594,
+        3.4797253107987225,
+        2.1229413188441457
+      ],
+      "means_us": [
+        372.65116798877864,
+        373.0931207239644,
+        372.4834249615681
+      ]
+    },
+    {
+      "elements": 16777215,
+      "medians_us": [
+        372.73600697517395,
+        372.73600697517395,
+        371.71199917793274
+      ],
+      "median_of_medians_us": 372.73600697517395,
+      "span_pct": 0.27472736147796284,
+      "noise_pct": [
+        3.1354784136298184,
+        2.806488128775864,
+        5.037296026904662
+      ],
+      "means_us": [
+        373.0953292250642,
+        373.6871369779125,
+        373.37580829858825
+      ]
+    },
+    {
+      "elements": 16777216,
+      "medians_us": [
+        372.73600697517395,
+        372.73600697517395,
+        372.73600697517395
+      ],
+      "median_of_medians_us": 372.73600697517395,
+      "span_pct": 0.0,
+      "noise_pct": [
+        3.1917015727122515,
+        3.215763394267409,
+        3.871265559892092
+      ],
+      "means_us": [
+        372.2726725637919,
+        373.5101442039026,
+        372.40796926617764
+      ]
+    },
+    {
+      "elements": 16777217,
+      "medians_us": [
+        372.73600697517395,
+        372.73600697517395,
+        371.71199917793274
+      ],
+      "median_of_medians_us": 372.73600697517395,
+      "span_pct": 0.27472736147796284,
+      "noise_pct": [
+        2.960921677134732,
+        3.0714201386504483,
+        4.447355533747045
+      ],
+      "means_us": [
+        372.8502410054226,
+        373.28080117702643,
+        372.80716839432836
+      ]
+    },
+    {
+      "elements": 16781311,
+      "medians_us": [
+        372.73600697517395,
+        372.73600697517395,
+        372.73600697517395
+      ],
+      "median_of_medians_us": 372.73600697517395,
+      "span_pct": 0.0,
+      "noise_pct": [
+        2.4176009934044647,
+        3.985787084089667,
+        2.1927277818943245
+      ],
+      "means_us": [
+        372.7590416073809,
+        373.3780487477792,
+        372.7390092909353
+      ]
+    },
+    {
+      "elements": 16781312,
+      "medians_us": [
+        372.73600697517395,
+        372.73600697517395,
+        372.73600697517395
+      ],
+      "median_of_medians_us": 372.73600697517395,
+      "span_pct": 0.0,
+      "noise_pct": [
+        1.9659654357300538,
+        3.362314123454197,
+        3.6293248348972567
+      ],
+      "means_us": [
+        372.59916949272275,
+        373.1562892496595,
+        373.731232941152
+      ]
+    }
+  ],
+  "gpu_after": "Sat Sep  5 14:16:27 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.01              KMD Version: 610.88        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    On  |   00000000:01:00.0  On |                  N/A |\n| N/A   53C    P0             38W /  133W |    1111MiB /   8188MiB |      2%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+  "cccl_status_after": "",
+  "utc_end": "2026-09-05T06:16:27.538513+00:00"
+}
