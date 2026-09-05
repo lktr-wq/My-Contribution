@@ -1,0 +1,2 @@
+/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-src/nvbench/cuda_stream.cuh:124: Cuda API call returned error: cudaErrorDeviceUninitialized: invalid device context
+Command: 'cudaStreamDestroy(s)'

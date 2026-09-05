@@ -1,0 +1,1096 @@
+{
+  "scope": "fixed input/output/scratch/stream within process; patterned I32 sum",
+  "source": "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/fixed_input_reduce.cu",
+  "source_sha256": "f3df6aa6e4fa981a199a08ab4f6c5011e8f1cd9294fb8dc3ef3d685118aac18f",
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "upstream_status": "",
+  "steps": [
+    {
+      "label": "compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-forward-unknown-to-host-compiler",
+        "-ccbin=/usr/bin/c++",
+        "-DTUNE_BASE=1",
+        "-I/home/lktr/src/cccl/nvbench_helper/nvbench_helper",
+        "-I/home/lktr/src/cccl/lib/cmake/libcudacxx/../../../libcudacxx/include",
+        "-I/home/lktr/src/cccl/lib/cmake/thrust/../../../thrust",
+        "-I/home/lktr/src/cccl/lib/cmake/cub/../../../cub",
+        "-isystem",
+        "/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-src",
+        "-isystem",
+        "/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-build",
+        "-isystem",
+        "/usr/local/cuda/targets/x86_64-linux/include",
+        "-isystem",
+        "/usr/local/cuda/targets/x86_64-linux/include/cccl",
+        "-isystem",
+        "/usr/local/cuda/include",
+        "-O3",
+        "-DNDEBUG",
+        "-std=c++17",
+        "--generate-code=arch=compute_89,code=[compute_89,sm_89]",
+        "--extended-lambda",
+        "-x",
+        "cu",
+        "-c",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/fixed_input_reduce.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce.o"
+      ],
+      "trace_only": false,
+      "gpu": false,
+      "returncode": 0,
+      "elapsed_s": 12.808843104999994,
+      "warnings": []
+    },
+    {
+      "label": "link",
+      "command": [
+        "/usr/bin/c++",
+        "nvbench_helper/CMakeFiles/cccl.nvbench_helper.dir/nvbench_helper/nvbench_helper.cu.o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce.o",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce",
+        "-Wl,-rpath,/home/lktr/src/cccl/build/cub-benchmark/lib",
+        "/usr/local/cuda-13.3/targets/x86_64-linux/lib/libcurand.so",
+        "lib/libnvbench.so",
+        "-lstdc++fs",
+        "/usr/local/cuda/targets/x86_64-linux/lib/stubs/libnvidia-ml.so",
+        "/usr/local/cuda/targets/x86_64-linux/lib/stubs/libcuda.so",
+        "-ldl",
+        "/usr/lib/x86_64-linux-gnu/librt.a",
+        "/usr/local/cuda/lib64/libcupti.so",
+        "-lcudadevrt",
+        "-lcudart_static",
+        "-lrt",
+        "-lpthread",
+        "-ldl",
+        "-L/usr/local/cuda/targets/x86_64-linux/lib/stubs",
+        "-L/usr/local/cuda/targets/x86_64-linux/lib"
+      ],
+      "trace_only": false,
+      "gpu": false,
+      "returncode": 0,
+      "elapsed_s": 0.9725486130000149,
+      "warnings": []
+    },
+    {
+      "label": "trace",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce",
+        "-d",
+        "0",
+        "-a",
+        "Elements{io}=[2945024,2947072,2949088,2949116,2949119,2949120,2949121]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/trace.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/trace.md",
+        "--profile"
+      ],
+      "trace_only": true,
+      "gpu": true,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "returncode": 0,
+      "elapsed_s": 0.5734961919999932,
+      "warnings": [],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "checks": [
+        [
+          "2945024",
+          "26505186",
+          "26505186",
+          "26505186",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x594f06c70020"
+        ],
+        [
+          "2947072",
+          "26523627",
+          "26523627",
+          "26523627",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x594f06c70020"
+        ],
+        [
+          "2949088",
+          "26541766",
+          "26541766",
+          "26541766",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x594f06c70020"
+        ],
+        [
+          "2949116",
+          "26542009",
+          "26542009",
+          "26542009",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x594f06c70020"
+        ],
+        [
+          "2949119",
+          "26542036",
+          "26542036",
+          "26542036",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x594f06c70020"
+        ],
+        [
+          "2949120",
+          "26542047",
+          "26542047",
+          "26542047",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x594f06c70020"
+        ],
+        [
+          "2949121",
+          "26542059",
+          "26542059",
+          "26542059",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x594f06c70020"
+        ]
+      ],
+      "prechecks": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "4095",
+          "36840",
+          "36840"
+        ],
+        [
+          "4096",
+          "36856",
+          "36856"
+        ],
+        [
+          "4097",
+          "36873",
+          "36873"
+        ],
+        [
+          "2945024",
+          "26505186",
+          "26505186"
+        ],
+        [
+          "2947072",
+          "26523627",
+          "26523627"
+        ],
+        [
+          "2949088",
+          "26541766",
+          "26541766"
+        ],
+        [
+          "2949116",
+          "26542009",
+          "26542009"
+        ],
+        [
+          "2949119",
+          "26542036",
+          "26542036"
+        ],
+        [
+          "2949120",
+          "26542047",
+          "26542047"
+        ],
+        [
+          "2949121",
+          "26542059",
+          "26542059"
+        ]
+      ]
+    },
+    {
+      "label": "round1",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce",
+        "-d",
+        "0",
+        "-a",
+        "Elements{io}=[2945024,2947072,2949088,2949116,2949119,2949120,2949121]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/round1.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/round1.md",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15"
+      ],
+      "trace_only": false,
+      "gpu": true,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "returncode": 0,
+      "elapsed_s": 2.8291410719999988,
+      "warnings": [],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "checks": [
+        [
+          "2945024",
+          "26505186",
+          "26505186",
+          "26505186",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x635880ea5270"
+        ],
+        [
+          "2947072",
+          "26523627",
+          "26523627",
+          "26523627",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x635880ea5270"
+        ],
+        [
+          "2949088",
+          "26541766",
+          "26541766",
+          "26541766",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x635880ea5270"
+        ],
+        [
+          "2949116",
+          "26542009",
+          "26542009",
+          "26542009",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x635880ea5270"
+        ],
+        [
+          "2949119",
+          "26542036",
+          "26542036",
+          "26542036",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x635880ea5270"
+        ],
+        [
+          "2949120",
+          "26542047",
+          "26542047",
+          "26542047",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x635880ea5270"
+        ],
+        [
+          "2949121",
+          "26542059",
+          "26542059",
+          "26542059",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x635880ea5270"
+        ]
+      ],
+      "prechecks": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "4095",
+          "36840",
+          "36840"
+        ],
+        [
+          "4096",
+          "36856",
+          "36856"
+        ],
+        [
+          "4097",
+          "36873",
+          "36873"
+        ],
+        [
+          "2945024",
+          "26505186",
+          "26505186"
+        ],
+        [
+          "2947072",
+          "26523627",
+          "26523627"
+        ],
+        [
+          "2949088",
+          "26541766",
+          "26541766"
+        ],
+        [
+          "2949116",
+          "26542009",
+          "26542009"
+        ],
+        [
+          "2949119",
+          "26542036",
+          "26542036"
+        ],
+        [
+          "2949120",
+          "26542047",
+          "26542047"
+        ],
+        [
+          "2949121",
+          "26542059",
+          "26542059"
+        ]
+      ],
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.361361592,
+          "mean_s": 8.934940785914666e-05,
+          "median_s": 8.886399865150452e-05,
+          "noise": 0.14992738180482879,
+          "iqr": 0.08066261405515684,
+          "min_s": 6.348799914121628e-05,
+          "max_s": 0.0002908160090446472,
+          "name": "Device=0 Elements{io}=2945024",
+          "axes": {
+            "Elements{io}": "2945024"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.33027791300000003,
+          "mean_s": 7.989318400993944e-05,
+          "median_s": 7.88479968905449e-05,
+          "noise": 0.131371689896105,
+          "iqr": 0.11241884117802861,
+          "min_s": 5.5424001067876815e-05,
+          "max_s": 0.00022015999257564545,
+          "name": "Device=0 Elements{io}=2947072",
+          "axes": {
+            "Elements{io}": "2947072"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.315190338,
+          "mean_s": 7.926639986783266e-05,
+          "median_s": 7.88479968905449e-05,
+          "noise": 0.245832247319163,
+          "iqr": 0.08725649991084586,
+          "min_s": 5.7344000786542894e-05,
+          "max_s": 0.000650048017501831,
+          "name": "Device=0 Elements{io}=2949088",
+          "axes": {
+            "Elements{io}": "2949088"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.313273951,
+          "mean_s": 7.852611199021349e-05,
+          "median_s": 7.782399654388428e-05,
+          "noise": 0.22457791348289954,
+          "iqr": 0.07894730291727617,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.000549888014793396,
+          "name": "Device=0 Elements{io}=2949116",
+          "axes": {
+            "Elements{io}": "2949116"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.318218286,
+          "mean_s": 7.8399967957288e-05,
+          "median_s": 7.88479968905449e-05,
+          "noise": 0.1153773862003265,
+          "iqr": 0.09090903077720744,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.00021401600539684294,
+          "name": "Device=0 Elements{io}=2949119",
+          "axes": {
+            "Elements{io}": "2949119"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.328134951,
+          "mean_s": 7.55825611539183e-05,
+          "median_s": 7.372800260782241e-05,
+          "noise": 0.2511667073823532,
+          "iqr": 0.08333325754211085,
+          "min_s": 5.529600009322166e-05,
+          "max_s": 0.0006451200246810913,
+          "name": "Device=0 Elements{io}=2949120",
+          "axes": {
+            "Elements{io}": "2949120"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.31855044800000004,
+          "mean_s": 7.695276888832453e-05,
+          "median_s": 7.475200295448303e-05,
+          "noise": 0.28026307269186884,
+          "iqr": 0.09460608365716344,
+          "min_s": 5.436800047755242e-05,
+          "max_s": 0.0006502400040626526,
+          "name": "Device=0 Elements{io}=2949121",
+          "axes": {
+            "Elements{io}": "2949121"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ]
+    },
+    {
+      "label": "round2",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce",
+        "-d",
+        "0",
+        "-a",
+        "Elements{io}=[2949121,2949120,2949119,2949116,2949088,2947072,2945024]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/round2.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/round2.md",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15"
+      ],
+      "trace_only": false,
+      "gpu": true,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "returncode": 0,
+      "elapsed_s": 2.7291702599999894,
+      "warnings": [],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "checks": [
+        [
+          "2949121",
+          "26542059",
+          "26542059",
+          "26542059",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x5f4e2ba1d420"
+        ],
+        [
+          "2949120",
+          "26542047",
+          "26542047",
+          "26542047",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x5f4e2ba1d420"
+        ],
+        [
+          "2949119",
+          "26542036",
+          "26542036",
+          "26542036",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x5f4e2ba1d420"
+        ],
+        [
+          "2949116",
+          "26542009",
+          "26542009",
+          "26542009",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x5f4e2ba1d420"
+        ],
+        [
+          "2949088",
+          "26541766",
+          "26541766",
+          "26541766",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x5f4e2ba1d420"
+        ],
+        [
+          "2947072",
+          "26523627",
+          "26523627",
+          "26523627",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x5f4e2ba1d420"
+        ],
+        [
+          "2945024",
+          "26505186",
+          "26505186",
+          "26505186",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x5f4e2ba1d420"
+        ]
+      ],
+      "prechecks": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "4095",
+          "36840",
+          "36840"
+        ],
+        [
+          "4096",
+          "36856",
+          "36856"
+        ],
+        [
+          "4097",
+          "36873",
+          "36873"
+        ],
+        [
+          "2945024",
+          "26505186",
+          "26505186"
+        ],
+        [
+          "2947072",
+          "26523627",
+          "26523627"
+        ],
+        [
+          "2949088",
+          "26541766",
+          "26541766"
+        ],
+        [
+          "2949116",
+          "26542009",
+          "26542009"
+        ],
+        [
+          "2949119",
+          "26542036",
+          "26542036"
+        ],
+        [
+          "2949120",
+          "26542047",
+          "26542047"
+        ],
+        [
+          "2949121",
+          "26542059",
+          "26542059"
+        ]
+      ],
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.32221784000000003,
+          "mean_s": 7.941497641429308e-05,
+          "median_s": 7.680000364780426e-05,
+          "noise": 0.2996064752956467,
+          "iqr": 0.09333326348414356,
+          "min_s": 5.529600009322166e-05,
+          "max_s": 0.0006451200246810913,
+          "name": "Device=0 Elements{io}=2949121",
+          "axes": {
+            "Elements{io}": "2949121"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.31686935400000005,
+          "mean_s": 7.526396904885768e-05,
+          "median_s": 7.372800260782241e-05,
+          "noise": 0.09297999578950084,
+          "iqr": 0.08333325754211085,
+          "min_s": 5.529600009322166e-05,
+          "max_s": 0.000130048006772995,
+          "name": "Device=0 Elements{io}=2949120",
+          "axes": {
+            "Elements{io}": "2949120"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.339959846,
+          "mean_s": 7.789766453579064e-05,
+          "median_s": 7.577600330114365e-05,
+          "noise": 0.09961121807065504,
+          "iqr": 0.09459452417353238,
+          "min_s": 5.536000058054924e-05,
+          "max_s": 0.00015462400019168853,
+          "name": "Device=0 Elements{io}=2949119",
+          "axes": {
+            "Elements{io}": "2949119"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.31195849200000003,
+          "mean_s": 7.762745678052319e-05,
+          "median_s": 7.577600330114365e-05,
+          "noise": 0.15264584100664982,
+          "iqr": 0.07685810005286879,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.0002754560112953186,
+          "name": "Device=0 Elements{io}=2949116",
+          "axes": {
+            "Elements{io}": "2949116"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.312081618,
+          "mean_s": 7.8475616529584e-05,
+          "median_s": 7.673600316047669e-05,
+          "noise": 0.25956422477757246,
+          "iqr": 0.09341110666206313,
+          "min_s": 5.427199974656105e-05,
+          "max_s": 0.0006664320230484009,
+          "name": "Device=0 Elements{io}=2949088",
+          "axes": {
+            "Elements{io}": "2949088"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.31853192900000005,
+          "mean_s": 7.674345697835111e-05,
+          "median_s": 7.372800260782241e-05,
+          "noise": 0.19727027203103667,
+          "iqr": 0.06944436444259865,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.00031334400177001953,
+          "name": "Device=0 Elements{io}=2947072",
+          "axes": {
+            "Elements{io}": "2947072"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.31462497300000003,
+          "mean_s": 7.582233698666094e-05,
+          "median_s": 7.372800260782241e-05,
+          "noise": 0.08764660639359026,
+          "iqr": 0.06944436444259865,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.00011673600226640701,
+          "name": "Device=0 Elements{io}=2945024",
+          "axes": {
+            "Elements{io}": "2945024"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ]
+    },
+    {
+      "label": "round3",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/build/fixed_input_reduce",
+        "-d",
+        "0",
+        "-a",
+        "Elements{io}=[2949116,2949119,2949120,2949121,2945024,2947072,2949088]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/round3.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-fixed-input-reduce-v2/round3.md",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15"
+      ],
+      "trace_only": false,
+      "gpu": true,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "returncode": 0,
+      "elapsed_s": 2.7786843800000156,
+      "warnings": [],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "checks": [
+        [
+          "2949116",
+          "26542009",
+          "26542009",
+          "26542009",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x593f84472310"
+        ],
+        [
+          "2949119",
+          "26542036",
+          "26542036",
+          "26542036",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x593f84472310"
+        ],
+        [
+          "2949120",
+          "26542047",
+          "26542047",
+          "26542047",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x593f84472310"
+        ],
+        [
+          "2949121",
+          "26542059",
+          "26542059",
+          "26542059",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x593f84472310"
+        ],
+        [
+          "2945024",
+          "26505186",
+          "26505186",
+          "26505186",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x593f84472310"
+        ],
+        [
+          "2947072",
+          "26523627",
+          "26523627",
+          "26523627",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x593f84472310"
+        ],
+        [
+          "2949088",
+          "26541766",
+          "26541766",
+          "26541766",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x593f84472310"
+        ]
+      ],
+      "prechecks": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "4095",
+          "36840",
+          "36840"
+        ],
+        [
+          "4096",
+          "36856",
+          "36856"
+        ],
+        [
+          "4097",
+          "36873",
+          "36873"
+        ],
+        [
+          "2945024",
+          "26505186",
+          "26505186"
+        ],
+        [
+          "2947072",
+          "26523627",
+          "26523627"
+        ],
+        [
+          "2949088",
+          "26541766",
+          "26541766"
+        ],
+        [
+          "2949116",
+          "26542009",
+          "26542009"
+        ],
+        [
+          "2949119",
+          "26542036",
+          "26542036"
+        ],
+        [
+          "2949120",
+          "26542047",
+          "26542047"
+        ],
+        [
+          "2949121",
+          "26542059",
+          "26542059"
+        ]
+      ],
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.324651014,
+          "mean_s": 7.797814427688725e-05,
+          "median_s": 7.680000364780426e-05,
+          "noise": 0.11019011556559502,
+          "iqr": 0.09124991438623611,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.00020684799551963807,
+          "name": "Device=0 Elements{io}=2949116",
+          "axes": {
+            "Elements{io}": "2949116"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.312640004,
+          "mean_s": 7.82440638877453e-05,
+          "median_s": 7.782399654388428e-05,
+          "noise": 0.11759885208254958,
+          "iqr": 0.07853611555752982,
+          "min_s": 5.7344000786542894e-05,
+          "max_s": 0.0002210559993982315,
+          "name": "Device=0 Elements{io}=2949119",
+          "axes": {
+            "Elements{io}": "2949119"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.32992403800000003,
+          "mean_s": 7.515139303356419e-05,
+          "median_s": 7.372800260782241e-05,
+          "noise": 0.10389251962765346,
+          "iqr": 0.08333325754211085,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.0002488320022821426,
+          "name": "Device=0 Elements{io}=2949120",
+          "axes": {
+            "Elements{io}": "2949120"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.33118107300000005,
+          "mean_s": 7.758713665232062e-05,
+          "median_s": 7.577600330114365e-05,
+          "noise": 0.1756713916971231,
+          "iqr": 0.09543912516249213,
+          "min_s": 5.7344000786542894e-05,
+          "max_s": 0.0003829759955406189,
+          "name": "Device=0 Elements{io}=2949121",
+          "axes": {
+            "Elements{io}": "2949121"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.31762255500000003,
+          "mean_s": 7.681152065470828e-05,
+          "median_s": 7.577600330114365e-05,
+          "noise": 0.12497487334069883,
+          "iqr": 0.08108100667392115,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.00023039999604225158,
+          "name": "Device=0 Elements{io}=2945024",
+          "axes": {
+            "Elements{io}": "2945024"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.309331686,
+          "mean_s": 7.728387258201844e-05,
+          "median_s": 7.577600330114365e-05,
+          "noise": 0.14733789912881204,
+          "iqr": 0.09248312002487984,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.00027136000990867615,
+          "name": "Device=0 Elements{io}=2947072",
+          "axes": {
+            "Elements{io}": "2947072"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.326419701,
+          "mean_s": 7.75600644797088e-05,
+          "median_s": 7.577600330114365e-05,
+          "noise": 0.0894396811315833,
+          "iqr": 0.09417222367905241,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.0001430400013923645,
+          "name": "Device=0 Elements{io}=2949088",
+          "axes": {
+            "Elements{io}": "2949088"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ]
+    }
+  ],
+  "original_compile": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -ccbin=/usr/bin/c++ -DTUNE_BASE=1 -I/home/lktr/src/cccl/nvbench_helper/nvbench_helper -I/home/lktr/src/cccl/lib/cmake/libcudacxx/../../../libcudacxx/include -I/home/lktr/src/cccl/lib/cmake/thrust/../../../thrust -I/home/lktr/src/cccl/lib/cmake/cub/../../../cub -isystem /home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-src -isystem /home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-build -isystem /usr/local/cuda/targets/x86_64-linux/include -isystem /usr/local/cuda/targets/x86_64-linux/include/cccl -isystem /usr/local/cuda/include -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_89,code=[compute_89,sm_89]\" --extended-lambda -MD -MT cub/benchmarks/CMakeFiles/cub.bench.reduce.sum.base.dir/bench/reduce/sum.cu.o -MF cub/benchmarks/CMakeFiles/cub.bench.reduce.sum.base.dir/bench/reduce/sum.cu.o.d -x cu -c /home/lktr/src/cccl/cub/benchmarks/bench/reduce/sum.cu -o cub/benchmarks/CMakeFiles/cub.bench.reduce.sum.base.dir/bench/reduce/sum.cu.o",
+  "original_link": ": && /usr/bin/c++  nvbench_helper/CMakeFiles/cccl.nvbench_helper.dir/nvbench_helper/nvbench_helper.cu.o cub/benchmarks/CMakeFiles/cub.bench.reduce.sum.base.dir/bench/reduce/sum.cu.o -o bin/cub.bench.reduce.sum.base  -Wl,-rpath,/home/lktr/src/cccl/build/cub-benchmark/lib  lib/libnvbench_main.a  /usr/local/cuda-13.3/targets/x86_64-linux/lib/libcurand.so  lib/libnvbench.so  -lstdc++fs  /usr/local/cuda/targets/x86_64-linux/lib/stubs/libnvidia-ml.so  /usr/local/cuda/targets/x86_64-linux/lib/stubs/libcuda.so  -ldl  /usr/lib/x86_64-linux-gnu/librt.a  /usr/local/cuda/lib64/libcupti.so  -lcudadevrt  -lcudart_static  -lrt  -lpthread  -ldl -L\"/usr/local/cuda/targets/x86_64-linux/lib/stubs\" -L\"/usr/local/cuda/targets/x86_64-linux/lib\" && :",
+  "nvbench_head": "410dcdd21c9b48191ecb3d3d77060b1bf4ac6244",
+  "nvbench_lib_sha256": "cbec31c052e121ca224de0afa60990fd7dc29293fd676ef54d40e6fa9cf7286b",
+  "ld_library_path": "/home/lktr/src/cccl/build/cub-benchmark/lib:/usr/lib/wsl/lib:/usr/local/cuda/lib64",
+  "binary_sha256": "0f997ed19d59bd20343f557f7766b53ab8f9ca74248e8df2c61533b98eaa6f95",
+  "gpu_before": "Sat Sep  5 19:56:11 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.01              KMD Version: 610.88        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    On  |   00000000:01:00.0  On |                  N/A |\n| N/A   46C    P5             11W /  130W |    1226MiB /   8188MiB |     36%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+  "gpu_after": "Sat Sep  5 19:56:20 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.01              KMD Version: 610.88        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    On  |   00000000:01:00.0  On |                  N/A |\n| N/A   53C    P0             27W /  132W |    1181MiB /   8188MiB |     30%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+  "upstream_status_after": ""
+}
