@@ -1,0 +1,680 @@
+{
+  "utc_start": "2026-09-05T05:58:36.380647+00:00",
+  "binary": "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+  "binary_sha256": "950d9d1185acd25762a29a4210fb4d4b2ec35f83b0feffefdb5e3081e671c13f",
+  "ld_library_path": "/home/lktr/src/cccl/build/cub-benchmark/lib:/usr/lib/wsl/lib:/usr/local/cuda/lib64",
+  "runs": [
+    {
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}[pow2]=[16,24]",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "1",
+        "--timeout",
+        "15",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run1-warmup1.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run1-warmup1.md"
+      ],
+      "power_before": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "warmups": 1,
+      "utc_start": "2026-09-05T05:58:36.585569+00:00",
+      "returncode": 0,
+      "elapsed_s": 1.4233105850000003,
+      "power_after": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "deadlock_detected": false,
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.320859862,
+          "mean_s": 1.907222397252921e-05,
+          "median_s": 1.5647999942302704e-05,
+          "noise": 0.6434499826206916,
+          "iqr": 0.4601226931792049,
+          "min_s": 7.168000098317862e-06,
+          "max_s": 0.0002037760019302368,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^16",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "65536"
+          },
+          "timeout_s": 15.0,
+          "warmups": 1,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.556237895,
+          "mean_s": 0.00037315273585915635,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.043004372569051236,
+          "iqr": 0.021892156717727637,
+          "min_s": 0.0002867200076580048,
+          "max_s": 0.0006675519943237305,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^24",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777216"
+          },
+          "timeout_s": 15.0,
+          "warmups": 1,
+          "at_timeout_boundary": false
+        }
+      ]
+    },
+    {
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}[pow2]=[16,24]",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run2-warmup20.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run2-warmup20.md"
+      ],
+      "power_before": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "warmups": 20,
+      "utc_start": "2026-09-05T05:58:38.111449+00:00",
+      "returncode": 0,
+      "elapsed_s": 1.2227359499999997,
+      "power_after": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "deadlock_detected": false,
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.264534782,
+          "mean_s": 2.0552128012757728e-05,
+          "median_s": 1.6383999958634378e-05,
+          "noise": 0.6029197326832224,
+          "iqr": 0.49218749733546474,
+          "min_s": 7.168000098317862e-06,
+          "max_s": 0.00015462400019168853,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^16",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "65536"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.546400167,
+          "mean_s": 0.00037283830463886417,
+          "median_s": 0.00037376001477241517,
+          "noise": 0.028848709054799342,
+          "iqr": 0.019178067992126818,
+          "min_s": 0.000272383987903595,
+          "max_s": 0.0005755839943885803,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^24",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777216"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ]
+    },
+    {
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}[pow2]=[16,24]",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run3-warmup20.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run3-warmup20.md"
+      ],
+      "power_before": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "warmups": 20,
+      "utc_start": "2026-09-05T05:58:39.430407+00:00",
+      "returncode": 0,
+      "elapsed_s": 1.2226313219999998,
+      "power_after": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "deadlock_detected": false,
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.280399558,
+          "mean_s": 1.963206399697817e-05,
+          "median_s": 1.539199985563755e-05,
+          "noise": 0.7567854204538172,
+          "iqr": 0.5987525650398008,
+          "min_s": 7.168000098317862e-06,
+          "max_s": 0.0002016959935426712,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^16",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "65536"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.5545624,
+          "mean_s": 0.00037358646437525827,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.03828265994815447,
+          "iqr": 0.02197802900708357,
+          "min_s": 0.00033792001008987427,
+          "max_s": 0.000672767996788025,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^24",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777216"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ]
+    },
+    {
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}[pow2]=[16,24]",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "1",
+        "--timeout",
+        "15",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run4-warmup1.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run4-warmup1.md"
+      ],
+      "power_before": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "warmups": 1,
+      "utc_start": "2026-09-05T05:58:40.750583+00:00",
+      "returncode": 0,
+      "elapsed_s": 1.3229396860000016,
+      "power_after": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "deadlock_detected": false,
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.27659265,
+          "mean_s": 1.824499198328709e-05,
+          "median_s": 1.551999989897013e-05,
+          "noise": 0.6281120488342994,
+          "iqr": 0.3402061979397728,
+          "min_s": 6.144000217318535e-06,
+          "max_s": 0.00019062399864196777,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^16",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "65536"
+          },
+          "timeout_s": 15.0,
+          "warmups": 1,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.5560815610000001,
+          "mean_s": 0.0003737767998278147,
+          "median_s": 0.00037254399061203004,
+          "noise": 0.07456018014037202,
+          "iqr": 0.02104451485228346,
+          "min_s": 0.0002765760123729706,
+          "max_s": 0.0007905279994010926,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^24",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777216"
+          },
+          "timeout_s": 15.0,
+          "warmups": 1,
+          "at_timeout_boundary": false
+        }
+      ]
+    },
+    {
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}[pow2]=[16,24]",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "1",
+        "--timeout",
+        "15",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run5-warmup1.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run5-warmup1.md"
+      ],
+      "power_before": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "warmups": 1,
+      "utc_start": "2026-09-05T05:58:42.172972+00:00",
+      "returncode": 0,
+      "elapsed_s": 1.223343538,
+      "power_after": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "deadlock_detected": false,
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.26871479000000004,
+          "mean_s": 2.2904863975942184e-05,
+          "median_s": 1.6383999958634378e-05,
+          "noise": 0.9565626026272804,
+          "iqr": 0.43750003552713695,
+          "min_s": 7.168000098317862e-06,
+          "max_s": 0.0003624959886074066,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^16",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "65536"
+          },
+          "timeout_s": 15.0,
+          "warmups": 1,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.548969418,
+          "mean_s": 0.00037349318391084746,
+          "median_s": 0.00037273600697517394,
+          "noise": 0.03912894791142417,
+          "iqr": 0.021462955182100802,
+          "min_s": 0.00032358399033546447,
+          "max_s": 0.0006123520135879517,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^24",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777216"
+          },
+          "timeout_s": 15.0,
+          "warmups": 1,
+          "at_timeout_boundary": false
+        }
+      ]
+    },
+    {
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}[pow2]=[16,24]",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run6-warmup20.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-warmup-audit/run6-warmup20.md"
+      ],
+      "power_before": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "warmups": 20,
+      "utc_start": "2026-09-05T05:58:43.494191+00:00",
+      "returncode": 0,
+      "elapsed_s": 1.2240530439999997,
+      "power_after": {
+        "command": [
+          "/mnt/c/Windows/System32/powercfg.exe",
+          "/getactivescheme"
+        ],
+        "returncode": 0,
+        "stdout": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+        "stderr": ""
+      },
+      "deadlock_detected": false,
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.26506176000000004,
+          "mean_s": 2.033484798576686e-05,
+          "median_s": 1.6383999958634378e-05,
+          "noise": 0.695039143706989,
+          "iqr": 0.4589844036437541,
+          "min_s": 7.168000098317862e-06,
+          "max_s": 0.00014745600521564483,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^16",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "65536"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.545435925,
+          "mean_s": 0.00037376454484462824,
+          "median_s": 0.00037376001477241517,
+          "noise": 0.0300553990093491,
+          "iqr": 0.019178067992126818,
+          "min_s": 0.00033792001008987427,
+          "max_s": 0.000587776005268097,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2^24",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "16777216"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ]
+    }
+  ],
+  "limits": "six processes, two states each, 1000 accepted samples/state, 15 s/state, 90 s/process",
+  "scope": "warmup diagnostic only; no source change, no performance-fix claim",
+  "cccl_head": {
+    "command": [
+      "git",
+      "-C",
+      "/home/lktr/src/cccl",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2\n",
+    "stderr": ""
+  },
+  "nvbench_head": {
+    "command": [
+      "git",
+      "-C",
+      "/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-src",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "410dcdd21c9b48191ecb3d3d77060b1bf4ac6244\n",
+    "stderr": ""
+  },
+  "gpu_before": {
+    "command": [
+      "/usr/lib/wsl/lib/nvidia-smi"
+    ],
+    "returncode": 0,
+    "stdout": "Sat Sep  5 13:58:36 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.01              KMD Version: 610.88        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    On  |   00000000:01:00.0  On |                  N/A |\n| N/A   43C    P8              4W /  131W |    1113MiB /   8188MiB |      7%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  },
+  "gpu_after": {
+    "command": [
+      "/usr/lib/wsl/lib/nvidia-smi"
+    ],
+    "returncode": 0,
+    "stdout": "Sat Sep  5 13:58:44 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.01              KMD Version: 610.88        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    On  |   00000000:01:00.0  On |                  N/A |\n| N/A   53C    P0             34W /  134W |    1105MiB /   8188MiB |     15%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  },
+  "groups": [
+    {
+      "elements": 65536,
+      "warmups": 1,
+      "medians_us": [
+        15.647999942302704,
+        15.519999898970129,
+        16.383999958634377
+      ],
+      "means_us": [
+        19.07222397252921,
+        18.24499198328709,
+        22.904863975942185
+      ],
+      "median_span_pct": 5.521472794286734,
+      "noise_pct": [
+        64.34499826206917,
+        62.81120488342994,
+        95.65626026272804
+      ],
+      "iqr_pct": [
+        46.01226931792049,
+        34.02061979397728,
+        43.75000355271369
+      ]
+    },
+    {
+      "elements": 65536,
+      "warmups": 20,
+      "medians_us": [
+        16.383999958634377,
+        15.39199985563755,
+        16.383999958634377
+      ],
+      "means_us": [
+        20.552128012757727,
+        19.632063996978168,
+        20.33484798576686
+      ],
+      "median_span_pct": 6.054688143929356,
+      "noise_pct": [
+        60.29197326832224,
+        75.67854204538172,
+        69.50391437069891
+      ],
+      "iqr_pct": [
+        49.218749733546474,
+        59.875256503980076,
+        45.89844036437541
+      ]
+    },
+    {
+      "elements": 16777216,
+      "warmups": 1,
+      "medians_us": [
+        372.73600697517395,
+        372.54399061203003,
+        372.73600697517395
+      ],
+      "means_us": [
+        373.15273585915634,
+        373.77679982781467,
+        373.49318391084745
+      ],
+      "median_span_pct": 0.05151537805595211,
+      "noise_pct": [
+        4.3004372569051235,
+        7.456018014037202,
+        3.912894791142417
+      ],
+      "iqr_pct": [
+        2.1892156717727635,
+        2.104451485228346,
+        2.14629551821008
+      ]
+    },
+    {
+      "elements": 16777216,
+      "warmups": 20,
+      "medians_us": [
+        373.76001477241516,
+        372.73600697517395,
+        373.76001477241516
+      ],
+      "means_us": [
+        372.83830463886414,
+        373.5864643752583,
+        373.76454484462823
+      ],
+      "median_span_pct": 0.273974678073773,
+      "noise_pct": [
+        2.8848709054799344,
+        3.828265994815447,
+        3.00553990093491
+      ],
+      "iqr_pct": [
+        1.917806799212682,
+        2.197802900708357,
+        1.917806799212682
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # CUB DeviceReduce 官方基线（2026-09-04 至 2026-09-05）
 
+> 2026-09-05 审计修订：保留原始结果，撤回从 `SAME` 推导“无统计显著异常”的表述。见 [测量可信度审计](2026-09-05-device-reduce-measurement-audit.md)。
+
 ## 目标与固定条件
 
 - 上游工作副本：`/home/lktr/src/cccl`
@@ -58,7 +60,9 @@
   - `evidence/raw/phase2/2026-09-05-cub-reduce-sum-official-full-run2-turbo-sm89.json`
   - `evidence/raw/phase2/2026-09-05-cub-reduce-sum-official-full-run2-turbo-sm89.md`
 
-两轮均得到 80/80 条结果，没有 OOM、deadlock 或失败配置。Run 1 出现 5 次 throttle warning，Run 2 出现 1 次；NVBench 明确丢弃对应 trial 后重新测量。所有配置记录的平均 SM clock scaling 仍约为默认时钟的 104% 至 115%。
+两轮 JSON 均得到 80/80 条未跳过结果。保存的 Markdown 中未发现 OOM 或 deadlock；但没有单独持久化进程 stdout/stderr，不能仅凭 Markdown 排除绕过打印器的设备端警告。Run 1 出现 5 次 throttle warning，Run 2 出现 1 次。源码表明 NVBench 丢弃被判定降频的单次测量，保留其他已接受样本，不是清空整个配置重测。平均 SM clock scaling 约为默认时钟的 104% 至 115%，不能证明每个时刻都稳定。
+
+Run 1 的 5 个、Run 2 的 4 个配置，其 cold walltime 达到或超过 15 秒。这些配置的 entropy 收敛未获确认；JSON 未保存实际停止原因。
 
 ## 重复性分析
 
@@ -71,7 +75,7 @@
 | `2^24` | 20 | 0.27% | 1.57% |
 | `2^28` | 20 | 0.15% | 1.29% |
 
-小规模 kernel 的均值、median 和 relative noise 均明显受调度与长尾影响；大规模配置的跨轮重复性良好。
+小规模 kernel 的均值、median 和 relative noise 显示明显波动；调度、时钟等原因尚未隔离验证。大规模仅在这两轮的 median 上接近，不能推导完整分布稳定或细小性能差异可检出。
 
 使用 CCCL 构建目录内随附的官方比较脚本：
 
@@ -105,9 +109,11 @@ Failure (diff > min_noise): 0
 
 在本机 Ada `sm_89`、当前 CCCL commit 和官方默认 DeviceReduce sum axes 下：
 
-- 尚未发现可重复、统计上显著的性能异常；
-- 两个大规模点在两轮间稳定，I32/I64 offset 表现接近；
-- 小规模点存在显著测量噪声，但方向不稳定，不能解释为 CUB 性能缺陷；
-- 官方比较工具把 80 个配置全部判定为 `SAME`。
+- 已获得两轮相同代码的测量；尚未完成性能异常检出能力验证；
+- 两个大规模点的跨轮 median 接近，I32/I64 offset 的已观测表现接近；
+- 小规模点噪声较大，不能直接解释为 CUB 性能缺陷；
+- 80 个 `SAME` 只代表满足该脚本的噪声阈值规则，不是统计显著性检验。
 
-因此当前只能表述为“官方 DeviceReduce sum 基线已在本机完整跑通并保存；默认 axes 暂未发现稳定异常”。下一阶段如果继续寻找问题，应扩大合法输入覆盖（尤其是 policy 边界附近和非 2 的幂规模），并对候选点进行交错重复测量；不能把本轮小规模噪声包装成性能问题。
+`SAME` 条件为 `abs((cmp_mean - ref_mean) / ref_mean) <= min(ref_noise, cmp_noise)`。noise 是样本标准差除以均值，不是均值差的置信区间。命令中的 `--threshold-diff 0.05` 不能把这个条件解释为“差异小于 5%”。
+
+当前只能表述为“默认 80 个配置完成两轮测量并保存，但部分配置噪声较大或停止原因不确定，尚不能据此判断 CUB 有无性能问题”。先审计测量可信度，再按源码选择少量合法输入边界。未比较其他实现或修改版本，也未验证优化；不能把噪声包装成性能问题。
