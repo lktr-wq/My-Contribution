@@ -1,0 +1,970 @@
+{
+  "utc_start": "2026-09-05T11:43:20.867826+00:00",
+  "scope": "official I32/I32, 9 sizes, 3 orders, no correctness assertion",
+  "suite": "grid-cap",
+  "sizes": [
+    2945023,
+    2945024,
+    2945025,
+    2949119,
+    2949120,
+    2949121,
+    5898239,
+    5898240,
+    5898241
+  ],
+  "cccl_head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "cccl_status": "",
+  "binary_sha256": "950d9d1185acd25762a29a4210fb4d4b2ec35f83b0feffefdb5e3081e671c13f",
+  "nvbench_head": "410dcdd21c9b48191ecb3d3d77060b1bf4ac6244",
+  "env_overrides": {
+    "LD_LIBRARY_PATH": "/home/lktr/src/cccl/build/cub-benchmark/lib:/usr/lib/wsl/lib:/usr/local/cuda/lib64",
+    "CCCL_EXPERIMENTAL_LOGGING": "0"
+  },
+  "gpu_before": "Sat Sep  5 19:43:21 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.01              KMD Version: 610.88        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    On  |   00000000:01:00.0  On |                  N/A |\n| N/A   45C    P5             10W /  130W |    1157MiB /   8188MiB |     37%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+  "runs": [
+    {
+      "label": "dispatch-trace",
+      "sizes_requested": [
+        2945023,
+        2945024,
+        2945025,
+        2949119,
+        2949120,
+        2949121,
+        5898239,
+        5898240,
+        5898241
+      ],
+      "trace_only": true,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "utc_start": "2026-09-05T11:43:21.162084+00:00",
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}=[2945023,2945024,2945025,2949119,2949120,2949121,5898239,5898240,5898241]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-grid-cap-confirm/dispatch-trace.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-grid-cap-confirm/dispatch-trace.md",
+        "--profile"
+      ],
+      "logging": "1",
+      "returncode": 0,
+      "elapsed_s": 0.6713363460000039,
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "warning_lines": [],
+      "grid_expected": [
+        719,
+        719,
+        720,
+        720,
+        720,
+        720,
+        720,
+        720,
+        720
+      ],
+      "grid_actual": [
+        719,
+        719,
+        720,
+        720,
+        720,
+        720,
+        720,
+        720,
+        720
+      ]
+    },
+    {
+      "label": "round1",
+      "sizes_requested": [
+        2945023,
+        2945024,
+        2945025,
+        2949119,
+        2949120,
+        2949121,
+        5898239,
+        5898240,
+        5898241
+      ],
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "utc_start": "2026-09-05T11:43:21.940361+00:00",
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}=[2945023,2945024,2945025,2949119,2949120,2949121,5898239,5898240,5898241]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-grid-cap-confirm/round1.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-grid-cap-confirm/round1.md",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15"
+      ],
+      "logging": "0",
+      "returncode": 0,
+      "elapsed_s": 3.5788491640000046,
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "warning_lines": [],
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.34494119100000004,
+          "mean_s": 8.822915190458335e-05,
+          "median_s": 8.601599931716918e-05,
+          "noise": 0.09322381537939166,
+          "iqr": 0.07142859617672662,
+          "min_s": 6.656000018119811e-05,
+          "max_s": 0.0002631680071353912,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2945023",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2945023"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.312023573,
+          "mean_s": 7.664560076594355e-05,
+          "median_s": 7.372800260782241e-05,
+          "noise": 0.10177958066686237,
+          "iqr": 0.12239585149164692,
+          "min_s": 6.348799914121628e-05,
+          "max_s": 0.0002037760019302368,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2945024",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2945024"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.31018560500000003,
+          "mean_s": 7.41646410860122e-05,
+          "median_s": 7.260800153017045e-05,
+          "noise": 0.09954831311101821,
+          "iqr": 0.07051566804487214,
+          "min_s": 5.3247999399900436e-05,
+          "max_s": 0.0002385919988155365,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2945025",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2945025"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.30912061900000004,
+          "mean_s": 7.697129692882317e-05,
+          "median_s": 7.475200295448303e-05,
+          "noise": 0.08483232844602075,
+          "iqr": 0.08219170572759373,
+          "min_s": 5.8368001133203504e-05,
+          "max_s": 0.00012457600235939027,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2949119",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2949119"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.312854885,
+          "mean_s": 7.403401716426005e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.1220171369903111,
+          "iqr": 0.05633804548928553,
+          "min_s": 5.939200147986412e-05,
+          "max_s": 0.00025497600436210634,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2949120",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2949120"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.312600745,
+          "mean_s": 7.436518511176095e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.10220389133603082,
+          "iqr": 0.07042255686160696,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.00025472000241279604,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2949121",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2949121"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.37162080200000003,
+          "mean_s": 0.00014116860717535074,
+          "median_s": 0.00014019200205802918,
+          "noise": 0.10007012497491852,
+          "iqr": 0.05112994872730236,
+          "min_s": 0.00011865600198507309,
+          "max_s": 0.00037273600697517394,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=5898239",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "5898239"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.36699479100000004,
+          "mean_s": 0.00013945302281528755,
+          "median_s": 0.00013823999464511873,
+          "noise": 0.07039712023818472,
+          "iqr": 0.05185181751811364,
+          "min_s": 0.00011980800330638886,
+          "max_s": 0.00037785598635673524,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=5898240",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "5898240"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.38423360700000003,
+          "mean_s": 0.00013975942279398517,
+          "median_s": 0.00013823999464511873,
+          "noise": 0.07232584598296146,
+          "iqr": 0.05069445514878569,
+          "min_s": 0.0001157120019197464,
+          "max_s": 0.00033884799480438235,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=5898241",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "5898241"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ],
+      "sizes_actual": [
+        2945023,
+        2945024,
+        2945025,
+        2949119,
+        2949120,
+        2949121,
+        5898239,
+        5898240,
+        5898241
+      ]
+    },
+    {
+      "label": "round2",
+      "sizes_requested": [
+        5898241,
+        5898240,
+        5898239,
+        2949121,
+        2949120,
+        2949119,
+        2945025,
+        2945024,
+        2945023
+      ],
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "utc_start": "2026-09-05T11:43:25.626156+00:00",
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}=[5898241,5898240,5898239,2949121,2949120,2949119,2945025,2945024,2945023]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-grid-cap-confirm/round2.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-grid-cap-confirm/round2.md",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15"
+      ],
+      "logging": "0",
+      "returncode": 0,
+      "elapsed_s": 3.580217288,
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "warning_lines": [],
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.37521149000000004,
+          "mean_s": 0.00013919990263134294,
+          "median_s": 0.0001372160017490387,
+          "noise": 0.0690692827054205,
+          "iqr": 0.05223876869079462,
+          "min_s": 0.00011980800330638886,
+          "max_s": 0.00036351999640464784,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=5898241",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "5898241"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.386623325,
+          "mean_s": 0.0001387523501589898,
+          "median_s": 0.00013702400028705596,
+          "noise": 0.06434022595182047,
+          "iqr": 0.044838875431256066,
+          "min_s": 0.0001157120019197464,
+          "max_s": 0.0003171840012073517,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=5898240",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "5898240"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.37409334600000005,
+          "mean_s": 0.00013997961464524343,
+          "median_s": 0.00013823999464511873,
+          "noise": 0.05579183955876004,
+          "iqr": 0.05185192531008249,
+          "min_s": 0.00011776000261306762,
+          "max_s": 0.0002795520126819611,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=5898239",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "5898239"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.311602007,
+          "mean_s": 7.529110494628548e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.09464166597937013,
+          "iqr": 0.09859147712797674,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.00014640000462532043,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2949121",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2949121"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.30669237200000005,
+          "mean_s": 7.446841708198191e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.07910551167952101,
+          "iqr": 0.07042255686160696,
+          "min_s": 5.7344000786542894e-05,
+          "max_s": 0.00011740799993276597,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2949120",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2949120"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.31260767100000003,
+          "mean_s": 7.671212914958617e-05,
+          "median_s": 7.475200295448303e-05,
+          "noise": 0.13613457137008275,
+          "iqr": 0.06849307149455353,
+          "min_s": 5.529600009322166e-05,
+          "max_s": 0.00025702399015426635,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2949119",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2949119"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.306247259,
+          "mean_s": 7.462233716249461e-05,
+          "median_s": 7.16800019145012e-05,
+          "noise": 0.25036890001207995,
+          "iqr": 0.07098216174307821,
+          "min_s": 5.7344000786542894e-05,
+          "max_s": 0.0006338559985160828,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2945025",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2945025"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.32503118200000003,
+          "mean_s": 7.7408480450511e-05,
+          "median_s": 7.577600330114365e-05,
+          "noise": 0.278987524687001,
+          "iqr": 0.1081080416731436,
+          "min_s": 5.632000043988228e-05,
+          "max_s": 0.0006471679806709289,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2945024",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2945024"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.337555058,
+          "mean_s": 7.935782410576957e-05,
+          "median_s": 7.88479968905449e-05,
+          "noise": 0.14077901052342104,
+          "iqr": 0.09090903077720744,
+          "min_s": 5.8368001133203504e-05,
+          "max_s": 0.00023654399812221528,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2945023",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2945023"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ],
+      "sizes_actual": [
+        5898241,
+        5898240,
+        5898239,
+        2949121,
+        2949120,
+        2949119,
+        2945025,
+        2945024,
+        2945023
+      ]
+    },
+    {
+      "label": "round3",
+      "sizes_requested": [
+        2949120,
+        2949121,
+        5898239,
+        5898240,
+        5898241,
+        2945023,
+        2945024,
+        2945025,
+        2949119
+      ],
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "utc_start": "2026-09-05T11:43:29.322205+00:00",
+      "command": [
+        "/home/lktr/src/cccl/build/cub-benchmark/bin/cub.bench.reduce.sum.base",
+        "-d",
+        "0",
+        "-a",
+        "T{ct}=I32",
+        "-a",
+        "OffsetT{ct}=I32",
+        "-a",
+        "Elements{io}=[2949120,2949121,5898239,5898240,5898241,2945023,2945024,2945025,2949119]",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-grid-cap-confirm/round3.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-05-reduce-grid-cap-confirm/round3.md",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15"
+      ],
+      "logging": "0",
+      "returncode": 0,
+      "elapsed_s": 3.5801579829999923,
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "warning_lines": [],
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.321229247,
+          "mean_s": 7.575712098181253e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.14510163286530497,
+          "iqr": 0.09330984941227681,
+          "min_s": 5.7344000786542894e-05,
+          "max_s": 0.00023347200453281401,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2949120",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2949120"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.309295832,
+          "mean_s": 7.525667298957696e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.12263732729597633,
+          "iqr": 0.0845069657556553,
+          "min_s": 5.7344000786542894e-05,
+          "max_s": 0.0002529279887676239,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2949121",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2949121"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.372089642,
+          "mean_s": 0.0001420219516083604,
+          "median_s": 0.00014233599603176116,
+          "noise": 0.06796653659721773,
+          "iqr": 0.05035967833775667,
+          "min_s": 0.00011878400295972824,
+          "max_s": 0.00032153600454330446,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=5898239",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "5898239"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.365115026,
+          "mean_s": 0.00014137964697182227,
+          "median_s": 0.00014131200313568116,
+          "noise": 0.135999888014724,
+          "iqr": 0.04347827462373819,
+          "min_s": 0.00010239999741315842,
+          "max_s": 0.000690015971660614,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=5898240",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "5898240"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.36238573900000004,
+          "mean_s": 0.00014050355111062615,
+          "median_s": 0.00014028799533843993,
+          "noise": 0.04367454273526897,
+          "iqr": 0.04379563671960317,
+          "min_s": 0.00011980800330638886,
+          "max_s": 0.00017715199291706084,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=5898241",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "5898241"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.30645598900000004,
+          "mean_s": 7.71487690769137e-05,
+          "median_s": 7.475200295448303e-05,
+          "noise": 0.09168103074727518,
+          "iqr": 0.08219170572759373,
+          "min_s": 5.8368001133203504e-05,
+          "max_s": 0.0002170879989862442,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2945023",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2945023"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.30816616900000005,
+          "mean_s": 7.50294732488692e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.07473506930279146,
+          "iqr": 0.0814260589541108,
+          "min_s": 5.7344000786542894e-05,
+          "max_s": 0.00011776000261306762,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2945024",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2945024"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.30400206500000004,
+          "mean_s": 7.417881730198845e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.07745816798683264,
+          "iqr": 0.05633804548928553,
+          "min_s": 5.7344000786542894e-05,
+          "max_s": 0.00016383999586105347,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2945025",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2945025"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.30692648100000003,
+          "mean_s": 7.851782514899981e-05,
+          "median_s": 7.475200295448303e-05,
+          "noise": 0.3445659645524932,
+          "iqr": 0.08219170572759373,
+          "min_s": 5.8368001133203504e-05,
+          "max_s": 0.0006379520297050476,
+          "name": "Device=0 T{ct}=I32 OffsetT{ct}=I32 Elements{io}=2949119",
+          "axes": {
+            "T{ct}": "I32",
+            "OffsetT{ct}": "I32",
+            "Elements{io}": "2949119"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ],
+      "sizes_actual": [
+        2949120,
+        2949121,
+        5898239,
+        5898240,
+        5898241,
+        2945023,
+        2945024,
+        2945025,
+        2949119
+      ]
+    }
+  ],
+  "source_sha256": {
+    "cub/benchmarks/bench/reduce/base.cuh": "7fe86731402fe7f05c754c625774ff0d597e1988cb85e06665cbbf476cbe8280",
+    "cub/benchmarks/bench/reduce/sum.cu": "c41a007b41c79a076952271bf88c8b9b491b5940aaf2c5e5f0b3e68883e4ae76",
+    "cub/cub/device/device_reduce.cuh": "16ebc9f81a33e34ed6641e8734b5a98bf6fe2bb2bc027f1fde487bbf512b94cf",
+    "cub/cub/device/dispatch/tuning/tuning_reduce.cuh": "27acc1fe6c227ba5923f59969be8e1b25f6ca2e7d7f48a2ad8bd63fcbc8dd395",
+    "cub/cub/device/dispatch/dispatch_reduce.cuh": "cbe70c12a09709c8613aca3814bd05b1324b2ce159bf9fc474834be0bf2e2750",
+    "cub/cub/grid/grid_even_share.cuh": "18a599e5173752f10203bb1fd1e242bffe1b5bdc32c09209c0793682702e559c",
+    "cub/cub/agent/agent_reduce.cuh": "1c72e6c4a628f7c3c7ea2e2a9b3e14d61be9cc0e9d11b6d6dbf931ac9501f497",
+    "cub/cub/util_arch.cuh": "d4b360cbae1b390d3e8a820a9162f4639eadc0a844c8148698947260322f6052",
+    "cub/cub/detail/logging.cuh": "542fb5a1d0552634d1bd19ba41ea744d703c56ef07867336d401652844cc786c"
+  },
+  "groups": [
+    {
+      "elements": 2945023,
+      "medians_us": [
+        86.01599931716919,
+        78.84799689054489,
+        74.75200295448303
+      ],
+      "median_of_medians_us": 78.84799689054489,
+      "span_pct": 14.28571023601601,
+      "noise_pct": [
+        9.322381537939165,
+        14.077901052342105,
+        9.168103074727519
+      ],
+      "means_us": [
+        88.22915190458335,
+        79.35782410576957,
+        77.1487690769137
+      ]
+    },
+    {
+      "elements": 2945024,
+      "medians_us": [
+        73.72800260782242,
+        75.77600330114365,
+        72.7040022611618
+      ],
+      "median_of_medians_us": 73.72800260782242,
+      "span_pct": 4.166667929853707,
+      "noise_pct": [
+        10.177958066686237,
+        27.8987524687001,
+        7.473506930279146
+      ],
+      "means_us": [
+        76.64560076594356,
+        77.40848045051101,
+        75.0294732488692
+      ]
+    },
+    {
+      "elements": 2945025,
+      "medians_us": [
+        72.60800153017044,
+        71.68000191450119,
+        72.7040022611618
+      ],
+      "median_of_medians_us": 72.60800153017044,
+      "span_pct": 1.4103133608974436,
+      "noise_pct": [
+        9.95483131110182,
+        25.036890001207997,
+        7.745816798683264
+      ],
+      "means_us": [
+        74.1646410860122,
+        74.62233716249462,
+        74.17881730198845
+      ]
+    },
+    {
+      "elements": 2949119,
+      "medians_us": [
+        74.75200295448303,
+        74.75200295448303,
+        74.75200295448303
+      ],
+      "median_of_medians_us": 74.75200295448303,
+      "span_pct": 0.0,
+      "noise_pct": [
+        8.483232844602075,
+        13.613457137008275,
+        34.456596455249326
+      ],
+      "means_us": [
+        76.97129692882316,
+        76.71212914958618,
+        78.5178251489998
+      ]
+    },
+    {
+      "elements": 2949120,
+      "medians_us": [
+        72.7040022611618,
+        72.7040022611618,
+        72.7040022611618
+      ],
+      "median_of_medians_us": 72.7040022611618,
+      "span_pct": 0.0,
+      "noise_pct": [
+        12.20171369903111,
+        7.910551167952101,
+        14.510163286530497
+      ],
+      "means_us": [
+        74.03401716426005,
+        74.46841708198191,
+        75.75712098181252
+      ]
+    },
+    {
+      "elements": 2949121,
+      "medians_us": [
+        72.7040022611618,
+        72.7040022611618,
+        72.7040022611618
+      ],
+      "median_of_medians_us": 72.7040022611618,
+      "span_pct": 0.0,
+      "noise_pct": [
+        10.220389133603081,
+        9.464166597937012,
+        12.263732729597633
+      ],
+      "means_us": [
+        74.36518511176095,
+        75.29110494628547,
+        75.25667298957696
+      ]
+    },
+    {
+      "elements": 5898239,
+      "medians_us": [
+        140.19200205802917,
+        138.2399946451187,
+        142.33599603176117
+      ],
+      "median_of_medians_us": 140.19200205802917,
+      "span_pct": 2.921708318957463,
+      "noise_pct": [
+        10.007012497491852,
+        5.579183955876004,
+        6.796653659721772
+      ],
+      "means_us": [
+        141.16860717535073,
+        139.97961464524343,
+        142.0219516083604
+      ]
+    },
+    {
+      "elements": 5898240,
+      "medians_us": [
+        138.2399946451187,
+        137.02400028705597,
+        141.31200313568115
+      ],
+      "median_of_medians_us": 138.2399946451187,
+      "span_pct": 3.101854032643073,
+      "noise_pct": [
+        7.039712023818471,
+        6.434022595182047,
+        13.599988801472401
+      ],
+      "means_us": [
+        139.45302281528754,
+        138.7523501589898,
+        141.37964697182227
+      ]
+    },
+    {
+      "elements": 5898241,
+      "medians_us": [
+        138.2399946451187,
+        137.2160017490387,
+        140.28799533843994
+      ],
+      "median_of_medians_us": 138.2399946451187,
+      "span_pct": 2.222217671005761,
+      "noise_pct": [
+        7.232584598296146,
+        6.90692827054205,
+        4.367454273526897
+      ],
+      "means_us": [
+        139.75942279398518,
+        139.19990263134295,
+        140.50355111062615
+      ]
+    }
+  ],
+  "gpu_after": "Sat Sep  5 19:43:33 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.01              KMD Version: 610.88        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...    On  |   00000000:01:00.0  On |                  N/A |\n| N/A   56C    P0             42W /  133W |    1161MiB /   8188MiB |      5%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+  "cccl_status_after": "",
+  "utc_end": "2026-09-05T11:43:33.112008+00:00"
+}

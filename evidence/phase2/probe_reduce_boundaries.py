@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import statistics
 import subprocess
 import time
@@ -33,12 +34,21 @@ def capture(cmd):
     return p.stdout.decode('utf-8', errors='replace')
 
 
-def run(out):
+def run(out, suite='tile'):
+    if suite == 'grid-cap':
+        # 719 -> 720 blocks; first extra tile; second extra tile per block.
+        centers = [719*4096, 720*4096, 1440*4096]
+        sizes_to_run = [center+delta for center in centers for delta in [-1, 0, 1]]
+        trace_sizes = sizes_to_run
+    else:
+        sizes_to_run = SIZES
+        trace_sizes = [4095, 4096, 4097, N, N+1]
     out.mkdir(parents=True, exist_ok=False)
     env = dict(os.environ, LD_LIBRARY_PATH=f'{BUILD}/lib:/usr/lib/wsl/lib:/usr/local/cuda/lib64',
                CCCL_EXPERIMENTAL_LOGGING='0')
     manifest = {'utc_start': dt.datetime.now(dt.timezone.utc).isoformat(),
                 'scope': 'official I32/I32, 9 sizes, 3 orders, no correctness assertion',
+                'suite': suite, 'sizes': sizes_to_run,
                 'cccl_head': capture(['git', '-C', str(CCCL), 'rev-parse', 'HEAD']).strip(),
                 'cccl_status': capture(['git', '-C', str(CCCL), 'status', '--short']),
                 'binary_sha256': hashlib.sha256(BINARY.read_bytes()).hexdigest(),
@@ -89,6 +99,14 @@ def run(out):
         if trace:
             if 'Dispatching DeviceReduce' not in logs:
                 raise RuntimeError('Runtime dispatch logging unavailable; inspect before timing')
+            if suite == 'grid-cap':
+                blocks = re.findall(r'Invoking DeviceReduceKernel<<<(\d+), 256,.*?6 SM occupancy', logs)
+                expected = [min((n+4095)//4096, 720) for n in sizes]
+                actual = list(map(int, blocks))
+                entry.update(grid_expected=expected, grid_actual=actual)
+                save()
+                if actual != expected or '.items_per_thread = 16, .vec_size = 4' not in logs:
+                    raise RuntimeError('Grid/tuning assumption failed; no timing runs')
         else:
             rows = records(prefix.with_suffix('.json'))
             entry['rows'] = rows
@@ -100,12 +118,12 @@ def run(out):
                 raise RuntimeError('Sample/axis guard failed; no further runs')
         print(f'{label}: {entry["elapsed_s"]:.2f}s, exit {p.returncode}, warnings {len(entry["warning_lines"])}', flush=True)
 
-    execute('dispatch-trace', [4095, 4096, 4097, N, N+1], trace=True)
-    orders = [SIZES, list(reversed(SIZES)), SIZES[4:]+SIZES[:4]]
+    execute('dispatch-trace', trace_sizes, trace=True)
+    orders = [sizes_to_run, list(reversed(sizes_to_run)), sizes_to_run[4:]+sizes_to_run[:4]]
     for i, sizes in enumerate(orders, 1):
         execute(f'round{i}', sizes)
     groups = []
-    for n in SIZES:
+    for n in sizes_to_run:
         rows = [r for trial in manifest['runs'] if not trial['trace_only'] for r in trial['rows']
                 if int(r['axes']['Elements{io}']) == n]
         medians = [r['median_s']*1e6 for r in rows]
@@ -125,5 +143,6 @@ def run(out):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output_directory', type=Path)
+    parser.add_argument('--suite', choices=['tile', 'grid-cap'], default='tile')
     args = parser.parse_args()
-    run(args.output_directory.resolve())
+    run(args.output_directory.resolve(), args.suite)
