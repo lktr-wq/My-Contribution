@@ -1,0 +1,73 @@
+{
+  "sizes": [
+    2945024,
+    2947072,
+    2949088,
+    2949116,
+    2949119,
+    2949120,
+    2949121
+  ],
+  "cccl_head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "decision_rule": "Exploratory only: B-1 variant faster in >=5/6 rounds and median paired delta <= -2%; full-tile B-4096 and B median paired regressions <=2%. No significance claim.",
+  "limits": "Each compile <=300 s; memcheck <=180 s; each measured process <=120 s; six rounds, no automatic retuning/repeats.",
+  "source_sha256": {
+    "evidence/phase2/tail_ab_api.h": "9576222803c0f1b35fafa821d3f8b19eedc3884d1fc698d0282876d81f6a498d",
+    "evidence/phase2/tail_ab_wrapper.cu": "a4de9f73db2da165515b4e758a64769aaa05d3719d80ed25adfd0473d31797ba",
+    "evidence/phase2/tail_ab_bench.cu": "d0f94c05535594c817cd2b74511957753c625fd90ed691292eac675a06a688da",
+    "evidence/phase2/tail_ab_overlay/tail_ab_partial.cuh": "4b9d1e3a8bd0a946c13ca1a93cc651c5f4fe29f3503cda2e426eecd2287213a3",
+    "evidence/phase2/tail_ab_overlay/cub/agent/agent_reduce.cuh": "6287ad5595e00929ba561fb03b5d4267faea2d25e923df1ddcae41d8e8ac45cc"
+  },
+  "nvbench_lib_sha256": "cbec31c052e121ca224de0afa60990fd7dc29293fd676ef54d40e6fa9cf7286b",
+  "compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Tue_Jun_09_02:43:40_PM_PDT_2026\nCuda compilation tools, release 13.3, V13.3.73\nBuild cuda_13.3.r13.3/compiler.38244171_0\n",
+  "binary_sha256": "e91590321df9d7d83dba53c1157e363316b17b7d120cf9cdff355df4ee835133",
+  "memcheck_status": "unavailable: WDDM debugger interface; not a sanitizer pass",
+  "target_static_vector_load_sites": {
+    "baseline": 8,
+    "vector": 66
+  },
+  "utc_start": "2026-09-05T16:58:17.113942+00:00",
+  "steps": [
+    {
+      "label": "round1",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/tail_ab",
+        "-d",
+        "0",
+        "-a",
+        "Case=[12,13,4,5,6,7,8,9,10,11,0,1,2,3]",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-wallpaper-off/round1.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-wallpaper-off/round1.md"
+      ],
+      "gpu": true,
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_before": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n40, 4.66 W, 210 MHz, 7 %\n",
+      "returncode": 0,
+      "elapsed_s": 5.186892186000001,
+      "warnings": [
+        "Warn: GPU throttled below threshold (1447.30 MHz / 2250.00 MHz) (64% < 75%) on sample 200. Discarding previous trial and pausing for 0.050s.",
+        "Warn: GPU throttled below threshold (696.16 MHz / 2250.00 MHz) (31% < 75%) on sample 458. Discarding previous trial and pausing for 0.050s."
+      ],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_after": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n49, 27.89 W, 2580 MHz, 23 %\n"
+    }
+  ],
+  "prepared": true,
+  "reused_binary": "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/tail_ab",
+  "preparation_manifest": "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/manifest.json",
+  "preparation_manifest_sha256": "360bda40967a70d61560b2895f223356b3a94f357218fec2dd8593dbbca22de2",
+  "environmental_change": "User confirmed wallpaper paused/exited after earlier clock warning; new six-round batch, no historical pooling.",
+  "measurement_started": true,
+  "paired_results": []
+}

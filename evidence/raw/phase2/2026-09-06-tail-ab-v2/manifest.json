@@ -1,0 +1,844 @@
+{
+  "utc_start": "2026-09-05T16:53:50.164939+00:00",
+  "steps": [
+    {
+      "label": "compile-baseline",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/tail_ab_overlay",
+        "-DTAIL_AB_ENABLED=0",
+        "-DTHRUST_CUB_WRAPPED_NAMESPACE=tail_baseline",
+        "-DREDUCE_ENTRY=reduce_baseline",
+        "-forward-unknown-to-host-compiler",
+        "-ccbin=/usr/bin/c++",
+        "-DTUNE_BASE=1",
+        "-I/home/lktr/src/cccl/nvbench_helper/nvbench_helper",
+        "-I/home/lktr/src/cccl/lib/cmake/libcudacxx/../../../libcudacxx/include",
+        "-I/home/lktr/src/cccl/lib/cmake/thrust/../../../thrust",
+        "-I/home/lktr/src/cccl/lib/cmake/cub/../../../cub",
+        "-isystem",
+        "/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-src",
+        "-isystem",
+        "/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-build",
+        "-isystem",
+        "/usr/local/cuda/targets/x86_64-linux/include",
+        "-isystem",
+        "/usr/local/cuda/targets/x86_64-linux/include/cccl",
+        "-isystem",
+        "/usr/local/cuda/include",
+        "-O3",
+        "-DNDEBUG",
+        "-std=c++17",
+        "--generate-code=arch=compute_89,code=[compute_89,sm_89]",
+        "--extended-lambda",
+        "-x",
+        "cu",
+        "-c",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/tail_ab_wrapper.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/baseline.o"
+      ],
+      "gpu": false,
+      "trace_only": false,
+      "returncode": 0,
+      "elapsed_s": 12.707943602,
+      "warnings": []
+    },
+    {
+      "label": "compile-vector",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/tail_ab_overlay",
+        "-DTAIL_AB_ENABLED=1",
+        "-DTHRUST_CUB_WRAPPED_NAMESPACE=tail_vector",
+        "-DREDUCE_ENTRY=reduce_vector",
+        "-forward-unknown-to-host-compiler",
+        "-ccbin=/usr/bin/c++",
+        "-DTUNE_BASE=1",
+        "-I/home/lktr/src/cccl/nvbench_helper/nvbench_helper",
+        "-I/home/lktr/src/cccl/lib/cmake/libcudacxx/../../../libcudacxx/include",
+        "-I/home/lktr/src/cccl/lib/cmake/thrust/../../../thrust",
+        "-I/home/lktr/src/cccl/lib/cmake/cub/../../../cub",
+        "-isystem",
+        "/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-src",
+        "-isystem",
+        "/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-build",
+        "-isystem",
+        "/usr/local/cuda/targets/x86_64-linux/include",
+        "-isystem",
+        "/usr/local/cuda/targets/x86_64-linux/include/cccl",
+        "-isystem",
+        "/usr/local/cuda/include",
+        "-O3",
+        "-DNDEBUG",
+        "-std=c++17",
+        "--generate-code=arch=compute_89,code=[compute_89,sm_89]",
+        "--extended-lambda",
+        "-x",
+        "cu",
+        "-c",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/tail_ab_wrapper.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/vector.o"
+      ],
+      "gpu": false,
+      "trace_only": false,
+      "returncode": 0,
+      "elapsed_s": 11.502857322,
+      "warnings": []
+    },
+    {
+      "label": "compile-bench",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-forward-unknown-to-host-compiler",
+        "-ccbin=/usr/bin/c++",
+        "-DTUNE_BASE=1",
+        "-I/home/lktr/src/cccl/nvbench_helper/nvbench_helper",
+        "-I/home/lktr/src/cccl/lib/cmake/libcudacxx/../../../libcudacxx/include",
+        "-I/home/lktr/src/cccl/lib/cmake/thrust/../../../thrust",
+        "-I/home/lktr/src/cccl/lib/cmake/cub/../../../cub",
+        "-isystem",
+        "/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-src",
+        "-isystem",
+        "/home/lktr/src/cccl/build/cub-benchmark/_deps/nvbench-build",
+        "-isystem",
+        "/usr/local/cuda/targets/x86_64-linux/include",
+        "-isystem",
+        "/usr/local/cuda/targets/x86_64-linux/include/cccl",
+        "-isystem",
+        "/usr/local/cuda/include",
+        "-O3",
+        "-DNDEBUG",
+        "-std=c++17",
+        "--generate-code=arch=compute_89,code=[compute_89,sm_89]",
+        "--extended-lambda",
+        "-x",
+        "cu",
+        "-c",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/tail_ab_bench.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/bench.o"
+      ],
+      "gpu": false,
+      "trace_only": false,
+      "returncode": 0,
+      "elapsed_s": 4.282521921000001,
+      "warnings": []
+    },
+    {
+      "label": "link",
+      "command": [
+        "/usr/bin/c++",
+        "nvbench_helper/CMakeFiles/cccl.nvbench_helper.dir/nvbench_helper/nvbench_helper.cu.o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/baseline.o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/vector.o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/bench.o",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/tail_ab",
+        "-Wl,-rpath,/home/lktr/src/cccl/build/cub-benchmark/lib",
+        "/usr/local/cuda-13.3/targets/x86_64-linux/lib/libcurand.so",
+        "lib/libnvbench.so",
+        "-lstdc++fs",
+        "/usr/local/cuda/targets/x86_64-linux/lib/stubs/libnvidia-ml.so",
+        "/usr/local/cuda/targets/x86_64-linux/lib/stubs/libcuda.so",
+        "-ldl",
+        "/usr/lib/x86_64-linux-gnu/librt.a",
+        "/usr/local/cuda/lib64/libcupti.so",
+        "-lcudadevrt",
+        "-lcudart_static",
+        "-lrt",
+        "-lpthread",
+        "-ldl",
+        "-L/usr/local/cuda/targets/x86_64-linux/lib/stubs",
+        "-L/usr/local/cuda/targets/x86_64-linux/lib"
+      ],
+      "gpu": false,
+      "trace_only": false,
+      "returncode": 0,
+      "elapsed_s": 0.9213992759999954,
+      "warnings": []
+    },
+    {
+      "label": "correctness",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/tail_ab",
+        "--check-only"
+      ],
+      "gpu": true,
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_before": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n41, 11.59 W, 810 MHz, 38 %\n",
+      "returncode": 0,
+      "elapsed_s": 1.9782410440000007,
+      "warnings": [],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_after": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n44, 20.88 W, 2250 MHz, 19 %\n"
+    },
+    {
+      "label": "memcheck",
+      "command": [
+        "/usr/local/cuda/bin/compute-sanitizer",
+        "--tool",
+        "memcheck",
+        "--error-exitcode",
+        "99",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/tail_ab",
+        "--check-only"
+      ],
+      "gpu": true,
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_before": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n44, 24.25 W, 2250 MHz, 8 %\n",
+      "returncode": 99,
+      "elapsed_s": 2.1774738980000024,
+      "warnings": [
+        "========= Error: Failed to initialize WDDM debugger interface. Please run EnableDebuggerInterface.bat as an administrator",
+        "========= Error: Device not supported. Please refer to the \"Supported Devices\" section of the sanitizer documentation"
+      ],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_after": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n44, 21.07 W, 2250 MHz, 13 %\n"
+    },
+    {
+      "label": "host-mapping",
+      "command": [
+        "python3",
+        "-B",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/check_tail_ab_mapping.py",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/host-mapping-check.json"
+      ],
+      "gpu": false,
+      "trace_only": false,
+      "returncode": 0,
+      "elapsed_s": 1.3240663620000035,
+      "warnings": []
+    },
+    {
+      "label": "sass-baseline",
+      "command": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-sass",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/baseline.o"
+      ],
+      "gpu": false,
+      "trace_only": false,
+      "returncode": 0,
+      "elapsed_s": 0.37171347799999666,
+      "warnings": []
+    },
+    {
+      "label": "resources-baseline",
+      "command": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-resource-usage",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/baseline.o"
+      ],
+      "gpu": false,
+      "trace_only": false,
+      "returncode": 0,
+      "elapsed_s": 0.037413672999996095,
+      "warnings": []
+    },
+    {
+      "label": "sass-vector",
+      "command": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-sass",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/vector.o"
+      ],
+      "gpu": false,
+      "trace_only": false,
+      "returncode": 0,
+      "elapsed_s": 0.37113515699999766,
+      "warnings": []
+    },
+    {
+      "label": "resources-vector",
+      "command": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-resource-usage",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/vector.o"
+      ],
+      "gpu": false,
+      "trace_only": false,
+      "returncode": 0,
+      "elapsed_s": 0.03760503200000187,
+      "warnings": []
+    },
+    {
+      "label": "trace",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/tail_ab",
+        "-a",
+        "Case=[8,9]",
+        "--profile"
+      ],
+      "gpu": true,
+      "trace_only": true,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_before": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n42, 12.10 W, 855 MHz, 18 %\n",
+      "returncode": 0,
+      "elapsed_s": 0.5727064249999998,
+      "warnings": [],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_after": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n44, 21.26 W, 2250 MHz, 16 %\n"
+    },
+    {
+      "label": "round1",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/tail_ab",
+        "-d",
+        "0",
+        "-a",
+        "Case=[12,13,4,5,6,7,8,9,10,11,0,1,2,3]",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/round1.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/round1.md"
+      ],
+      "gpu": true,
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_before": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n43, 21.49 W, 2250 MHz, 8 %\n",
+      "returncode": 0,
+      "elapsed_s": 5.338587742000001,
+      "warnings": [],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_after": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n51, 25.48 W, 2580 MHz, 7 %\n",
+      "rows": [
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.328319191,
+          "mean_s": 7.94941443763674e-05,
+          "median_s": 7.67040029168129e-05,
+          "noise": 0.351460692405345,
+          "iqr": 0.10680010183547652,
+          "min_s": 5.3247999399900436e-05,
+          "max_s": 0.0004700160026550293,
+          "name": "Device=0 Case=12",
+          "axes": {
+            "Case": "12"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.31819488900000004,
+          "mean_s": 7.667705698311325e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.29582519308419786,
+          "iqr": 0.0845069657556553,
+          "min_s": 5.3247999399900436e-05,
+          "max_s": 0.0006666240096092224,
+          "name": "Device=0 Case=13",
+          "axes": {
+            "Case": "13"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.33603509000000004,
+          "mean_s": 7.853875255957259e-05,
+          "median_s": 7.577600330114365e-05,
+          "noise": 0.2736567475852331,
+          "iqr": 0.09459452417353238,
+          "min_s": 5.939200147986412e-05,
+          "max_s": 0.0007004160284996033,
+          "name": "Device=0 Case=4",
+          "axes": {
+            "Case": "4"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.32628121000000004,
+          "mean_s": 7.761792066320789e-05,
+          "median_s": 7.372800260782241e-05,
+          "noise": 0.3137526873139538,
+          "iqr": 0.10677083412282523,
+          "min_s": 5.222399905323982e-05,
+          "max_s": 0.0006908800005912781,
+          "name": "Device=0 Case=5",
+          "axes": {
+            "Case": "5"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.327701171,
+          "mean_s": 7.83347526043655e-05,
+          "median_s": 7.475200295448303e-05,
+          "noise": 0.27646642654982434,
+          "iqr": 0.09203767072086992,
+          "min_s": 5.3247999399900436e-05,
+          "max_s": 0.0006809599995613098,
+          "name": "Device=0 Case=6",
+          "axes": {
+            "Case": "6"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.32551855100000004,
+          "mean_s": 7.67409607246519e-05,
+          "median_s": 7.372800260782241e-05,
+          "noise": 0.30995162601217646,
+          "iqr": 0.09722215064162325,
+          "min_s": 5.222399905323982e-05,
+          "max_s": 0.0006868799924850463,
+          "name": "Device=0 Case=7",
+          "axes": {
+            "Case": "7"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.331806947,
+          "mean_s": 7.745030470192443e-05,
+          "median_s": 7.475200295448303e-05,
+          "noise": 0.10865539503724211,
+          "iqr": 0.08219170572759373,
+          "min_s": 5.3279999643564224e-05,
+          "max_s": 0.00014207999408245086,
+          "name": "Device=0 Case=8",
+          "axes": {
+            "Case": "8"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.32742116400000004,
+          "mean_s": 7.520396902412185e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.1251644821992506,
+          "iqr": 0.08274649150260405,
+          "min_s": 5.8368001133203504e-05,
+          "max_s": 0.00020479999482631684,
+          "name": "Device=0 Case=9",
+          "axes": {
+            "Case": "9"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.333206985,
+          "mean_s": 7.524838511645788e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.1571847176901379,
+          "iqr": 0.08230634731977297,
+          "min_s": 5.3247999399900436e-05,
+          "max_s": 0.0002648639976978302,
+          "name": "Device=0 Case=10",
+          "axes": {
+            "Case": "10"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.33392749,
+          "mean_s": 7.702796896174547e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.39097358714496283,
+          "iqr": 0.0845069657556553,
+          "min_s": 5.8368001133203504e-05,
+          "max_s": 0.0007004160284996033,
+          "name": "Device=0 Case=11",
+          "axes": {
+            "Case": "11"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.34920514,
+          "mean_s": 7.794604835286727e-05,
+          "median_s": 7.680000364780426e-05,
+          "noise": 0.2843350114841891,
+          "iqr": 0.1066666006979873,
+          "min_s": 5.225599929690361e-05,
+          "max_s": 0.0006656000018119813,
+          "name": "Device=0 Case=0",
+          "axes": {
+            "Case": "0"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.34165835,
+          "mean_s": 7.710844871401781e-05,
+          "median_s": 7.372800260782241e-05,
+          "noise": 0.37670501559375114,
+          "iqr": 0.09461806529262232,
+          "min_s": 5.3247999399900436e-05,
+          "max_s": 0.0006809599995613098,
+          "name": "Device=0 Case=1",
+          "axes": {
+            "Case": "1"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.334265344,
+          "mean_s": 7.499312121048584e-05,
+          "median_s": 7.27040022611618e-05,
+          "noise": 0.10181665170868155,
+          "iqr": 0.0726231752974893,
+          "min_s": 5.939200147986412e-05,
+          "max_s": 0.0002181120067834854,
+          "name": "Device=0 Case=2",
+          "axes": {
+            "Case": "2"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        },
+        {
+          "samples": 1000.0,
+          "walltime_s": 0.337423122,
+          "mean_s": 7.763286446034897e-05,
+          "median_s": 7.680000364780426e-05,
+          "noise": 0.13675733863700426,
+          "iqr": 0.09499994276246934,
+          "min_s": 5.3247999399900436e-05,
+          "max_s": 0.00018432000279426574,
+          "name": "Device=0 Case=3",
+          "axes": {
+            "Case": "3"
+          },
+          "timeout_s": 15.0,
+          "warmups": 20,
+          "at_timeout_boundary": false
+        }
+      ],
+      "checks": [
+        [
+          "12",
+          "2949121",
+          "0",
+          "26542059",
+          "26542059",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "13",
+          "2949121",
+          "1",
+          "26542059",
+          "26542059",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "4",
+          "2949088",
+          "0",
+          "26541766",
+          "26541766",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "5",
+          "2949088",
+          "1",
+          "26541766",
+          "26541766",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "6",
+          "2949116",
+          "0",
+          "26542009",
+          "26542009",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "7",
+          "2949116",
+          "1",
+          "26542009",
+          "26542009",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "8",
+          "2949119",
+          "0",
+          "26542036",
+          "26542036",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "9",
+          "2949119",
+          "1",
+          "26542036",
+          "26542036",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "10",
+          "2949120",
+          "0",
+          "26542047",
+          "26542047",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "11",
+          "2949120",
+          "1",
+          "26542047",
+          "26542047",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "0",
+          "2945024",
+          "0",
+          "26505186",
+          "26505186",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "1",
+          "2945024",
+          "1",
+          "26505186",
+          "26505186",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "2",
+          "2947072",
+          "0",
+          "26523627",
+          "26523627",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ],
+        [
+          "3",
+          "2947072",
+          "1",
+          "26523627",
+          "26523627",
+          "0x505800000",
+          "0x506400000",
+          "0x506400200",
+          "0x55e577fa8e50"
+        ]
+      ],
+      "case_order": [
+        12,
+        13,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "label": "round2",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/tail_ab",
+        "-d",
+        "0",
+        "-a",
+        "Case=[1,0,9,8,7,6,5,4,13,12,11,10,3,2]",
+        "--stopping-criterion",
+        "sample-count",
+        "--target-samples",
+        "1000",
+        "--cold-warmup-runs",
+        "20",
+        "--timeout",
+        "15",
+        "--json",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/round2.json",
+        "--md",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/round2.md"
+      ],
+      "gpu": true,
+      "trace_only": false,
+      "power_before": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_before": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n51, 25.77 W, 2580 MHz, 7 %\n",
+      "returncode": 0,
+      "elapsed_s": 5.538428288000006,
+      "warnings": [
+        "Warn: GPU throttled below threshold (1547.69 MHz / 2250.00 MHz) (69% < 75%) on sample 913. Discarding previous trial and pausing for 0.050s."
+      ],
+      "power_after": "\ufffd\ufffd\u0534\ufffd\ufffd\ufffd\ufffd GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+      "gpu_after": "temperature.gpu, power.draw [W], clocks.current.sm [MHz], utilization.gpu [%]\n52, 26.24 W, 2580 MHz, 11 %\n"
+    }
+  ],
+  "sizes": [
+    2945024,
+    2947072,
+    2949088,
+    2949116,
+    2949119,
+    2949120,
+    2949121
+  ],
+  "cccl_head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "decision_rule": "Exploratory only: B-1 variant faster in >=5/6 rounds and median paired delta <= -2%; full-tile B-4096 and B median paired regressions <=2%. No significance claim.",
+  "limits": "Each compile <=300 s; memcheck <=180 s; each measured process <=120 s; six rounds, no automatic retuning/repeats.",
+  "source_sha256": {
+    "evidence/phase2/tail_ab_api.h": "9576222803c0f1b35fafa821d3f8b19eedc3884d1fc698d0282876d81f6a498d",
+    "evidence/phase2/tail_ab_wrapper.cu": "a4de9f73db2da165515b4e758a64769aaa05d3719d80ed25adfd0473d31797ba",
+    "evidence/phase2/tail_ab_bench.cu": "d0f94c05535594c817cd2b74511957753c625fd90ed691292eac675a06a688da",
+    "evidence/phase2/tail_ab_overlay/tail_ab_partial.cuh": "4b9d1e3a8bd0a946c13ca1a93cc651c5f4fe29f3503cda2e426eecd2287213a3",
+    "evidence/phase2/tail_ab_overlay/cub/agent/agent_reduce.cuh": "6287ad5595e00929ba561fb03b5d4267faea2d25e923df1ddcae41d8e8ac45cc"
+  },
+  "nvbench_lib_sha256": "cbec31c052e121ca224de0afa60990fd7dc29293fd676ef54d40e6fa9cf7286b",
+  "compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Tue_Jun_09_02:43:40_PM_PDT_2026\nCuda compilation tools, release 13.3, V13.3.73\nBuild cuda_13.3.r13.3/compiler.38244171_0\n",
+  "binary_sha256": "e91590321df9d7d83dba53c1157e363316b17b7d120cf9cdff355df4ee835133",
+  "memcheck_status": "unavailable: WDDM debugger interface; not a sanitizer pass",
+  "validation_scope_change": "Exploratory timing only after GPU oracle and exhaustive host mapping; no upstream-ready safety claim.",
+  "target_static_vector_load_sites": {
+    "baseline": 8,
+    "vector": 66
+  },
+  "prepared": true,
+  "measurement_started": true,
+  "paired_results": [
+    {
+      "round": 1,
+      "n": 2945024,
+      "baseline_median_us": 76.80000364780426,
+      "variant_median_us": 73.72800260782242,
+      "delta_pct": -4.000001164153167
+    },
+    {
+      "round": 1,
+      "n": 2947072,
+      "baseline_median_us": 72.7040022611618,
+      "variant_median_us": 76.80000364780426,
+      "delta_pct": 5.633804548928567
+    },
+    {
+      "round": 1,
+      "n": 2949088,
+      "baseline_median_us": 75.77600330114365,
+      "variant_median_us": 73.72800260782242,
+      "delta_pct": -2.7027034999222765
+    },
+    {
+      "round": 1,
+      "n": 2949116,
+      "baseline_median_us": 74.75200295448303,
+      "variant_median_us": 73.72800260782242,
+      "delta_pct": -1.3698634233040408
+    },
+    {
+      "round": 1,
+      "n": 2949119,
+      "baseline_median_us": 74.75200295448303,
+      "variant_median_us": 72.7040022611618,
+      "delta_pct": -2.7397268466080704
+    },
+    {
+      "round": 1,
+      "n": 2949120,
+      "baseline_median_us": 72.7040022611618,
+      "variant_median_us": 72.7040022611618,
+      "delta_pct": 0.0
+    },
+    {
+      "round": 1,
+      "n": 2949121,
+      "baseline_median_us": 76.7040029168129,
+      "variant_median_us": 72.7040022611618,
+      "delta_pct": -5.214852554682425
+    }
+  ]
+}

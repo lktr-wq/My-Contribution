@@ -1,0 +1,77 @@
+# Command Line
+
+```
+'/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-v2/build/tail_ab' -d 0 -a 'Case=[1,0,7,6,11,10,3,2,13,12,9,8,5,4]' --stopping-criterion sample-count --target-samples 1000 --cold-warmup-runs 20 --timeout 15 --json '/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-recovery/round6.json' --md '/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-06-tail-ab-recovery/round6.md'
+```
+
+# Devices
+
+## [0] `NVIDIA GeForce RTX 4060 Laptop GPU`
+* SM Version: 890 (PTX Version: 890)
+* Number of SMs: 24
+* SM Default Clock Rate: 2250 MHz
+* Global Memory: 7096 MiB Free / 8187 MiB Total
+* Global Memory Bus Peak: 256 GB/sec (128-bit DDR @8001MHz)
+* Max Shared Memory: 100 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 32768 KiB
+* Maximum Active Blocks: 24/SM
+* Maximum Active Threads: 1536/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: No
+
+# Log
+
+```
+Run:  [1/14] tail_ab [Device=0 Case=1]
+Pass: Cold: 0.078971ms GPU, 0.166221ms CPU, 0.08s total GPU, 0.32s total wall, 1000x 
+Run:  [2/14] tail_ab [Device=0 Case=0]
+Pass: Cold: 0.077038ms GPU, 0.165709ms CPU, 0.08s total GPU, 0.32s total wall, 1000x 
+Run:  [3/14] tail_ab [Device=0 Case=7]
+Warn: GPU throttled below threshold (346.70 MHz / 2250.00 MHz) (15% < 75%) on sample 827. Discarding previous trial and pausing for 0.050s.
+Pass: Cold: 0.080893ms GPU, 0.182729ms CPU, 0.08s total GPU, 0.40s total wall, 1000x 
+Run:  [4/14] tail_ab [Device=0 Case=6]
+Pass: Cold: 0.080278ms GPU, 0.160336ms CPU, 0.08s total GPU, 0.31s total wall, 1000x 
+Run:  [5/14] tail_ab [Device=0 Case=11]
+Pass: Cold: 0.075359ms GPU, 0.158437ms CPU, 0.08s total GPU, 0.31s total wall, 1000x 
+Run:  [6/14] tail_ab [Device=0 Case=10]
+Pass: Cold: 0.077698ms GPU, 0.153082ms CPU, 0.08s total GPU, 0.30s total wall, 1000x 
+Run:  [7/14] tail_ab [Device=0 Case=3]
+Pass: Cold: 0.077914ms GPU, 0.164709ms CPU, 0.08s total GPU, 0.32s total wall, 1000x 
+Run:  [8/14] tail_ab [Device=0 Case=2]
+Pass: Cold: 0.077996ms GPU, 0.179426ms CPU, 0.08s total GPU, 0.34s total wall, 1000x 
+Run:  [9/14] tail_ab [Device=0 Case=13]
+Pass: Cold: 0.077726ms GPU, 0.186208ms CPU, 0.08s total GPU, 0.35s total wall, 1000x 
+Run:  [10/14] tail_ab [Device=0 Case=12]
+Pass: Cold: 0.076669ms GPU, 0.157126ms CPU, 0.08s total GPU, 0.31s total wall, 1000x 
+Run:  [11/14] tail_ab [Device=0 Case=9]
+Pass: Cold: 0.078433ms GPU, 0.166126ms CPU, 0.08s total GPU, 0.32s total wall, 1000x 
+Run:  [12/14] tail_ab [Device=0 Case=8]
+Pass: Cold: 0.079003ms GPU, 0.162616ms CPU, 0.08s total GPU, 0.32s total wall, 1000x 
+Run:  [13/14] tail_ab [Device=0 Case=5]
+Pass: Cold: 0.079645ms GPU, 0.170928ms CPU, 0.08s total GPU, 0.33s total wall, 1000x 
+Run:  [14/14] tail_ab [Device=0 Case=4]
+Pass: Cold: 0.081489ms GPU, 0.166382ms CPU, 0.08s total GPU, 0.32s total wall, 1000x 
+```
+
+# Benchmark Results
+
+## tail_ab
+
+### [0] NVIDIA GeForce RTX 4060 Laptop GPU
+
+| Case | Samples |  CPU Time  | Noise  | GPU Time  | Noise  | Elem/s  | GlobalMem BW | BWUtil |
+|------|---------|------------|--------|-----------|--------|---------|--------------|--------|
+|    1 |   1000x | 166.221 us | 45.06% | 78.971 us | 14.85% | 37.292G | 149.169 GB/s | 58.26% |
+|    0 |   1000x | 165.709 us | 55.43% | 77.038 us | 16.89% | 38.228G | 152.912 GB/s | 59.72% |
+|    7 |   1000x | 182.729 us | 51.56% | 80.893 us | 22.68% | 36.457G | 145.827 GB/s | 56.96% |
+|    6 |   1000x | 160.336 us | 46.99% | 80.278 us | 23.29% | 36.736G | 146.946 GB/s | 57.39% |
+|   11 |   1000x | 158.437 us | 26.33% | 75.359 us | 10.09% | 39.134G | 156.536 GB/s | 61.14% |
+|   10 |   1000x | 153.082 us | 27.58% | 77.698 us | 13.52% | 37.956G | 151.826 GB/s | 59.30% |
+|    3 |   1000x | 164.709 us | 27.18% | 77.914 us | 14.93% | 37.824G | 151.298 GB/s | 59.09% |
+|    2 |   1000x | 179.426 us | 52.76% | 77.996 us | 15.13% | 37.785G | 151.139 GB/s | 59.03% |
+|   13 |   1000x | 186.208 us | 61.47% | 77.726 us | 17.58% | 37.942G | 151.769 GB/s | 59.28% |
+|   12 |   1000x | 157.126 us | 30.68% | 76.669 us | 10.64% | 38.465G | 153.862 GB/s | 60.09% |
+|    9 |   1000x | 166.126 us | 44.77% | 78.433 us | 14.72% | 37.601G | 150.403 GB/s | 58.74% |
+|    8 |   1000x | 162.616 us | 32.28% | 79.003 us | 16.64% | 37.329G | 149.317 GB/s | 58.32% |
+|    5 |   1000x | 170.928 us | 40.19% | 79.645 us | 16.00% | 37.028G | 148.112 GB/s | 57.85% |
+|    4 |   1000x | 166.382 us | 27.74% | 81.489 us | 15.27% | 36.190G | 144.759 GB/s | 56.54% |

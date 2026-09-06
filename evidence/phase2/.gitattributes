@@ -1,0 +1,5 @@
+# Preserve the measured source hashes across Windows/WSL checkouts.
+tail_ab_api.h -text
+tail_ab_bench.cu -text
+tail_ab_wrapper.cu -text
+tail_ab_overlay/** -text

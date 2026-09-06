@@ -1,0 +1,28 @@
+
+Fatbin ptx code:
+================
+arch = sm_89
+code version = [9,3]
+host = linux
+compile_size = 64bit
+compressed
+ptxasOptions = 
+
+Fatbin elf code:
+================
+arch = sm_89
+code version = [1,8]
+host = linux
+compile_size = 64bit
+
+Resource usage:
+ Common:
+  GLOBAL:57 CONSTANT[4]:456
+ Function _ZN13tail_baseline3cub6detail6reduce28DeviceReduceSingleTileKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEEPiSF_iS9_iiNS7_8identityEEEvT0_T1_T2_T3_T4_T6_:
+  REG:32 STACK:0 SHARED:44 LOCAL:0 CONSTANT[0]:381 TEXTURE:0 SURFACE:0 SAMPLER:0
+ Function _ZN13tail_baseline3cub6detail6reduce18DeviceReduceKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEELb1EPiSF_jjS9_iiNS7_8identityEEEvT1_T2_T4_NS0_13GridEvenShareIT3_EET5_T7_T8_:
+  REG:40 STACK:0 SHARED:44 LOCAL:0 CONSTANT[0]:421 TEXTURE:0 SURFACE:0 SAMPLER:0
+ Function _ZN13tail_baseline3cub6detail6reduce28DeviceReduceSingleTileKernelINS2_26policy_selector_from_typesIijN4cuda3std3__44plusIvEELNS5_9execution3__411determinism15__determinism_tE1EEEPiSF_jS9_iiNS7_8identityEEEvT0_T1_T2_T3_T4_T6_:
+  REG:37 STACK:0 SHARED:44 LOCAL:0 CONSTANT[0]:381 TEXTURE:0 SURFACE:0 SAMPLER:0
+ Function _ZN13tail_baseline3cub6detail11EmptyKernelIvEEvv:
+  REG:4 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:352 TEXTURE:0 SURFACE:0 SAMPLER:0

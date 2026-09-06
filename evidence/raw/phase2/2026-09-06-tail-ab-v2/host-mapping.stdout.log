@@ -1,0 +1,10 @@
+{
+  "eligible_lengths_checked": 3072,
+  "minimum": 1024,
+  "maximum": 4095,
+  "each_valid_element_visited_exactly_once": true,
+  "vector_reads_within_valid_end": true,
+  "each_thread_has_an_initial_vector": true,
+  "device_sanitizer_verified": false,
+  "limitation": "This models source index arithmetic, not compiler-generated runtime memory accesses."
+}
