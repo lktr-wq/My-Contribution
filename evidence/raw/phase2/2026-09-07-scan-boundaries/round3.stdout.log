@@ -1,0 +1,71 @@
+# Command Line
+
+```
+'/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-07-scan-boundaries/build/scan_boundaries' -d 0 -a 'N=[46079,46080,46081,1919,1920,1921,245759,245760,245761]' --stopping-criterion sample-count --target-samples 1000 --cold-warmup-runs 20 --timeout 15 --json '/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-07-scan-boundaries/round3.json' --md '/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-07-scan-boundaries/round3.md'
+```
+
+# Devices
+
+## [0] `NVIDIA GeForce RTX 4060 Laptop GPU`
+* SM Version: 890 (PTX Version: 890)
+* Number of SMs: 24
+* SM Default Clock Rate: 2250 MHz
+* Global Memory: 7096 MiB Free / 8187 MiB Total
+* Global Memory Bus Peak: 256 GB/sec (128-bit DDR @8001MHz)
+* Max Shared Memory: 100 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 32768 KiB
+* Maximum Active Blocks: 24/SM
+* Maximum Active Threads: 1536/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: No
+
+# Log
+
+```
+Run:  [1/9] scan_boundaries [Device=0 N=46079]
+Pass: Cold: 0.020934ms GPU, 0.100827ms CPU, 0.02s total GPU, 0.26s total wall, 1000x 
+CHECK N=46079 before=PASS after=PASS guards=PASS
+Run:  [2/9] scan_boundaries [Device=0 N=46080]
+Warn: GPU throttled below threshold (1678.96 MHz / 2250.00 MHz) (75% < 75%) on sample 855. Discarding previous trial and pausing for 0.050s.
+Pass: Cold: 0.020474ms GPU, 0.103492ms CPU, 0.02s total GPU, 0.32s total wall, 1000x 
+CHECK N=46080 before=PASS after=PASS guards=PASS
+Run:  [3/9] scan_boundaries [Device=0 N=46081]
+Pass: Cold: 0.022585ms GPU, 0.102101ms CPU, 0.02s total GPU, 0.27s total wall, 1000x 
+CHECK N=46081 before=PASS after=PASS guards=PASS
+Run:  [4/9] scan_boundaries [Device=0 N=1919]
+Pass: Cold: 0.024554ms GPU, 0.108282ms CPU, 0.02s total GPU, 0.27s total wall, 1000x 
+CHECK N=1919 before=PASS after=PASS guards=PASS
+Run:  [5/9] scan_boundaries [Device=0 N=1920]
+Pass: Cold: 0.022191ms GPU, 0.103939ms CPU, 0.02s total GPU, 0.27s total wall, 1000x 
+CHECK N=1920 before=PASS after=PASS guards=PASS
+Run:  [6/9] scan_boundaries [Device=0 N=1921]
+Pass: Cold: 0.021529ms GPU, 0.105856ms CPU, 0.02s total GPU, 0.27s total wall, 1000x 
+CHECK N=1921 before=PASS after=PASS guards=PASS
+Run:  [7/9] scan_boundaries [Device=0 N=245759]
+Pass: Cold: 0.024939ms GPU, 0.111746ms CPU, 0.02s total GPU, 0.27s total wall, 1000x 
+CHECK N=245759 before=PASS after=PASS guards=PASS
+Run:  [8/9] scan_boundaries [Device=0 N=245760]
+Pass: Cold: 0.023171ms GPU, 0.108178ms CPU, 0.02s total GPU, 0.27s total wall, 1000x 
+CHECK N=245760 before=PASS after=PASS guards=PASS
+Run:  [9/9] scan_boundaries [Device=0 N=245761]
+Pass: Cold: 0.023259ms GPU, 0.105691ms CPU, 0.02s total GPU, 0.27s total wall, 1000x 
+CHECK N=245761 before=PASS after=PASS guards=PASS
+```
+
+# Benchmark Results
+
+## scan_boundaries
+
+### [0] NVIDIA GeForce RTX 4060 Laptop GPU
+
+|   N    | Samples |  CPU Time  | Noise  | GPU Time  |  Noise  | Elem/s  | GlobalMem BW | BWUtil |
+|--------|---------|------------|--------|-----------|---------|---------|--------------|--------|
+|  46079 |   1000x | 100.827 us | 37.46% | 20.934 us |  65.49% |  2.201G |  17.609 GB/s |  6.88% |
+|  46080 |   1000x | 103.492 us | 39.61% | 20.474 us | 100.14% |  2.251G |  18.006 GB/s |  7.03% |
+|  46081 |   1000x | 102.101 us | 41.45% | 22.585 us |  97.62% |  2.040G |  16.322 GB/s |  6.38% |
+|   1919 |   1000x | 108.282 us | 43.90% | 24.554 us |  90.35% | 78.153M | 625.222 MB/s |  0.24% |
+|   1920 |   1000x | 103.939 us | 38.78% | 22.191 us |  80.69% | 86.523M | 692.184 MB/s |  0.27% |
+|   1921 |   1000x | 105.856 us | 39.49% | 21.529 us |  87.65% | 89.229M | 713.834 MB/s |  0.28% |
+| 245759 |   1000x | 111.746 us | 41.36% | 24.939 us |  64.25% |  9.854G |  78.835 GB/s | 30.79% |
+| 245760 |   1000x | 108.178 us | 40.30% | 23.171 us |  55.10% | 10.606G |  84.850 GB/s | 33.14% |
+| 245761 |   1000x | 105.691 us | 37.36% | 23.259 us |  60.32% | 10.566G |  84.531 GB/s | 33.02% |
