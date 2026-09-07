@@ -1,0 +1,52 @@
+# Command Line
+
+```
+'/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-07-select-distribution/build/select_distribution' -d 0 -a 'Case=[0,1,2,3,4,5]' --stopping-criterion sample-count --target-samples 1000 --cold-warmup-runs 20 --timeout 15 --json '/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-07-select-distribution/round1.json' --md '/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-07-select-distribution/round1.md'
+```
+
+# Devices
+
+## [0] `NVIDIA GeForce RTX 4060 Laptop GPU`
+* SM Version: 890 (PTX Version: 890)
+* Number of SMs: 24
+* SM Default Clock Rate: 2250 MHz
+* Global Memory: 7096 MiB Free / 8187 MiB Total
+* Global Memory Bus Peak: 256 GB/sec (128-bit DDR @8001MHz)
+* Max Shared Memory: 100 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 32768 KiB
+* Maximum Active Blocks: 24/SM
+* Maximum Active Threads: 1536/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: No
+
+# Log
+
+```
+Run:  [1/6] select_distribution [Device=0 Case=0]
+Pass: Cold: 0.055546ms GPU, 0.141707ms CPU, 0.06s total GPU, 0.30s total wall, 1000x 
+Run:  [2/6] select_distribution [Device=0 Case=1]
+Pass: Cold: 0.058357ms GPU, 0.130375ms CPU, 0.06s total GPU, 0.29s total wall, 1000x 
+Run:  [3/6] select_distribution [Device=0 Case=2]
+Pass: Cold: 0.056062ms GPU, 0.135049ms CPU, 0.06s total GPU, 0.29s total wall, 1000x 
+Run:  [4/6] select_distribution [Device=0 Case=3]
+Pass: Cold: 0.154984ms GPU, 0.247042ms CPU, 0.15s total GPU, 0.41s total wall, 1000x 
+Run:  [5/6] select_distribution [Device=0 Case=4]
+Pass: Cold: 0.157286ms GPU, 0.233731ms CPU, 0.16s total GPU, 0.39s total wall, 1000x 
+Run:  [6/6] select_distribution [Device=0 Case=5]
+Pass: Cold: 0.155006ms GPU, 0.229800ms CPU, 0.16s total GPU, 0.39s total wall, 1000x 
+```
+
+# Benchmark Results
+
+## select_distribution
+
+### [0] NVIDIA GeForce RTX 4060 Laptop GPU
+
+| Case | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | Elem/s  | GlobalMem BW | BWUtil |
+|------|---------|------------|--------|------------|--------|---------|--------------|--------|
+|    0 |   1000x | 141.707 us | 34.06% |  55.546 us | 27.70% | 18.878G | 132.144 GB/s | 51.61% |
+|    1 |   1000x | 130.375 us | 28.60% |  58.357 us | 22.73% | 17.968G | 125.778 GB/s | 49.13% |
+|    2 |   1000x | 135.049 us | 34.99% |  56.062 us | 24.46% | 18.704G | 130.927 GB/s | 51.14% |
+|    3 |   1000x | 247.042 us | 21.14% | 154.984 us | 11.68% | 27.063G | 189.440 GB/s | 73.99% |
+|    4 |   1000x | 233.731 us | 17.16% | 157.286 us |  9.97% | 26.667G | 186.667 GB/s | 72.91% |
+|    5 |   1000x | 229.800 us | 16.49% | 155.006 us |  7.64% | 27.059G | 189.413 GB/s | 73.98% |
