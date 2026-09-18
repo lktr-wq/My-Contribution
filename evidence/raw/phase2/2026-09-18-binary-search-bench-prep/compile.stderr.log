@@ -1,0 +1,51 @@
+ptxas info    : 23 bytes gmem, 184 bytes cmem[4]
+ptxas info    : Compiling entry function '_Z15repeated_searchILi4EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z15repeated_searchILi4EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, used 1 barriers, 4 bytes smem, 392 bytes cmem[0]
+ptxas info    : Compile time = 25.752 ms
+ptxas info    : Compiling entry function '_Z15repeated_searchILi3EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z15repeated_searchILi3EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, used 1 barriers, 4 bytes smem, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.656 ms
+ptxas info    : Compiling entry function '_Z15repeated_searchILi2EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z15repeated_searchILi2EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, used 1 barriers, 4 bytes smem, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.504 ms
+ptxas info    : Compiling entry function '_Z15repeated_searchILi1EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z15repeated_searchILi1EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 1 barriers, 4 bytes smem, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.862 ms
+ptxas info    : Compiling entry function '_Z15repeated_searchILi0EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z15repeated_searchILi0EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 1 barriers, 4 bytes smem, 392 bytes cmem[0]
+ptxas info    : Compile time = 3.410 ms
+ptxas info    : Compiling entry function '_Z13search_kernelILi4EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z13search_kernelILi4EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 1.493 ms
+ptxas info    : Compiling entry function '_Z13search_kernelILi3EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z13search_kernelILi3EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 1.539 ms
+ptxas info    : Compiling entry function '_Z13search_kernelILi2EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z13search_kernelILi2EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 1.631 ms
+ptxas info    : Compiling entry function '_Z13search_kernelILi1EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z13search_kernelILi1EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 1.911 ms
+ptxas info    : Compiling entry function '_Z13search_kernelILi0EEvPKiiS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z13search_kernelILi0EEvPKiiS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.397 ms
