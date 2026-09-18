@@ -1,0 +1,42 @@
+{
+  "utc_start": "2026-09-18T09:04:24.618010+00:00",
+  "scope": "correctness only; stock CCCL + four local integer reference variants",
+  "source_sha256": "64c3773b624ed71ddd3dddb12a9e78c5aa222957c8f69c319159b094fb758676",
+  "driver_sha256": "4b34a3031600a0e1cfb4e3b3c1495d4a6b46435b65e961a57f801b9b5aa19ab4",
+  "cccl_head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "status_before": "",
+  "nvcc_version": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Tue_Jun_09_02:43:40_PM_PDT_2026\nCuda compilation tools, release 13.3, V13.3.73\nBuild cuda_13.3.r13.3/compiler.38244171_0",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU, 610.88",
+  "steps": [
+    {
+      "label": "compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-I/home/lktr/src/cccl/cub",
+        "-I/home/lktr/src/cccl/thrust",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_11412.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-binary-search-correctness/build/binary_search_11412"
+      ],
+      "timeout_s": 120,
+      "returncode": 0,
+      "elapsed_s": 4.6350919600000005
+    },
+    {
+      "label": "correctness",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-binary-search-correctness/build/binary_search_11412"
+      ],
+      "timeout_s": 30,
+      "returncode": 0,
+      "elapsed_s": 0.4235385919999999
+    }
+  ],
+  "completed": true,
+  "binary_sha256": "6a1988e0cdbe9770b294c5d1e5bc5f9f30367bb7fc2415f63b059fdaee43484c",
+  "status_after": ""
+}
