@@ -1,0 +1,14 @@
+{
+  "utc_start": "2026-09-18T14:11:49.249085+00:00",
+  "timeout_s": 180,
+  "completed": true,
+  "binary_sha256": "9eb1023c3093e5084690d5b9e2a5dd8d96c1b9ead006183b8281546c800f72ec",
+  "command": [
+    "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-binary-search-bench-prep/build/binary_search_bench",
+    "--measure"
+  ],
+  "returncode": 0,
+  "samples": 1350,
+  "telemetry_returncode": 0,
+  "elapsed_s": 9.997231462999999
+}
