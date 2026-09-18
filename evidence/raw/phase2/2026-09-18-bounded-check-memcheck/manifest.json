@@ -1,0 +1,51 @@
+{
+  "utc_start": "2026-09-18T14:24:16.260149+00:00",
+  "completed": false,
+  "performance_tested": false,
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "status_before": "",
+  "hashes": {
+    "binary_search_bounded_check.cu": "e1c232d4bb2d28de8ea8b604193119ce671772d8661b1cdf74ee5a7355b5a9b6",
+    "binary_search_bounded.cuh": "248a983a96c174026fc3884cba38270f0c179367ff48165f33817e291b49e0e5",
+    "check_binary_search_bounded.py": "d0299c5c8cf8bd15435bbc6b7e355d298b03e0aeb6eb8d5ec3503c86080f7c40"
+  },
+  "steps": [
+    {
+      "label": "compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_check.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-check-memcheck/build/bounded_check"
+      ],
+      "returncode": 0,
+      "elapsed_s": 5.938325415000001
+    },
+    {
+      "label": "check",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-check-memcheck/build/bounded_check"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.5228894269999955
+    },
+    {
+      "label": "memcheck",
+      "command": [
+        "/usr/local/cuda/bin/compute-sanitizer",
+        "--tool",
+        "memcheck",
+        "--error-exitcode",
+        "3",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-check-memcheck/build/bounded_check"
+      ],
+      "returncode": 3,
+      "elapsed_s": 0.7229128090000003
+    }
+  ],
+  "error": "AssertionError()"
+}
