@@ -1,0 +1,63 @@
+{
+  "start": "2026-09-18T14:35:22.591714+00:00",
+  "completed": true,
+  "steps": [
+    {
+      "label": "compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "--ptxas-options=-v",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_screen.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-screen/build/screen"
+      ],
+      "utc_start": "2026-09-18T14:35:22.726209+00:00",
+      "returncode": 0,
+      "elapsed_s": 5.5882110869999995
+    },
+    {
+      "label": "check",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-screen/build/screen",
+        "--check"
+      ],
+      "utc_start": "2026-09-18T14:35:28.321264+00:00",
+      "returncode": 0,
+      "elapsed_s": 0.3727677430000007
+    },
+    {
+      "label": "preheat",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-screen/build/screen",
+        "--measure"
+      ],
+      "utc_start": "2026-09-18T14:35:28.719103+00:00",
+      "returncode": 0,
+      "elapsed_s": 2.6276381650000005
+    },
+    {
+      "label": "measure",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-screen/build/screen",
+        "--measure"
+      ],
+      "utc_start": "2026-09-18T14:35:31.351411+00:00",
+      "returncode": 0,
+      "elapsed_s": 2.526142138000001
+    }
+  ],
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "status_before": "",
+  "hashes": {
+    "binary_search_bounded_screen.cu": "29d257ea3274703631a327136db01c10760da3b141e2e6c2a1383c107ba63d94",
+    "binary_search_bounded.cuh": "248a983a96c174026fc3884cba38270f0c179367ff48165f33817e291b49e0e5",
+    "binary_search_bounded_bench.cu": "9d8524a72457aae136bc553caa1874c4efc3018cab89a0d1d6d91bd925b31908",
+    "run_bounded_screen.py": "2da76b577fe5a1c17377df4a8372cffd33b40453cf71b2db773f9dd9cfd87719"
+  },
+  "binary_sha256": "0fead7ee98a6b436dd4d6879cf2dfea0f0bec69eee689e38ac2fb21affcac8df",
+  "status_after": ""
+}
