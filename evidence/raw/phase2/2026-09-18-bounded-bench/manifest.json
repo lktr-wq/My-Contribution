@@ -1,0 +1,32 @@
+{
+  "start": "2026-09-18T14:28:31.716668+00:00",
+  "completed": false,
+  "steps": [
+    {
+      "label": "compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "--ptxas-options=-v",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_bench.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-bench/build/bench"
+      ],
+      "utc_start": "2026-09-18T14:28:31.852062+00:00",
+      "returncode": 134,
+      "elapsed_s": 2.8293690080000005
+    }
+  ],
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "status_before": "",
+  "hashes": {
+    "binary_search_bounded_bench.cu": "f13e288648d77dbe130d0995ef61a36485263f26f2fe7e563ee8ecd28e35c4b6",
+    "binary_search_bounded.cuh": "248a983a96c174026fc3884cba38270f0c179367ff48165f33817e291b49e0e5",
+    "binary_search_11412.cu": "64c3773b624ed71ddd3dddb12a9e78c5aa222957c8f69c319159b094fb758676",
+    "run_bounded_bench.py": "05731745ae8729cfa1a6919fa43c8b5a6c3ffcd4f2188c262401e457c5bedbec"
+  },
+  "error": "AssertionError()"
+}

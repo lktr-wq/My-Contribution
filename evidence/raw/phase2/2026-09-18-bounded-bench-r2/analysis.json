@@ -1,0 +1,67 @@
+{
+  "results": [
+    {
+      "shape": 0,
+      "official_ms": 7.3036801815,
+      "clone_ms": 7.416240215,
+      "guarded_ms": 5.275984049,
+      "reduction_vs_official_percent": 27.762663234297868,
+      "reduction_vs_clone_percent": 28.859045877062385,
+      "paired_round_reduction_vs_clone_percent": [
+        27.744038871666632,
+        28.859045877062385,
+        31.21001151676329
+      ]
+    },
+    {
+      "shape": 1,
+      "official_ms": 6.793120146,
+      "clone_ms": 6.915071964,
+      "guarded_ms": 4.88345623,
+      "reduction_vs_official_percent": 28.111734739808313,
+      "reduction_vs_clone_percent": 29.37953132775235,
+      "paired_round_reduction_vs_clone_percent": [
+        23.862599121780715,
+        30.09518411828721,
+        29.37953132775235
+      ]
+    },
+    {
+      "shape": 2,
+      "official_ms": 6.818304062,
+      "clone_ms": 6.840240002,
+      "guarded_ms": 4.943871975,
+      "reduction_vs_official_percent": 27.491177717442195,
+      "reduction_vs_clone_percent": 27.723705987589987,
+      "paired_round_reduction_vs_clone_percent": [
+        27.4966234479893,
+        27.733995268372468,
+        27.961489244161452
+      ]
+    }
+  ],
+  "sass": {
+    "2": {
+      "instruction_lines": 192,
+      "normalized_sha256": "be268407fbed5a91094fdaefe7533b522c118d0507cc9310af7fe040b23187b3"
+    },
+    "1": {
+      "instruction_lines": 128,
+      "normalized_sha256": "0a3fbaeca0b329393f0d39f9c3a687339512ae063765a7d20f98ee0794e16055"
+    },
+    "0": {
+      "instruction_lines": 128,
+      "normalized_sha256": "0a3fbaeca0b329393f0d39f9c3a687339512ae063765a7d20f98ee0794e16055"
+    }
+  },
+  "official_clone_normalized_instructions_identical": true,
+  "measurement_sm_mhz": {
+    "samples": 46,
+    "min": 2565,
+    "max": 2580,
+    "counts": {
+      "2565": 44,
+      "2580": 2
+    }
+  }
+}

@@ -1,0 +1,8 @@
+/home/lktr/src/cccl/libcudacxx/include/cuda/std/__functional/binary_negate.h(28): internal error: assertion failed at: "src_seq.c", line 1274 in recycle_src_seq_entry
+
+  namespace cuda::std { inline namespace __4 {
+  ^
+
+1 catastrophic error detected in the compilation of "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_bench.cu".
+Compilation aborted.
+Aborted (core dumped)

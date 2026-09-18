@@ -1,0 +1,77 @@
+{
+  "start": "2026-09-18T14:29:10.211058+00:00",
+  "completed": true,
+  "steps": [
+    {
+      "label": "compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "--ptxas-options=-v",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_bench.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-bench-r2/build/bench"
+      ],
+      "utc_start": "2026-09-18T14:29:10.347565+00:00",
+      "returncode": 0,
+      "elapsed_s": 5.587182517000002
+    },
+    {
+      "label": "check",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-bench-r2/build/bench",
+        "--check",
+        "20000"
+      ],
+      "utc_start": "2026-09-18T14:29:15.942740+00:00",
+      "returncode": 0,
+      "elapsed_s": 0.472505034000001
+    },
+    {
+      "label": "sass",
+      "command": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-sass",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-bench-r2/build/bench"
+      ],
+      "utc_start": "2026-09-18T14:29:16.432079+00:00",
+      "returncode": 0,
+      "elapsed_s": 0.6222869959999997
+    },
+    {
+      "label": "preheat",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-bench-r2/build/bench",
+        "--measure",
+        "20000"
+      ],
+      "utc_start": "2026-09-18T14:29:17.072960+00:00",
+      "returncode": 0,
+      "elapsed_s": 9.347344848999995
+    },
+    {
+      "label": "measure",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-18-bounded-bench-r2/build/bench",
+        "--measure",
+        "20000"
+      ],
+      "utc_start": "2026-09-18T14:29:26.425911+00:00",
+      "returncode": 0,
+      "elapsed_s": 9.347649755000006
+    }
+  ],
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "status_before": "",
+  "hashes": {
+    "binary_search_bounded_bench.cu": "9d8524a72457aae136bc553caa1874c4efc3018cab89a0d1d6d91bd925b31908",
+    "binary_search_bounded.cuh": "248a983a96c174026fc3884cba38270f0c179367ff48165f33817e291b49e0e5",
+    "binary_search_11412.cu": "64c3773b624ed71ddd3dddb12a9e78c5aa222957c8f69c319159b094fb758676",
+    "run_bounded_bench.py": "05731745ae8729cfa1a6919fa43c8b5a6c3ffcd4f2188c262401e457c5bedbec"
+  },
+  "binary_sha256": "b9efe5ecd1db4baf1b015e9eda27b56a5d4bedbe1c0bad3e753edfbe1aab5e60",
+  "status_after": ""
+}
