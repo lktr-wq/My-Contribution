@@ -1,8 +1,10 @@
 # Device-only bounded 32-bit search: implementation and results
 
+**2026-09-20 follow-up:** [Compilation and device-code cost report](bounded-search-cost-report.md). Focused probes found larger kernel text and increased register allocation; this is not a cost-free optimization.
+
 ## Outcome
 
-This experiment follows the bounded 32-bit dispatch approach already discussed in [NVIDIA/cccl#11412](https://github.com/NVIDIA/cccl/issues/11412). It adds implementation and validation evidence, rather than introducing the observation that 32-bit indexing can improve GPU search performance. The compile-time and code-size concerns raised in that discussion remain open.
+This experiment follows the bounded 32-bit dispatch approach already discussed in [NVIDIA/cccl#11412](https://github.com/NVIDIA/cccl/issues/11412). It adds implementation and validation evidence, rather than introducing the observation that 32-bit indexing can improve GPU search performance. The follow-up above measures compilation and code-size costs for focused probes; broader application costs remain open.
 
 On an RTX 4060 Laptop GPU, the modified public `cuda::std::binary_search` reduced elapsed time by about 24% for the tested 20,000-element workloads. Other tested sizes were essentially unchanged or improved by about 23%, as shown below. These are comparisons on the same GPU, not direct comparisons with the issue author's measurements.
 
@@ -79,4 +81,4 @@ The runner currently assumes a Linux/WSL checkout at `/home/lktr/src/cccl`, CUDA
 
 Known boundaries: GPU specificity, one GPU/compiler, limited pointer/int workloads, reused data between launches, no physical huge-array performance test, and unavailable WDDM sanitizer. CPU compilation overhead and untested targets are not covered by executable identity.
 
-The next measurements will address compilation time and generated device-code size, rather than assume the observed runtime improvement is free. The existing benchmark source also includes earlier experimental variants, so whole-executable size alone would not isolate this change's cost. A focused comparison is needed before drawing conclusions about those tradeoffs.
+The subsequent [cost comparison](bounded-search-cost-report.md) uses focused programs without the earlier experimental variants present in this runtime benchmark. It measures kernel text separately from complete file sizes. The result confirms a generated-code tradeoff, while leaving larger-application costs and upstream suitability unresolved.
