@@ -1,0 +1,93 @@
+{
+  "cpu_affinity": 0,
+  "steps": [
+    {
+      "label": "head",
+      "args": [
+        "git",
+        "-C",
+        "/home/lktr/src/cccl",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "seconds": 0.022852217000007613
+    },
+    {
+      "label": "status-before",
+      "args": [
+        "git",
+        "-C",
+        "/home/lktr/src/cccl",
+        "status",
+        "--porcelain"
+      ],
+      "returncode": 0,
+      "seconds": 0.12183837199999914
+    },
+    {
+      "label": "compiler",
+      "args": [
+        "g++",
+        "--version"
+      ],
+      "returncode": 0,
+      "seconds": 0.01561972600001127
+    },
+    {
+      "label": "cpu",
+      "args": [
+        "lscpu"
+      ],
+      "returncode": 0,
+      "seconds": 0.01678846900000508
+    },
+    {
+      "label": "baseline-dependencies",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-MM",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp"
+      ],
+      "returncode": 0,
+      "seconds": 0.4141413969999945
+    },
+    {
+      "label": "baseline-compile",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 1.0795490959999938
+    },
+    {
+      "label": "overlay-dependencies",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-MM",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp"
+      ],
+      "returncode": 0,
+      "seconds": 1.4092733329999874
+    }
+  ],
+  "completed": false,
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "source_sha256": "1bb5d22a2c57b655af2474d30920a91403614bc17ca03bd7235306c4c27a9d67"
+}

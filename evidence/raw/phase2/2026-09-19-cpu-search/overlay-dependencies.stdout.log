@@ -1,0 +1,23 @@
+cpu_search.o: \
+ /mnt/d/Projects/Open-Source\ Contribution/evidence/phase2/cpu_search.cpp \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/algorithm \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/detail/__config \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__internal/atomic.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/__cccl_config \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/assert.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/compiler.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/preprocessor.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/system_header.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/is_non_narrowing_convertible.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/deprecated.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/exceptions.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/ptx_isa.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/rtti.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/sequence_access.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/unreachable.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/version.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__cccl/visibility.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__internal/cpp_dialect.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__internal/namespaces.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__internal/pstl_config.h \
+ /home/lktr/src/cccl/libcudacxx/include/cuda/std/__internal/thread_api.h

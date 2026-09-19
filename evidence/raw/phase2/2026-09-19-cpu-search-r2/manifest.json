@@ -1,0 +1,231 @@
+{
+  "cpu_affinity": 0,
+  "steps": [
+    {
+      "label": "head",
+      "args": [
+        "git",
+        "-C",
+        "/home/lktr/src/cccl",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "seconds": 0.023594821000003208
+    },
+    {
+      "label": "status-before",
+      "args": [
+        "git",
+        "-C",
+        "/home/lktr/src/cccl",
+        "status",
+        "--porcelain"
+      ],
+      "returncode": 0,
+      "seconds": 0.11873151199999654
+    },
+    {
+      "label": "compiler",
+      "args": [
+        "g++",
+        "--version"
+      ],
+      "returncode": 0,
+      "seconds": 0.014168943000001377
+    },
+    {
+      "label": "cpu",
+      "args": [
+        "lscpu"
+      ],
+      "returncode": 0,
+      "seconds": 0.014631850999990093
+    },
+    {
+      "label": "baseline-dependencies",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-M",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp"
+      ],
+      "returncode": 0,
+      "seconds": 0.4056086079999943
+    },
+    {
+      "label": "baseline-compile",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 1.0831484030000098
+    },
+    {
+      "label": "overlay-dependencies",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-M",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp"
+      ],
+      "returncode": 0,
+      "seconds": 1.3309076819999888
+    },
+    {
+      "label": "overlay-compile",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 2.155719744999999
+    },
+    {
+      "label": "baseline-0",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.4175794169999989
+    },
+    {
+      "label": "overlay-0",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.404139102000002
+    },
+    {
+      "label": "overlay-1",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.40623612599999603
+    },
+    {
+      "label": "baseline-1",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.4136777519999981
+    },
+    {
+      "label": "baseline-2",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.41041455399999904
+    },
+    {
+      "label": "overlay-2",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.414689451000001
+    },
+    {
+      "label": "overlay-3",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.4059744500000022
+    },
+    {
+      "label": "baseline-3",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.4074971069999975
+    },
+    {
+      "label": "baseline-4",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.4067213659999993
+    },
+    {
+      "label": "overlay-4",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-cpu-search-r2/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.405955359999993
+    },
+    {
+      "label": "status-after",
+      "args": [
+        "git",
+        "-C",
+        "/home/lktr/src/cccl",
+        "status",
+        "--porcelain"
+      ],
+      "returncode": 0,
+      "seconds": 0.04372587399998906
+    }
+  ],
+  "completed": true,
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "source_sha256": "1bb5d22a2c57b655af2474d30920a91403614bc17ca03bd7235306c4c27a9d67"
+}
