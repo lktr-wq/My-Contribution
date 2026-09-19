@@ -1,0 +1,3 @@
+HOST cases=23798 failures=0 narrow=12802 fallback=10974
+DEVICE cases=23798 failures=0 narrow=12802 fallback=10974
+PASS constexpr host device; performance_tested=false

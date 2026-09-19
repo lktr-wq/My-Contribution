@@ -14,6 +14,7 @@ try:
     assert not run('status-before',['git','-C',str(cccl),'status','--porcelain']).strip()
     run('compiler',['g++','--version']);run('cpu',['lscpu'])
     m['source_sha256']=hashlib.sha256(src.read_bytes()).hexdigest()
+    m['overlay_sha256']=hashlib.sha256((root/'evidence/phase2/bounded_overlay/cuda/std/__algorithm/lower_bound.h').read_bytes()).hexdigest()
     for mode in ['baseline','overlay']:
         args=['g++','-O3','-std=c++17','-fno-lto']
         if mode=='overlay':args+=['-I'+str(root/'evidence/phase2/bounded_overlay')]

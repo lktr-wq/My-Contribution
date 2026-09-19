@@ -1,0 +1,482 @@
+[
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 32,
+    "shape": 0,
+    "duration_ms": 255,
+    "samples": 1,
+    "min_mhz": 2580,
+    "max_mhz": 2580
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 32,
+    "shape": 1,
+    "duration_ms": 252,
+    "samples": 1,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 4096,
+    "shape": 0,
+    "duration_ms": 514,
+    "samples": 2,
+    "min_mhz": 2580,
+    "max_mhz": 2580
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 4096,
+    "shape": 1,
+    "duration_ms": 515,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 20000,
+    "shape": 0,
+    "duration_ms": 590,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 20000,
+    "shape": 1,
+    "duration_ms": 589,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 65536,
+    "shape": 0,
+    "duration_ms": 1400,
+    "samples": 7,
+    "min_mhz": 2565,
+    "max_mhz": 2580
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 65536,
+    "shape": 1,
+    "duration_ms": 1399,
+    "samples": 6,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 32,
+    "shape": 0,
+    "duration_ms": 256,
+    "samples": 2,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 32,
+    "shape": 1,
+    "duration_ms": 252,
+    "samples": 1,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 4096,
+    "shape": 0,
+    "duration_ms": 514,
+    "samples": 2,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 4096,
+    "shape": 1,
+    "duration_ms": 514,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 20000,
+    "shape": 0,
+    "duration_ms": 589,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 20000,
+    "shape": 1,
+    "duration_ms": 590,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 65536,
+    "shape": 0,
+    "duration_ms": 1401,
+    "samples": 7,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 65536,
+    "shape": 1,
+    "duration_ms": 1401,
+    "samples": 7,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 32,
+    "shape": 0,
+    "duration_ms": 255,
+    "samples": 1,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 32,
+    "shape": 1,
+    "duration_ms": 252,
+    "samples": 1,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 4096,
+    "shape": 0,
+    "duration_ms": 516,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 4096,
+    "shape": 1,
+    "duration_ms": 514,
+    "samples": 2,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 20000,
+    "shape": 0,
+    "duration_ms": 592,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 20000,
+    "shape": 1,
+    "duration_ms": 591,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 65536,
+    "shape": 0,
+    "duration_ms": 1401,
+    "samples": 6,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 65536,
+    "shape": 1,
+    "duration_ms": 1401,
+    "samples": 7,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 32,
+    "shape": 0,
+    "duration_ms": 201,
+    "samples": 1,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 32,
+    "shape": 1,
+    "duration_ms": 200,
+    "samples": 1,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 4096,
+    "shape": 0,
+    "duration_ms": 516,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2580
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 4096,
+    "shape": 1,
+    "duration_ms": 514,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 20000,
+    "shape": 0,
+    "duration_ms": 445,
+    "samples": 2,
+    "min_mhz": 2580,
+    "max_mhz": 2580
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 20000,
+    "shape": 1,
+    "duration_ms": 446,
+    "samples": 2,
+    "min_mhz": 2550,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 65536,
+    "shape": 0,
+    "duration_ms": 1406,
+    "samples": 7,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 65536,
+    "shape": 1,
+    "duration_ms": 1402,
+    "samples": 7,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 32,
+    "shape": 0,
+    "duration_ms": 201,
+    "samples": 1,
+    "min_mhz": 2580,
+    "max_mhz": 2580
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 32,
+    "shape": 1,
+    "duration_ms": 200,
+    "samples": 1,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 4096,
+    "shape": 0,
+    "duration_ms": 515,
+    "samples": 2,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 4096,
+    "shape": 1,
+    "duration_ms": 516,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 20000,
+    "shape": 0,
+    "duration_ms": 446,
+    "samples": 2,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 20000,
+    "shape": 1,
+    "duration_ms": 445,
+    "samples": 2,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 65536,
+    "shape": 0,
+    "duration_ms": 1402,
+    "samples": 6,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 65536,
+    "shape": 1,
+    "duration_ms": 1401,
+    "samples": 7,
+    "min_mhz": 2565,
+    "max_mhz": 2580
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 32,
+    "shape": 0,
+    "duration_ms": 201,
+    "samples": 1,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 32,
+    "shape": 1,
+    "duration_ms": 199,
+    "samples": 1,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 4096,
+    "shape": 0,
+    "duration_ms": 515,
+    "samples": 3,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 4096,
+    "shape": 1,
+    "duration_ms": 515,
+    "samples": 2,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 20000,
+    "shape": 0,
+    "duration_ms": 447,
+    "samples": 2,
+    "min_mhz": 2550,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 20000,
+    "shape": 1,
+    "duration_ms": 445,
+    "samples": 2,
+    "min_mhz": 2550,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 65536,
+    "shape": 0,
+    "duration_ms": 1403,
+    "samples": 7,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 65536,
+    "shape": 1,
+    "duration_ms": 1401,
+    "samples": 7,
+    "min_mhz": 2565,
+    "max_mhz": 2565
+  }
+]

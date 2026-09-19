@@ -1,0 +1,14 @@
+{
+  "token_equivalent_to_measured_overlay": true,
+  "command": [
+    "git",
+    "-C",
+    "/home/lktr/src/cccl",
+    "apply",
+    "--check",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-gpu/minimal.patch"
+  ],
+  "returncode": 0,
+  "candidate_sha256": "79632dc639a3283f66866eae769a725a9f552edd0ba9608eb7ffa5356bf949a2",
+  "measured_overlay_sha256": "cfa2d34cc32923f803641aad4eb713099e50ab190513eef7577d6c435efe3a8c"
+}

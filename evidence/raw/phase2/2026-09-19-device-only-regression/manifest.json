@@ -1,0 +1,194 @@
+{
+  "start": "2026-09-19T09:45:22.672564+00:00",
+  "completed": true,
+  "steps": [
+    {
+      "label": "overlay-dependencies",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O2",
+        "-std=c++17",
+        "-arch=sm_89",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-I/home/lktr/src/cccl/libcudacxx/test/support",
+        "-DTEST_SOURCE=\"/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/binary.search/binary_search.pass.cpp\"",
+        "-M",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_official_test.cu"
+      ],
+      "returncode": 0,
+      "elapsed_s": 3.7808949499999898
+    },
+    {
+      "label": "overlay-binary_search-compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O2",
+        "-std=c++17",
+        "-arch=sm_89",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-I/home/lktr/src/cccl/libcudacxx/test/support",
+        "-DTEST_SOURCE=\"/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/binary.search/binary_search.pass.cpp\"",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_official_test.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-binary_search"
+      ],
+      "returncode": 0,
+      "elapsed_s": 8.545355420000007
+    },
+    {
+      "label": "overlay-binary_search-run",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-binary_search"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.422508176000008
+    },
+    {
+      "label": "overlay-binary_search_comp-compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O2",
+        "-std=c++17",
+        "-arch=sm_89",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-I/home/lktr/src/cccl/libcudacxx/test/support",
+        "-DTEST_SOURCE=\"/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/binary.search/binary_search_comp.pass.cpp\"",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_official_test.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-binary_search_comp"
+      ],
+      "returncode": 0,
+      "elapsed_s": 8.445460526999994
+    },
+    {
+      "label": "overlay-binary_search_comp-run",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-binary_search_comp"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.37306823400000155
+    },
+    {
+      "label": "overlay-lower_bound-compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O2",
+        "-std=c++17",
+        "-arch=sm_89",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-I/home/lktr/src/cccl/libcudacxx/test/support",
+        "-DTEST_SOURCE=\"/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/lower.bound/lower_bound.pass.cpp\"",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_official_test.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-lower_bound"
+      ],
+      "returncode": 0,
+      "elapsed_s": 8.044427303999996
+    },
+    {
+      "label": "overlay-lower_bound-run",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-lower_bound"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.3726214129999903
+    },
+    {
+      "label": "overlay-lower_bound_comp-compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O2",
+        "-std=c++17",
+        "-arch=sm_89",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-I/home/lktr/src/cccl/libcudacxx/test/support",
+        "-DTEST_SOURCE=\"/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/lower.bound/lower_bound_comp.pass.cpp\"",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_official_test.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-lower_bound_comp"
+      ],
+      "returncode": 0,
+      "elapsed_s": 9.196418945999994
+    },
+    {
+      "label": "overlay-lower_bound_comp-run",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-lower_bound_comp"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.3724296609999982
+    },
+    {
+      "label": "overlay-equal_range-compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O2",
+        "-std=c++17",
+        "-arch=sm_89",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-I/home/lktr/src/cccl/libcudacxx/test/support",
+        "-DTEST_SOURCE=\"/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/equal.range/equal_range.pass.cpp\"",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_official_test.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-equal_range"
+      ],
+      "returncode": 0,
+      "elapsed_s": 8.945232262999994
+    },
+    {
+      "label": "overlay-equal_range-run",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-equal_range"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.37243890500000987
+    },
+    {
+      "label": "overlay-equal_range_comp-compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O2",
+        "-std=c++17",
+        "-arch=sm_89",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-I/home/lktr/src/cccl/libcudacxx/test/support",
+        "-DTEST_SOURCE=\"/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/equal.range/equal_range_comp.pass.cpp\"",
+        "-DEXTRA_POINTER_TEST",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_official_test.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-equal_range_comp"
+      ],
+      "returncode": 0,
+      "elapsed_s": 10.551515358999993
+    },
+    {
+      "label": "overlay-equal_range_comp-run",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-regression/build/overlay-equal_range_comp"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.3726730759999839
+    }
+  ],
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "status_before": "",
+  "hashes": {
+    "/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/binary.search/binary_search.pass.cpp": "14fa859d2e032a5abb702abe195f0aeb8f95611748c0316e1207bcfae62bd403",
+    "/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/binary.search/binary_search_comp.pass.cpp": "3e8383be652cc15b36b718bbbd448b78066100bc80ba2204275c7c10be768de5",
+    "/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/lower.bound/lower_bound.pass.cpp": "8ab12b07e426d6fd69b30960e39783d1cbac40aa7037554762fa2ef48226162a",
+    "/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/lower.bound/lower_bound_comp.pass.cpp": "5a848dd995f6f4c30fa79d2d4ec2a3bf09a836bad34555012ff1535409bd826b",
+    "/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/equal.range/equal_range.pass.cpp": "bd7846ede795c052cbd883bf7d7a4bd0164c213044f822bfb3e6d181a00a15eb",
+    "/home/lktr/src/cccl/libcudacxx/test/libcudacxx/std/algorithms/alg.sorting/alg.binary.search/equal.range/equal_range_comp.pass.cpp": "be0d1d33fb435e004549ec91adacde7c32b0dcc31590fbfa18c8565e025ce173",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_official_test.cu": "ebaaa19d31faaf54559839aba9fe820d681466424bcbe30ac45109a1bbfcd39b",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay/cuda/std/__algorithm/lower_bound.h": "cfa2d34cc32923f803641aad4eb713099e50ab190513eef7577d6c435efe3a8c",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/check_bounded_overlay.py": "44ea362756fa78a69af16b03ab2d69e300fee423348fef24c1d58483961ce54d"
+  },
+  "status_after": ""
+}

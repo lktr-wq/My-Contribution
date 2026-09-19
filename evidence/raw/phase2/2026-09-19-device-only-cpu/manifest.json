@@ -1,0 +1,232 @@
+{
+  "cpu_affinity": 0,
+  "steps": [
+    {
+      "label": "head",
+      "args": [
+        "git",
+        "-C",
+        "/home/lktr/src/cccl",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "seconds": 0.024977010999997162
+    },
+    {
+      "label": "status-before",
+      "args": [
+        "git",
+        "-C",
+        "/home/lktr/src/cccl",
+        "status",
+        "--porcelain"
+      ],
+      "returncode": 0,
+      "seconds": 0.11837990699999779
+    },
+    {
+      "label": "compiler",
+      "args": [
+        "g++",
+        "--version"
+      ],
+      "returncode": 0,
+      "seconds": 0.014480865000003007
+    },
+    {
+      "label": "cpu",
+      "args": [
+        "lscpu"
+      ],
+      "returncode": 0,
+      "seconds": 0.016876144000001148
+    },
+    {
+      "label": "baseline-dependencies",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-M",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp"
+      ],
+      "returncode": 0,
+      "seconds": 0.40968465899999984
+    },
+    {
+      "label": "baseline-compile",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 1.0682428450000003
+    },
+    {
+      "label": "overlay-dependencies",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-M",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp"
+      ],
+      "returncode": 0,
+      "seconds": 1.3137633520000023
+    },
+    {
+      "label": "overlay-compile",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "-fno-lto",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/cpu_search.cpp",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 2.2215877220000024
+    },
+    {
+      "label": "baseline-0",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.4119296379999966
+    },
+    {
+      "label": "overlay-0",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.4061206220000031
+    },
+    {
+      "label": "overlay-1",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.40588686699999954
+    },
+    {
+      "label": "baseline-1",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.4123684159999996
+    },
+    {
+      "label": "baseline-2",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.41079117200000326
+    },
+    {
+      "label": "overlay-2",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.4141820179999982
+    },
+    {
+      "label": "overlay-3",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.4071062370000078
+    },
+    {
+      "label": "baseline-3",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.4113958519999983
+    },
+    {
+      "label": "baseline-4",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/baseline"
+      ],
+      "returncode": 0,
+      "seconds": 0.41312831399999084
+    },
+    {
+      "label": "overlay-4",
+      "args": [
+        "taskset",
+        "-c",
+        "0",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-device-only-cpu/build/overlay"
+      ],
+      "returncode": 0,
+      "seconds": 0.405864545
+    },
+    {
+      "label": "status-after",
+      "args": [
+        "git",
+        "-C",
+        "/home/lktr/src/cccl",
+        "status",
+        "--porcelain"
+      ],
+      "returncode": 0,
+      "seconds": 0.05998723199999745
+    }
+  ],
+  "completed": true,
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "source_sha256": "1bb5d22a2c57b655af2474d30920a91403614bc17ca03bd7235306c4c27a9d67",
+  "overlay_sha256": "cfa2d34cc32923f803641aad4eb713099e50ab190513eef7577d6c435efe3a8c"
+}

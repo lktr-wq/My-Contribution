@@ -1,0 +1,31 @@
+ptxas info    : 33 bytes gmem, 264 bytes cmem[4]
+ptxas info    : Compiling entry function '_Z14bounded_kernelILi2ELb1EEvPKilS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z14bounded_kernelILi2ELb1EEvPKilS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 1 barriers, 4 bytes smem, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 6.225 ms
+ptxas info    : Compiling entry function '_Z14bounded_kernelILi1ELb1EEvPKilS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z14bounded_kernelILi1ELb1EEvPKilS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 1 barriers, 4 bytes smem, 392 bytes cmem[0]
+ptxas info    : Compile time = 3.901 ms
+ptxas info    : Compiling entry function '_Z14bounded_kernelILi0ELb1EEvPKilS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z14bounded_kernelILi0ELb1EEvPKilS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 1 barriers, 4 bytes smem, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 4.597 ms
+ptxas info    : Compiling entry function '_Z14bounded_kernelILi2ELb0EEvPKilS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z14bounded_kernelILi2ELb0EEvPKilS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.208 ms
+ptxas info    : Compiling entry function '_Z14bounded_kernelILi1ELb0EEvPKilS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z14bounded_kernelILi1ELb0EEvPKilS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.677 ms
+ptxas info    : Compiling entry function '_Z14bounded_kernelILi0ELb0EEvPKilS1_iPi' for 'sm_89'
+ptxas info    : Function properties for _Z14bounded_kernelILi0ELb0EEvPKilS1_iPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.701 ms

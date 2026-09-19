@@ -1,0 +1,7 @@
+{
+  "cpu_baseline_sha256": "e1b648c1caf9f120323855a2d4829c2d1d2c69354cba145bbafb271e44fd841e",
+  "cpu_overlay_sha256": "e1b648c1caf9f120323855a2d4829c2d1d2c69354cba145bbafb271e44fd841e",
+  "gpu_measured_normalized_instruction_identity_to_previous_overlay": true,
+  "gpu_normalized_sha256": "d60c5a804f4e2a1ce623044f6b9ca5a4a6b6301b07798522456f1807c9aa6133",
+  "cpu_executables_identical": true
+}
