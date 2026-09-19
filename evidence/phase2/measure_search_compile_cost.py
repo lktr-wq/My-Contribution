@@ -13,6 +13,8 @@ p = argparse.ArgumentParser()
 p.add_argument("output", type=Path)
 p.add_argument("--cccl", type=Path, default=Path("/home/lktr/src/cccl"))
 p.add_argument("--cuda", type=Path, default=Path("/usr/local/cuda"))
+p.add_argument("--source", type=Path)
+p.add_argument("--expected-kernels", type=int, default=1)
 a = p.parse_args()
 root = Path(__file__).resolve().parent
 a.output.mkdir(parents=True, exist_ok=False)
@@ -38,7 +40,7 @@ assert head.strip() == "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2" and not status
 run("nvcc-version", [a.cuda / "bin/nvcc", "--version"])
 run("host-version", ["g++", "--version"])
 run("system", ["uname", "-a"])
-source = root / "search_compile_cost.cu"
+source = a.source.resolve() if a.source else root / "search_compile_cost.cu"
 overlay = root / "bounded_overlay"
 hashes = {str(f): hashlib.sha256(f.read_bytes()).hexdigest()
           for f in [source, overlay / "cuda/std/__algorithm/lower_bound.h", Path(__file__)]}
@@ -71,11 +73,13 @@ for mode in ["baseline", "overlay"]:
     _, sections = run(mode + "-sections", ["readelf", "-SW", cubin])
     run(mode + "-sass", [a.cuda / "bin/cuobjdump", "--dump-sass", cubin])
     run(mode + "-resources", [a.cuda / "bin/cuobjdump", "--dump-resource-usage", cubin])
-    match = re.search(r"\.text\.search_cost\s+PROGBITS\s+\S+\s+\S+\s+([0-9a-fA-F]+)", sections)
-    assert match
-    summary[mode] = dict(kernel_text_bytes=int(match[1], 16), cubin_bytes=cubin.stat().st_size,
+    matches = re.findall(r"\.text\.(search_cost\w*)\s+PROGBITS\s+\S+\s+\S+\s+([0-9a-fA-F]+)", sections)
+    assert len(matches) == a.expected_kernels
+    sizes = {name: int(size, 16) for name, size in matches}
+    summary[mode] = dict(kernel_text_bytes=sum(sizes.values()), per_kernel_text_bytes=sizes, cubin_bytes=cubin.stat().st_size,
                          object_bytes=(build / (mode + ".o")).stat().st_size)
 summary["source_hashes"] = hashes
-summary["note"] = "Single int-pointer binary_search instantiation; runtime length; no GPU execution. Warm filesystem caches; six alternating pairs per build mode."
+summary["note"] = "Public binary_search instantiations; runtime length; no GPU execution. Warm filesystem caches; six alternating pairs per build mode."
+summary["expected_kernels"] = a.expected_kernels
 (a.output / "summary.json").write_text(json.dumps(summary, indent=2))
 print(json.dumps(summary, indent=2), flush=True)

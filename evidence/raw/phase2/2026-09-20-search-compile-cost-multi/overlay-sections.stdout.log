@@ -1,0 +1,71 @@
+There are 62 section headers, starting at offset 0xbf00:
+
+Section Headers:
+  [Nr] Name              Type            Address          Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            0000000000000000 000000 000000 00      0   0  0
+  [ 1] .shstrtab         STRTAB          0000000000000000 000040 000a8c 00      0   0  1
+  [ 2] .strtab           STRTAB          0000000000000000 000acc 001683 00      0   0  1
+  [ 3] .symtab           SYMTAB          0000000000000000 002150 0007e0 18      2  72  8
+  [ 4] .debug_frame      PROGBITS        0000000000000000 002930 000540 00      0   0  1
+  [ 5] .note.nv.tkinfo   NOTE            0000000000000000 002e70 0000a8 00   o  0   0  4
+  [ 6] .note.nv.cuinfo   NOTE            0000000000000000 002f18 000020 00   o  5   0  4
+  [ 7] .nv.info          LOPROC+0        0000000000000000 002f38 0001b0 00      3   0  4
+  [ 8] .nv.info.search_cost_f64_greater LOPROC+0        0000000000000000 0030e8 00008c 00   I  3  49  4
+  [ 9] .nv.info.search_cost_f64_less LOPROC+0        0000000000000000 003174 00008c 00   I  3  50  4
+  [10] .nv.info.search_cost_f32_greater LOPROC+0        0000000000000000 003200 00008c 00   I  3  51  4
+  [11] .nv.info.search_cost_f32_less LOPROC+0        0000000000000000 00328c 00008c 00   I  3  52  4
+  [12] .nv.info.search_cost_u64_greater LOPROC+0        0000000000000000 003318 00008c 00   I  3  53  4
+  [13] .nv.info.search_cost_u64_less LOPROC+0        0000000000000000 0033a4 00008c 00   I  3  54  4
+  [14] .nv.info.search_cost_i64_greater LOPROC+0        0000000000000000 003430 00008c 00   I  3  55  4
+  [15] .nv.info.search_cost_i64_less LOPROC+0        0000000000000000 0034bc 00008c 00   I  3  56  4
+  [16] .nv.info.search_cost_u32_greater LOPROC+0        0000000000000000 003548 00008c 00   I  3  57  4
+  [17] .nv.info.search_cost_u32_less LOPROC+0        0000000000000000 0035d4 00008c 00   I  3  58  4
+  [18] .nv.info.search_cost_i32_greater LOPROC+0        0000000000000000 003660 00008c 00   I  3  59  4
+  [19] .nv.info.search_cost_i32_less LOPROC+0        0000000000000000 0036ec 00008c 00   I  3  60  4
+  [20] .nv.callgraph     LOPROC+0x1      0000000000000000 003778 000020 08      3   0  4
+  [21] .nv.rel.action    LOPROC+0xb      0000000000000000 003798 000010 08      0   0  8
+  [22] .rel.nv.constant4 REL             0000000000000000 0037a8 0001c0 10   I  3  24  8
+  [23] .rel.debug_frame  REL             0000000000000000 003968 0000c0 10   I  3   4  8
+  [24] .nv.constant4     PROGBITS        0000000000000000 003a28 0000e0 00   A  0   0  8
+  [25] .nv.constant2.search_cost_f64_greater PROGBITS        0000000000000000 003b08 000008 00  AI  0  49  4
+  [26] .nv.constant0.search_cost_f64_greater PROGBITS        0000000000000000 003b10 000188 00  AI  0  49  4
+  [27] .nv.constant2.search_cost_f64_less PROGBITS        0000000000000000 003c98 000008 00  AI  0  50  4
+  [28] .nv.constant0.search_cost_f64_less PROGBITS        0000000000000000 003ca0 000188 00  AI  0  50  4
+  [29] .nv.constant2.search_cost_f32_greater PROGBITS        0000000000000000 003e28 000008 00  AI  0  51  4
+  [30] .nv.constant0.search_cost_f32_greater PROGBITS        0000000000000000 003e30 000188 00  AI  0  51  4
+  [31] .nv.constant2.search_cost_f32_less PROGBITS        0000000000000000 003fb8 000008 00  AI  0  52  4
+  [32] .nv.constant0.search_cost_f32_less PROGBITS        0000000000000000 003fc0 000188 00  AI  0  52  4
+  [33] .nv.constant2.search_cost_u64_greater PROGBITS        0000000000000000 004148 000008 00  AI  0  53  4
+  [34] .nv.constant0.search_cost_u64_greater PROGBITS        0000000000000000 004150 000188 00  AI  0  53  4
+  [35] .nv.constant2.search_cost_u64_less PROGBITS        0000000000000000 0042d8 000008 00  AI  0  54  4
+  [36] .nv.constant0.search_cost_u64_less PROGBITS        0000000000000000 0042e0 000188 00  AI  0  54  4
+  [37] .nv.constant2.search_cost_i64_greater PROGBITS        0000000000000000 004468 000008 00  AI  0  55  4
+  [38] .nv.constant0.search_cost_i64_greater PROGBITS        0000000000000000 004470 000188 00  AI  0  55  4
+  [39] .nv.constant2.search_cost_i64_less PROGBITS        0000000000000000 0045f8 000008 00  AI  0  56  4
+  [40] .nv.constant0.search_cost_i64_less PROGBITS        0000000000000000 004600 000188 00  AI  0  56  4
+  [41] .nv.constant2.search_cost_u32_greater PROGBITS        0000000000000000 004788 000008 00  AI  0  57  4
+  [42] .nv.constant0.search_cost_u32_greater PROGBITS        0000000000000000 004790 000188 00  AI  0  57  4
+  [43] .nv.constant2.search_cost_u32_less PROGBITS        0000000000000000 004918 000008 00  AI  0  58  4
+  [44] .nv.constant0.search_cost_u32_less PROGBITS        0000000000000000 004920 000188 00  AI  0  58  4
+  [45] .nv.constant2.search_cost_i32_greater PROGBITS        0000000000000000 004aa8 000008 00  AI  0  59  4
+  [46] .nv.constant0.search_cost_i32_greater PROGBITS        0000000000000000 004ab0 000188 00  AI  0  59  4
+  [47] .nv.constant2.search_cost_i32_less PROGBITS        0000000000000000 004c38 000008 00  AI  0  60  4
+  [48] .nv.constant0.search_cost_i32_less PROGBITS        0000000000000000 004c40 000188 00  AI  0  60  4
+  [49] .text.search_cost_f64_greater PROGBITS        0000000000000000 004e00 000900 00  AX  3 503316552 128
+  [50] .text.search_cost_f64_less PROGBITS        0000000000000000 005700 000900 00  AX  3 503316553 128
+  [51] .text.search_cost_f32_greater PROGBITS        0000000000000000 006000 000980 00  AX  3 469762122 128
+  [52] .text.search_cost_f32_less PROGBITS        0000000000000000 006980 000980 00  AX  3 469762123 128
+  [53] .text.search_cost_u64_greater PROGBITS        0000000000000000 007300 000980 00  AX  3 503316556 128
+  [54] .text.search_cost_u64_less PROGBITS        0000000000000000 007c80 000980 00  AX  3 503316557 128
+  [55] .text.search_cost_i64_greater PROGBITS        0000000000000000 008600 000980 00  AX  3 503316558 128
+  [56] .text.search_cost_i64_less PROGBITS        0000000000000000 008f80 000980 00  AX  3 503316559 128
+  [57] .text.search_cost_u32_greater PROGBITS        0000000000000000 009900 000980 00  AX  3 469762128 128
+  [58] .text.search_cost_u32_less PROGBITS        0000000000000000 00a280 000980 00  AX  3 469762129 128
+  [59] .text.search_cost_i32_greater PROGBITS        0000000000000000 00ac00 000980 00  AX  3 469762130 128
+  [60] .text.search_cost_i32_less PROGBITS        0000000000000000 00b580 000980 00  AX  3 469762131 128
+  [61] .nv.global        NOBITS          0000000000000000 00bf00 00001c 00  WA  0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  p (processor specific)

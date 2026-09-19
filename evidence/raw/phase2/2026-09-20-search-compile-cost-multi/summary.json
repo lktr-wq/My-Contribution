@@ -1,0 +1,97 @@
+{
+  "object": {
+    "seconds": {
+      "baseline": [
+        3.823781747,
+        3.6605199520000014,
+        4.049777998999996,
+        3.870180640000001,
+        3.830259558999998,
+        3.754269465
+      ],
+      "overlay": [
+        3.8818226110000005,
+        3.856527903,
+        3.805544312000002,
+        3.8268779240000015,
+        3.738205647000001,
+        3.8087947160000013
+      ]
+    },
+    "median_seconds": {
+      "baseline": 3.827020652999999,
+      "overlay": 3.8178363200000014
+    },
+    "median_increase_percent": -0.2399865021057046
+  },
+  "cubin": {
+    "seconds": {
+      "baseline": [
+        1.4373861079999983,
+        1.4775101139999975,
+        1.4196351749999963,
+        1.4252290320000043,
+        1.4837894749999947,
+        1.4846233540000071
+      ],
+      "overlay": [
+        1.5446929570000094,
+        1.5296484229999976,
+        1.5499883479999994,
+        1.5203479420000008,
+        1.5324856800000077,
+        1.471920639000004
+      ]
+    },
+    "median_seconds": {
+      "baseline": 1.457448110999998,
+      "overlay": 1.5310670515000027
+    },
+    "median_increase_percent": 5.051222060282656
+  },
+  "baseline": {
+    "kernel_text_bytes": 17408,
+    "per_kernel_text_bytes": {
+      "search_cost_f64_greater": 1408,
+      "search_cost_f64_less": 1408,
+      "search_cost_f32_greater": 1408,
+      "search_cost_f32_less": 1408,
+      "search_cost_u64_greater": 1536,
+      "search_cost_u64_less": 1536,
+      "search_cost_i64_greater": 1536,
+      "search_cost_i64_less": 1536,
+      "search_cost_u32_greater": 1408,
+      "search_cost_u32_less": 1408,
+      "search_cost_i32_greater": 1408,
+      "search_cost_i32_less": 1408
+    },
+    "cubin_bytes": 39520,
+    "object_bytes": 94240
+  },
+  "overlay": {
+    "kernel_text_bytes": 28928,
+    "per_kernel_text_bytes": {
+      "search_cost_f64_greater": 2304,
+      "search_cost_f64_less": 2304,
+      "search_cost_f32_greater": 2432,
+      "search_cost_f32_less": 2432,
+      "search_cost_u64_greater": 2432,
+      "search_cost_u64_less": 2432,
+      "search_cost_i64_greater": 2432,
+      "search_cost_i64_less": 2432,
+      "search_cost_u32_greater": 2432,
+      "search_cost_u32_less": 2432,
+      "search_cost_i32_greater": 2432,
+      "search_cost_i32_less": 2432
+    },
+    "cubin_bytes": 53088,
+    "object_bytes": 108416
+  },
+  "source_hashes": {
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/search_compile_cost_multi.cu": "60f337cd4fdfc0427a984819edee438c2b547cec727774e66b6972eed187a047",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay/cuda/std/__algorithm/lower_bound.h": "cfa2d34cc32923f803641aad4eb713099e50ab190513eef7577d6c435efe3a8c",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/measure_search_compile_cost.py": "f4487fb8504233417be42857933eb5d6a00b9aadc32f679876f576b80e235940"
+  },
+  "note": "Public binary_search instantiations; runtime length; no GPU execution. Warm filesystem caches; six alternating pairs per build mode.",
+  "expected_kernels": 12
+}

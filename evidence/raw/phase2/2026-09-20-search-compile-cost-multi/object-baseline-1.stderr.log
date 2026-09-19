@@ -1,0 +1,61 @@
+ptxas info    : 28 bytes gmem, 224 bytes cmem[4]
+ptxas info    : Compiling entry function 'search_cost_f64_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_f64_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 4.075 ms
+ptxas info    : Compiling entry function 'search_cost_f64_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_f64_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.744 ms
+ptxas info    : Compiling entry function 'search_cost_f32_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_f32_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.597 ms
+ptxas info    : Compiling entry function 'search_cost_f32_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_f32_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.243 ms
+ptxas info    : Compiling entry function 'search_cost_u64_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_u64_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.380 ms
+ptxas info    : Compiling entry function 'search_cost_u64_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_u64_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.313 ms
+ptxas info    : Compiling entry function 'search_cost_i64_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_i64_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.728 ms
+ptxas info    : Compiling entry function 'search_cost_i64_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_i64_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 3.568 ms
+ptxas info    : Compiling entry function 'search_cost_u32_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_u32_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.314 ms
+ptxas info    : Compiling entry function 'search_cost_u32_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_u32_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.261 ms
+ptxas info    : Compiling entry function 'search_cost_i32_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_i32_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.250 ms
+ptxas info    : Compiling entry function 'search_cost_i32_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_i32_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers, 392 bytes cmem[0]
+ptxas info    : Compile time = 2.205 ms

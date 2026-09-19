@@ -1,0 +1,61 @@
+ptxas info    : 28 bytes gmem, 224 bytes cmem[4]
+ptxas info    : Compiling entry function 'search_cost_f64_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_f64_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 4.757 ms
+ptxas info    : Compiling entry function 'search_cost_f64_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_f64_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.997 ms
+ptxas info    : Compiling entry function 'search_cost_f32_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_f32_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 4.103 ms
+ptxas info    : Compiling entry function 'search_cost_f32_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_f32_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 4.073 ms
+ptxas info    : Compiling entry function 'search_cost_u64_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_u64_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.736 ms
+ptxas info    : Compiling entry function 'search_cost_u64_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_u64_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.608 ms
+ptxas info    : Compiling entry function 'search_cost_i64_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_i64_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.675 ms
+ptxas info    : Compiling entry function 'search_cost_i64_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_i64_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.867 ms
+ptxas info    : Compiling entry function 'search_cost_u32_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_u32_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.713 ms
+ptxas info    : Compiling entry function 'search_cost_u32_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_u32_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.598 ms
+ptxas info    : Compiling entry function 'search_cost_i32_greater' for 'sm_89'
+ptxas info    : Function properties for search_cost_i32_greater
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.648 ms
+ptxas info    : Compiling entry function 'search_cost_i32_less' for 'sm_89'
+ptxas info    : Function properties for search_cost_i32_less
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers, 392 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compile time = 3.742 ms
