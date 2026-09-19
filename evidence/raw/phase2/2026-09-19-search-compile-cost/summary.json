@@ -1,0 +1,68 @@
+{
+  "object": {
+    "seconds": {
+      "baseline": [
+        3.0154674080000063,
+        2.964642027999986,
+        3.0002540879999913,
+        2.966274516999988,
+        2.9973541479999994,
+        3.191726158000023
+      ],
+      "overlay": [
+        2.997718090999996,
+        2.9994371049999984,
+        2.955096721000018,
+        2.9843843110000137,
+        2.9767938180000044,
+        3.1291145110000116
+      ]
+    },
+    "median_seconds": {
+      "baseline": 2.9988041179999954,
+      "overlay": 2.9910512010000048
+    },
+    "median_increase_percent": -0.25853362523595713
+  },
+  "cubin": {
+    "seconds": {
+      "baseline": [
+        1.235571152999995,
+        1.2112242089999938,
+        1.1696347980000041,
+        1.2127828120000004,
+        1.1595959240000013,
+        1.2210528970000212
+      ],
+      "overlay": [
+        1.2395677860000092,
+        1.1713478810000026,
+        1.1892310949999967,
+        1.174736878999994,
+        1.1946211529999857,
+        1.162962924999988
+      ]
+    },
+    "median_seconds": {
+      "baseline": 1.212003510499997,
+      "overlay": 1.1819839869999953
+    },
+    "median_increase_percent": -2.4768512005066357
+  },
+  "baseline": {
+    "kernel_text_bytes": 1408,
+    "cubin_bytes": 7968,
+    "object_bytes": 27368
+  },
+  "overlay": {
+    "kernel_text_bytes": 2432,
+    "cubin_bytes": 9184,
+    "object_bytes": 28744
+  },
+  "source_hashes": {
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/search_compile_cost.cu": "fdb9704124c89751c0efd3b5071b1abede170831d99f99aabd36cf22e7ecc278",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay/cuda/std/__algorithm/lower_bound.h": "cfa2d34cc32923f803641aad4eb713099e50ab190513eef7577d6c435efe3a8c",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/measure_search_compile_cost.py": "71f373954b720d5ed0f1b8c9cca5b7527d1b2a65c70b25aa9b0fd55e41cc329f"
+  },
+  "note": "Single int-pointer binary_search instantiation; runtime length; no GPU execution. Warm filesystem caches; six alternating pairs per build mode."
+}

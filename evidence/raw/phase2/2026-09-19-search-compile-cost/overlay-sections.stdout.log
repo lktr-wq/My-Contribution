@@ -1,0 +1,27 @@
+There are 18 section headers, starting at offset 0x1e80:
+
+Section Headers:
+  [Nr] Name              Type            Address          Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            0000000000000000 000000 000000 00      0   0  0
+  [ 1] .shstrtab         STRTAB          0000000000000000 000040 000168 00      0   0  1
+  [ 2] .strtab           STRTAB          0000000000000000 0001a8 0009d4 00      0   0  1
+  [ 3] .symtab           SYMTAB          0000000000000000 000b80 000348 18      2  34  8
+  [ 4] .debug_frame      PROGBITS        0000000000000000 000ec8 000070 00      0   0  1
+  [ 5] .note.nv.tkinfo   NOTE            0000000000000000 000f38 0000a8 00   o  0   0  4
+  [ 6] .note.nv.cuinfo   NOTE            0000000000000000 000fe0 000020 00   o  5   0  4
+  [ 7] .nv.info          LOPROC+0        0000000000000000 001000 000024 00      3   0  4
+  [ 8] .nv.info.search_cost LOPROC+0        0000000000000000 001024 00008c 00   I  3  16  4
+  [ 9] .nv.callgraph     LOPROC+0x1      0000000000000000 0010b0 000020 08      3   0  4
+  [10] .nv.rel.action    LOPROC+0xb      0000000000000000 0010d0 000010 08      0   0  8
+  [11] .rel.nv.constant4 REL             0000000000000000 0010e0 000170 10   I  3  13  8
+  [12] .rel.debug_frame  REL             0000000000000000 001250 000010 10   I  3   4  8
+  [13] .nv.constant4     PROGBITS        0000000000000000 001260 0000b8 00   A  0   0  8
+  [14] .nv.constant2.search_cost PROGBITS        0000000000000000 001318 000008 00  AI  0  16  4
+  [15] .nv.constant0.search_cost PROGBITS        0000000000000000 001320 000188 00  AI  0  16  4
+  [16] .text.search_cost PROGBITS        0000000000000000 001500 000980 00  AX  3 469762082 128
+  [17] .nv.global        NOBITS          0000000000000000 001e80 000017 00  WA  0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  p (processor specific)

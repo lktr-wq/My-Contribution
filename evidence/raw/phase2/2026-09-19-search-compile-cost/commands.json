@@ -1,0 +1,665 @@
+[
+  {
+    "label": "head",
+    "command": [
+      "git",
+      "-C",
+      "/home/lktr/src/cccl",
+      "rev-parse",
+      "HEAD"
+    ],
+    "seconds": 0.002802201999998033,
+    "returncode": 0
+  },
+  {
+    "label": "status",
+    "command": [
+      "git",
+      "-C",
+      "/home/lktr/src/cccl",
+      "status",
+      "--porcelain"
+    ],
+    "seconds": 0.03684695100000113,
+    "returncode": 0
+  },
+  {
+    "label": "nvcc-version",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "--version"
+    ],
+    "seconds": 0.003092412000000877,
+    "returncode": 0
+  },
+  {
+    "label": "host-version",
+    "command": [
+      "g++",
+      "--version"
+    ],
+    "seconds": 0.0017035859999907643,
+    "returncode": 0
+  },
+  {
+    "label": "system",
+    "command": [
+      "uname",
+      "-a"
+    ],
+    "seconds": 0.002208945000006679,
+    "returncode": 0
+  },
+  {
+    "label": "object-overlay-dependencies",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-M",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu"
+    ],
+    "seconds": 0.8419838359999972,
+    "returncode": 0
+  },
+  {
+    "label": "object-overlay--1",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.o"
+    ],
+    "seconds": 3.0262962399999935,
+    "returncode": 0
+  },
+  {
+    "label": "object-baseline-dependencies",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-M",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu"
+    ],
+    "seconds": 0.8320025630000032,
+    "returncode": 0
+  },
+  {
+    "label": "object-baseline--1",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.o"
+    ],
+    "seconds": 2.9967204659999993,
+    "returncode": 0
+  },
+  {
+    "label": "object-baseline-0",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.o"
+    ],
+    "seconds": 3.0154674080000063,
+    "returncode": 0
+  },
+  {
+    "label": "object-overlay-0",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.o"
+    ],
+    "seconds": 2.997718090999996,
+    "returncode": 0
+  },
+  {
+    "label": "object-overlay-1",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.o"
+    ],
+    "seconds": 2.9994371049999984,
+    "returncode": 0
+  },
+  {
+    "label": "object-baseline-1",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.o"
+    ],
+    "seconds": 2.964642027999986,
+    "returncode": 0
+  },
+  {
+    "label": "object-baseline-2",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.o"
+    ],
+    "seconds": 3.0002540879999913,
+    "returncode": 0
+  },
+  {
+    "label": "object-overlay-2",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.o"
+    ],
+    "seconds": 2.955096721000018,
+    "returncode": 0
+  },
+  {
+    "label": "object-overlay-3",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.o"
+    ],
+    "seconds": 2.9843843110000137,
+    "returncode": 0
+  },
+  {
+    "label": "object-baseline-3",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.o"
+    ],
+    "seconds": 2.966274516999988,
+    "returncode": 0
+  },
+  {
+    "label": "object-baseline-4",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.o"
+    ],
+    "seconds": 2.9973541479999994,
+    "returncode": 0
+  },
+  {
+    "label": "object-overlay-4",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.o"
+    ],
+    "seconds": 2.9767938180000044,
+    "returncode": 0
+  },
+  {
+    "label": "object-overlay-5",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.o"
+    ],
+    "seconds": 3.1291145110000116,
+    "returncode": 0
+  },
+  {
+    "label": "object-baseline-5",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-c",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.o"
+    ],
+    "seconds": 3.191726158000023,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-overlay-dependencies",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-M",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu"
+    ],
+    "seconds": 0.9019745980000096,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-overlay--1",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 1.2330397709999943,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-baseline-dependencies",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "-M",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu"
+    ],
+    "seconds": 0.8773211269999877,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-baseline--1",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 1.2152216330000272,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-baseline-0",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 1.235571152999995,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-overlay-0",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 1.2395677860000092,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-overlay-1",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 1.1713478810000026,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-baseline-1",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 1.2112242089999938,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-baseline-2",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 1.1696347980000041,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-overlay-2",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 1.1892310949999967,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-overlay-3",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 1.174736878999994,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-baseline-3",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 1.2127828120000004,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-baseline-4",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 1.1595959240000013,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-overlay-4",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 1.1946211529999857,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-overlay-5",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/search-cost-localfs-20260919/build/overlay",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 1.162962924999988,
+    "returncode": 0
+  },
+  {
+    "label": "cubin-baseline-5",
+    "command": [
+      "/usr/local/cuda/bin/nvcc",
+      "-O3",
+      "-std=c++17",
+      "-arch=sm_89",
+      "--ptxas-options=-v",
+      "-I/home/lktr/src/cccl/libcudacxx/include",
+      "--cubin",
+      "/home/lktr/search-cost-localfs-20260919/build/search_compile_cost.cu",
+      "-o",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 1.2210528970000212,
+    "returncode": 0
+  },
+  {
+    "label": "baseline-sections",
+    "command": [
+      "readelf",
+      "-SW",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 0.006090808999999808,
+    "returncode": 0
+  },
+  {
+    "label": "baseline-sass",
+    "command": [
+      "/usr/local/cuda/bin/cuobjdump",
+      "--dump-sass",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 0.3247019309999928,
+    "returncode": 0
+  },
+  {
+    "label": "baseline-resources",
+    "command": [
+      "/usr/local/cuda/bin/cuobjdump",
+      "--dump-resource-usage",
+      "/home/lktr/search-cost-localfs-20260919/build/baseline.cubin"
+    ],
+    "seconds": 0.0014909469999793146,
+    "returncode": 0
+  },
+  {
+    "label": "overlay-sections",
+    "command": [
+      "readelf",
+      "-SW",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 0.0018156560000193167,
+    "returncode": 0
+  },
+  {
+    "label": "overlay-sass",
+    "command": [
+      "/usr/local/cuda/bin/cuobjdump",
+      "--dump-sass",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 0.2859142439999971,
+    "returncode": 0
+  },
+  {
+    "label": "overlay-resources",
+    "command": [
+      "/usr/local/cuda/bin/cuobjdump",
+      "--dump-resource-usage",
+      "/home/lktr/search-cost-localfs-20260919/build/overlay.cubin"
+    ],
+    "seconds": 0.0017161600000008548,
+    "returncode": 0
+  }
+]
