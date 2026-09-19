@@ -1,0 +1,89 @@
+{
+  "start": "2026-09-19T04:32:31.808114+00:00",
+  "completed": true,
+  "steps": [
+    {
+      "label": "compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "--ptxas-options=-v",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_single.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-bounded-single-large/build/single"
+      ],
+      "utc_start": "2026-09-19T04:32:31.947199+00:00",
+      "returncode": 0,
+      "elapsed_s": 5.837493762999998
+    },
+    {
+      "label": "check",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-bounded-single-large/build/single",
+        "--check"
+      ],
+      "utc_start": "2026-09-19T04:32:37.793574+00:00",
+      "returncode": 0,
+      "elapsed_s": 3.1324665909999965
+    },
+    {
+      "label": "sass",
+      "command": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-sass",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-bounded-single-large/build/single"
+      ],
+      "utc_start": "2026-09-19T04:32:40.944371+00:00",
+      "returncode": 0,
+      "elapsed_s": 0.6228941279999987
+    },
+    {
+      "label": "preheat",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-bounded-single-large/build/single",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:32:41.585345+00:00",
+      "returncode": 0,
+      "elapsed_s": 9.650255505000004
+    },
+    {
+      "label": "measure",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-bounded-single-large/build/single",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:32:51.240920+00:00",
+      "returncode": 0,
+      "elapsed_s": 9.449436079999998
+    }
+  ],
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "status_before": "",
+  "hashes": {
+    "binary_search_bounded_single.cu": "f7edf4d476bef5cfe150febb54c150200d3e1865d6c14fbaeb8a2c95a93110b0",
+    "binary_search_bounded.cuh": "248a983a96c174026fc3884cba38270f0c179367ff48165f33817e291b49e0e5",
+    "binary_search_bounded_bench.cu": "9d8524a72457aae136bc553caa1874c4efc3018cab89a0d1d6d91bd925b31908",
+    "run_bounded_single.py": "7c20ca21f9aa344d8ddcc44ddd35b07fd5b8f0560d041bc60b31e2e282cb6c0c"
+  },
+  "single_official_clone_instruction_identity": true,
+  "single_sass": {
+    "2": {
+      "lines": 136,
+      "sha256": "53383672361e8087f24a923de1abf7604f527a65f03aea9da9e41984061638d8"
+    },
+    "1": {
+      "lines": 88,
+      "sha256": "c675dbdb9ed74897e8a19711ce4866fd882dd1d73c0b086b811237156fb27ace"
+    },
+    "0": {
+      "lines": 88,
+      "sha256": "c675dbdb9ed74897e8a19711ce4866fd882dd1d73c0b086b811237156fb27ace"
+    }
+  },
+  "binary_sha256": "fec89f942ef2e6a5fd9638f6fb85a7beb81c03246bcb03888a13f58639aa1ac9",
+  "status_after": ""
+}
