@@ -1,0 +1,214 @@
+{
+  "start": "2026-09-19T04:51:32.400228+00:00",
+  "completed": true,
+  "steps": [
+    {
+      "label": "baseline-dependencies",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "--ptxas-options=-v",
+        "-DPUBLIC_API_ONLY",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-M",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_single.cu"
+      ],
+      "utc_start": "2026-09-19T04:51:32.551733+00:00",
+      "returncode": 0,
+      "elapsed_s": 1.5756099580000011
+    },
+    {
+      "label": "baseline-compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "--ptxas-options=-v",
+        "-DPUBLIC_API_ONLY",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_single.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/baseline"
+      ],
+      "utc_start": "2026-09-19T04:51:34.139039+00:00",
+      "returncode": 0,
+      "elapsed_s": 5.336535123999994
+    },
+    {
+      "label": "baseline-check",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/baseline",
+        "--check"
+      ],
+      "utc_start": "2026-09-19T04:51:39.483642+00:00",
+      "returncode": 0,
+      "elapsed_s": 2.230288872000017
+    },
+    {
+      "label": "baseline-sass",
+      "command": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-sass",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/baseline"
+      ],
+      "utc_start": "2026-09-19T04:51:41.731951+00:00",
+      "returncode": 0,
+      "elapsed_s": 0.5724831429999995
+    },
+    {
+      "label": "overlay-dependencies",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "--ptxas-options=-v",
+        "-DPUBLIC_API_ONLY",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "-M",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_single.cu"
+      ],
+      "utc_start": "2026-09-19T04:51:42.313229+00:00",
+      "returncode": 0,
+      "elapsed_s": 3.6295233059999816
+    },
+    {
+      "label": "overlay-compile",
+      "command": [
+        "/usr/local/cuda/bin/nvcc",
+        "-O3",
+        "-std=c++17",
+        "-arch=sm_89",
+        "--ptxas-options=-v",
+        "-DPUBLIC_API_ONLY",
+        "-I/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay",
+        "-I/home/lktr/src/cccl/libcudacxx/include",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_single.cu",
+        "-o",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/overlay"
+      ],
+      "utc_start": "2026-09-19T04:51:45.959670+00:00",
+      "returncode": 0,
+      "elapsed_s": 7.291075434000021
+    },
+    {
+      "label": "overlay-check",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/overlay",
+        "--check"
+      ],
+      "utc_start": "2026-09-19T04:51:53.260344+00:00",
+      "returncode": 0,
+      "elapsed_s": 2.2295230400000037
+    },
+    {
+      "label": "overlay-sass",
+      "command": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--dump-sass",
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/overlay"
+      ],
+      "utc_start": "2026-09-19T04:51:55.506990+00:00",
+      "returncode": 0,
+      "elapsed_s": 0.5719273409999914
+    },
+    {
+      "label": "baseline-preheat",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/baseline",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:51:56.094938+00:00",
+      "returncode": 0,
+      "elapsed_s": 7.942997648000016
+    },
+    {
+      "label": "overlay-preheat",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/overlay",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:52:04.045133+00:00",
+      "returncode": 0,
+      "elapsed_s": 7.5422791889999985
+    },
+    {
+      "label": "baseline-round0",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/baseline",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:52:11.599923+00:00",
+      "returncode": 0,
+      "elapsed_s": 7.9436680279999905
+    },
+    {
+      "label": "overlay-round0",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/overlay",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:52:19.553827+00:00",
+      "returncode": 0,
+      "elapsed_s": 7.542451142000004
+    },
+    {
+      "label": "overlay-round1",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/overlay",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:52:27.107847+00:00",
+      "returncode": 0,
+      "elapsed_s": 7.542806146000004
+    },
+    {
+      "label": "baseline-round1",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/baseline",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:52:34.662280+00:00",
+      "returncode": 0,
+      "elapsed_s": 7.944028673999981
+    },
+    {
+      "label": "baseline-round2",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/baseline",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:52:42.618181+00:00",
+      "returncode": 0,
+      "elapsed_s": 7.942125247999996
+    },
+    {
+      "label": "overlay-round2",
+      "command": [
+        "/mnt/d/Projects/Open-Source Contribution/evidence/raw/phase2/2026-09-19-public-overlay-windowed/build/overlay",
+        "--measure"
+      ],
+      "utc_start": "2026-09-19T04:52:50.572045+00:00",
+      "returncode": 0,
+      "elapsed_s": 7.492317456999984
+    }
+  ],
+  "head": "f747ef146b77ed1e8f38fe8cb3c67effaf7793f2",
+  "status_before": "",
+  "hashes": {
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_single.cu": "95779a2a9845cf588e105ab4dd7f57b1f2090e5f8d6606a72493319150d9f95c",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/bounded_overlay/cuda/std/__algorithm/lower_bound.h": "66616c0ad069c0b2547477ef847d2b19370a64479433d26ecf9538bb6f8d448c",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded.cuh": "248a983a96c174026fc3884cba38270f0c179367ff48165f33817e291b49e0e5",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/binary_search_bounded_bench.cu": "9d8524a72457aae136bc553caa1874c4efc3018cab89a0d1d6d91bd925b31908",
+    "/mnt/d/Projects/Open-Source Contribution/evidence/phase2/measure_public_overlay.py": "60c763053545a869cbf7baa8040cc507874adcda267432acef82bcb072fca3fd"
+  },
+  "binary_hashes": {
+    "baseline": "c20735bcc9a1a9ea04d2ee11764ee9e731969c54334fb79f7a4eb7e8b94af873",
+    "overlay": "3ded245d494a2c4cddd1a9186493fb5883621888be59829aa1fa24dacb62ae9e"
+  },
+  "status_after": ""
+}

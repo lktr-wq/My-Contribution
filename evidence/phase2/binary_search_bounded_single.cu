@@ -1,12 +1,19 @@
 #define main prior_benchmark_main
 #include "binary_search_bounded_bench.cu"
 #undef main
+#include <chrono>
 std::uint32_t random_next(std::uint32_t& s){s^=s<<13;s^=s>>17;s^=s<<5;return s;}
 int main(int argc,char** argv) try {
   if(argc!=2 || (std::strcmp(argv[1],"--check") && std::strcmp(argv[1],"--measure")))throw std::runtime_error("mode");
   const bool measure=std::strcmp(argv[1],"--measure")==0;
-  constexpr int count=4194304,blocks=count/256,batch=3;
+  constexpr int count=4194304,blocks=count/256;
+#ifdef PUBLIC_API_ONLY
+  const std::int64_t sizes[]={32,4096,20000,65536};
+  constexpr int variants=1,rounds=1,batch=50;
+#else
   const std::int64_t sizes[]={1,32,257,4096,20000,65536};
+  constexpr int variants=3,rounds=3,batch=3;
+#endif
   cudaEvent_t start,stop;checked(cudaEventCreate(&start));checked(cudaEventCreate(&stop));
   std::int64_t checks=0;
   for(auto n:sizes) {
@@ -29,13 +36,17 @@ int main(int argc,char** argv) try {
         if(got.front()!=-1 || got.back()!=-1)throw std::runtime_error("guard");
         checks+=count;
       };
-      for(int r=0;r<(measure?3:1);++r)for(int order=0;order<3;++order) {
-        int v=(order+r)%3;
+      for(int r=0;r<(measure?rounds:1);++r)for(int order=0;order<variants;++order) {
+        int v=(order+r)%variants;
         checked(cudaMemset(out.p,0xff,got.size()*sizeof(int)));
         launch_bounded<false>(v,da.p,n,dq.p,count,out.p+1,blocks);validate();
         if(measure) {
           for(int w=0;w<50;++w)launch_bounded<false>(v,da.p,n,dq.p,count,out.p+1,blocks);
           checked(cudaDeviceSynchronize());
+#ifdef PUBLIC_API_ONLY
+          auto stamp=[](){return (long long)std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();};
+          std::printf("WINDOW_START n=%lld shape=%d epoch_ms=%lld\n",(long long)n,shape,stamp());
+#endif
           for(int i=0;i<30;++i) {
             checked(cudaEventRecord(start));
             for(int b=0;b<batch;++b)launch_bounded<false>(v,da.p,n,dq.p,count,out.p+1,blocks);
@@ -43,6 +54,9 @@ int main(int argc,char** argv) try {
             float ms;checked(cudaEventElapsedTime(&ms,start,stop));
             std::printf("SAMPLE n=%lld shape=%d round=%d variant=%d sample=%d ms=%.9f\n",(long long)n,shape,r,v,i,ms/batch);
           }
+#ifdef PUBLIC_API_ONLY
+          std::printf("WINDOW_END n=%lld shape=%d epoch_ms=%lld\n",(long long)n,shape,stamp());
+#endif
           validate();
         }
       }

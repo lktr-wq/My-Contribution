@@ -1,0 +1,434 @@
+[
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 32,
+    "shape": 0,
+    "median_ms": 0.1675039975,
+    "min_ms": 0.164864004,
+    "max_ms": 0.274773329
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 32,
+    "shape": 1,
+    "median_ms": 0.1653760005,
+    "min_ms": 0.163402662,
+    "max_ms": 0.261151999
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 4096,
+    "shape": 0,
+    "median_ms": 0.33378134699999995,
+    "min_ms": 0.329728007,
+    "max_ms": 0.436906666
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 4096,
+    "shape": 1,
+    "median_ms": 0.333824009,
+    "min_ms": 0.330015987,
+    "max_ms": 0.391509324
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 20000,
+    "shape": 0,
+    "median_ms": 0.38227200549999996,
+    "min_ms": 0.378197342,
+    "max_ms": 0.48467198
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 20000,
+    "shape": 1,
+    "median_ms": 0.3822559865,
+    "min_ms": 0.380586654,
+    "max_ms": 0.579274654
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 65536,
+    "shape": 0,
+    "median_ms": 1.0332159994999999,
+    "min_ms": 1.028778672,
+    "max_ms": 1.22807467
+  },
+  {
+    "mode": "baseline",
+    "round": 0,
+    "n": 65536,
+    "shape": 1,
+    "median_ms": 0.904533327,
+    "min_ms": 0.901802719,
+    "max_ms": 1.091242671
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 32,
+    "shape": 0,
+    "median_ms": 0.132778659,
+    "min_ms": 0.128682658,
+    "max_ms": 0.14469333
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 32,
+    "shape": 1,
+    "median_ms": 0.131466672,
+    "min_ms": 0.12922667,
+    "max_ms": 0.142271996
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 4096,
+    "shape": 0,
+    "median_ms": 0.33482667850000003,
+    "min_ms": 0.330410659,
+    "max_ms": 0.494176
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 4096,
+    "shape": 1,
+    "median_ms": 0.3354826715,
+    "min_ms": 0.333472013,
+    "max_ms": 0.498687983
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 20000,
+    "shape": 0,
+    "median_ms": 0.2891306575,
+    "min_ms": 0.286762685,
+    "max_ms": 0.392085314
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 20000,
+    "shape": 1,
+    "median_ms": 0.289792001,
+    "min_ms": 0.287744015,
+    "max_ms": 0.433066696
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 65536,
+    "shape": 0,
+    "median_ms": 1.0355520245,
+    "min_ms": 1.03079474,
+    "max_ms": 1.306624055
+  },
+  {
+    "mode": "overlay",
+    "round": 0,
+    "n": 65536,
+    "shape": 1,
+    "median_ms": 0.9062346514999999,
+    "min_ms": 0.901461363,
+    "max_ms": 1.112064004
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 32,
+    "shape": 0,
+    "median_ms": 0.1667093335,
+    "min_ms": 0.16520533,
+    "max_ms": 0.229034662
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 32,
+    "shape": 1,
+    "median_ms": 0.1647839995,
+    "min_ms": 0.16349867,
+    "max_ms": 0.306101352
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 4096,
+    "shape": 0,
+    "median_ms": 0.333850667,
+    "min_ms": 0.329728007,
+    "max_ms": 0.49800536
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 4096,
+    "shape": 1,
+    "median_ms": 0.333647996,
+    "min_ms": 0.332458675,
+    "max_ms": 0.509877324
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 20000,
+    "shape": 0,
+    "median_ms": 0.381269336,
+    "min_ms": 0.37879467,
+    "max_ms": 0.522506654
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 20000,
+    "shape": 1,
+    "median_ms": 0.381381333,
+    "min_ms": 0.377856016,
+    "max_ms": 0.554666698
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 65536,
+    "shape": 0,
+    "median_ms": 1.0331466195,
+    "min_ms": 1.030143976,
+    "max_ms": 1.275221348
+  },
+  {
+    "mode": "baseline",
+    "round": 1,
+    "n": 65536,
+    "shape": 1,
+    "median_ms": 0.905557334,
+    "min_ms": 0.902463973,
+    "max_ms": 1.267370701
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 32,
+    "shape": 0,
+    "median_ms": 0.132426664,
+    "min_ms": 0.128597334,
+    "max_ms": 0.142677337
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 32,
+    "shape": 1,
+    "median_ms": 0.130351998,
+    "min_ms": 0.128608003,
+    "max_ms": 0.131754667
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 4096,
+    "shape": 0,
+    "median_ms": 0.334458649,
+    "min_ms": 0.331093341,
+    "max_ms": 0.455680013
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 4096,
+    "shape": 1,
+    "median_ms": 0.334463984,
+    "min_ms": 0.330720007,
+    "max_ms": 0.44748798
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 20000,
+    "shape": 0,
+    "median_ms": 0.289450675,
+    "min_ms": 0.285280019,
+    "max_ms": 0.470016003
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 20000,
+    "shape": 1,
+    "median_ms": 0.289269328,
+    "min_ms": 0.287061334,
+    "max_ms": 0.466261357
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 65536,
+    "shape": 0,
+    "median_ms": 1.0332106945000001,
+    "min_ms": 0.919797361,
+    "max_ms": 1.284437299
+  },
+  {
+    "mode": "overlay",
+    "round": 1,
+    "n": 65536,
+    "shape": 1,
+    "median_ms": 0.9219093325000001,
+    "min_ms": 0.918869317,
+    "max_ms": 1.11411202
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 32,
+    "shape": 0,
+    "median_ms": 0.1670506745,
+    "min_ms": 0.164864004,
+    "max_ms": 0.316415995
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 32,
+    "shape": 1,
+    "median_ms": 0.169642672,
+    "min_ms": 0.163061336,
+    "max_ms": 0.288085341
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 4096,
+    "shape": 0,
+    "median_ms": 0.333824009,
+    "min_ms": 0.331775993,
+    "max_ms": 0.493567973
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 4096,
+    "shape": 1,
+    "median_ms": 0.33308801050000003,
+    "min_ms": 0.329728007,
+    "max_ms": 0.464277357
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 20000,
+    "shape": 0,
+    "median_ms": 0.382938683,
+    "min_ms": 0.378197342,
+    "max_ms": 0.480255991
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 20000,
+    "shape": 1,
+    "median_ms": 0.3825119885,
+    "min_ms": 0.378197342,
+    "max_ms": 0.547157347
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 65536,
+    "shape": 0,
+    "median_ms": 1.03236264,
+    "min_ms": 1.028437257,
+    "max_ms": 1.217504025
+  },
+  {
+    "mode": "baseline",
+    "round": 2,
+    "n": 65536,
+    "shape": 1,
+    "median_ms": 0.9057332874999999,
+    "min_ms": 0.901802719,
+    "max_ms": 1.078271985
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 32,
+    "shape": 0,
+    "median_ms": 0.131754667,
+    "min_ms": 0.12922667,
+    "max_ms": 0.135541335
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 32,
+    "shape": 1,
+    "median_ms": 0.13129065950000002,
+    "min_ms": 0.129248008,
+    "max_ms": 0.13312
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 4096,
+    "shape": 0,
+    "median_ms": 0.334010661,
+    "min_ms": 0.332800001,
+    "max_ms": 0.427008003
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 4096,
+    "shape": 1,
+    "median_ms": 0.335135996,
+    "min_ms": 0.330751985,
+    "max_ms": 0.444757342
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 20000,
+    "shape": 0,
+    "median_ms": 0.289450675,
+    "min_ms": 0.285354674,
+    "max_ms": 0.453663975
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 20000,
+    "shape": 1,
+    "median_ms": 0.289450675,
+    "min_ms": 0.287359983,
+    "max_ms": 0.510293305
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 65536,
+    "shape": 0,
+    "median_ms": 1.036117375,
+    "min_ms": 1.033525348,
+    "max_ms": 1.283018708
+  },
+  {
+    "mode": "overlay",
+    "round": 2,
+    "n": 65536,
+    "shape": 1,
+    "median_ms": 0.9067093135,
+    "min_ms": 0.903850615,
+    "max_ms": 1.108277321
+  }
+]
